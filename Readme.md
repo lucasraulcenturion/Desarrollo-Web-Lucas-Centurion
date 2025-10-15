@@ -36,16 +36,14 @@ Navegación con navbar sticky, estados activos y foco accesible.
 
 HTML5 semántico
 
-CSS3 (variables, utilidades, componentes)
+CSS
 
-Sin frameworks
-
-Herramientas gratuitas: VS Code + Live Server, Figma/Adobe XD para wireframes
+Herramientas gratuitas: VS Code + Live Server, Figma para wireframes
 
 🎨 Branding (versión inicial)
 
 Colores: terciopelo púrpura, dorados y verdes joya.
 
-Tipografías: Merriweather (títulos) + sistema para textos.
+Tipografías: Merriweather / Roboto.
 
 Detalles: bordes suaves, sombras sutiles y acentos “royal”.
