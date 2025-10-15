@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="BVF">
+  <defs>
+    <style>
+      .gold{fill:#d4af37}
+      .velvet{fill:#5f1651}
+    </style>
+  </defs>
+  <circle cx="24" cy="24" r="22" class="velvet"></circle>
+  <!-- Corona simple -->
+  <path d="M12 16l4 5 6-6 6 6 4-5 2 8H10l2-8Z" class="gold"></path>
+  <!-- Letras BVF -->
+  <text x="24" y="34" font-family="Cinzel, serif" font-size="14" font-weight="700" text-anchor="middle" fill="#f6f1ff">BVF</text>
+</svg>

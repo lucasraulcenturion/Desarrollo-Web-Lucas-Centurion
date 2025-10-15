@@ -1,0 +1,432 @@
+/* --- RESET --- */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- NAVBAR --- */
+
+.header {
+    background: #5f1651;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    display: flex;
+    /* ← barra en flex */
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --- LOGO NAVBAR A LA IZQUIERDA --- */
+.navbar__brand {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__logo {
+    height: 50px;
+}
+
+/* --- LINKS CENTRADOS --- */
+.navbar__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: #e7e5e4;
+    padding: .45rem .65rem;
+    border-radius: .5rem;
+}
+
+.navbar__link:hover {
+    background: rgba(204, 203, 203, 0.516);
+}
+
+/* --- LINK ACTIVO --- */
+.navbar__link[aria-current="page"],
+.navbar__link.is-active {
+    background: #fff;
+    color: #5f1651;
+    font-weight: 700;
+}
+
+/* --- LINK A LA PAGINA ACTUAL --- */
+.navbar__link[aria-current="page"],
+.navbar__link.is-active {
+    background: #ffffff;
+    color: #5f1651;
+    font-weight: 700;
+}
+
+.navbar__link:hover,
+.navbar__link:focus {
+    background: #1e293b;
+}
+
+/* --- MAIN --- */
+
+main {
+    background: linear-gradient(#cb4593, #75124c);
+}
+
+.img_portada {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* --- INDEX --- */
+.title_page {
+    font-family: "Merriweather", serif;
+    text-shadow: 3px 3px 5px #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    color: #8e0d7b;
+    text-shadow: 3px 3px 5px #ffffff;
+}
+
+.iafluencer_description {
+    font-family: '"Roboto", sans-serif';
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    line-height: 1.5;
+    color: #d1d5db;
+    padding-bottom: 20px;
+}
+
+/* --- CRONICAS --- */
+
+#introduccion_cronicas {
+    padding-top: 20px;
+}
+
+.parrafo_baron {
+    font-family: 'merriweather', serif;
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0 1.25rem 0 1.25rem;
+    line-height: 1.5;
+    color: #ffffff;
+    text-shadow: 0.125rem 0.125rem 0.25rem #404040;
+    padding:1.2% ;
+}
+
+
+.subtitulo_baron {
+    font-family: 'merriweather', serif;
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 20px;
+    text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+.lema_cronicas {
+    font-family: 'merriweather', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    padding-bottom: 20px;
+    text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+/* --- LA CORTE ---*/
+
+.cards_corte_container {
+    border: 1px solid #ddd;
+    border-radius: .75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    background: #fff;
+    max-width: 640px;
+    margin: 20px auto;
+}
+
+.card__media_img {
+    width: 100%;
+    display: block;
+    border-radius: .75rem;
+}
+
+#id_parrafo_baron_corte{
+font-family:'Roboto', sans-serif;
+font-weight:bolder;
+color:#ffffff;
+text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+
+}
+
+.text_cards{
+    font-family:'Roboto', sans-serif;
+    font-size:1.1rem;
+}
+
+
+#card_sidecar{
+margin-bottom:0;
+}
+
+.text_hashtag_cards {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
+/*--- PELUSOTECA ---*/
+
+.cards_pelusoteca_container {
+    border: 1px solid #ddd;
+    border-radius: .75rem;
+    padding: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem #505050;
+    background: #fff;
+    max-width: 320px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.card__media_img {
+    width: 100%;
+    display: block;
+    border-radius: .75rem;
+}
+
+#parrafo_baron_pelusoteca{
+    padding-top: 20px;
+}
+
+.pelusa_name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#text_cards_corte{
+    font-size:1rem;
+}
+
+.pelusarium {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    padding-bottom: 20px;
+}
+
+#card_pelusa8{
+    margin-bottom:0;
+}
+
+/* --- HATERS AND DIAMONDS*/
+
+.cards_haters_container {
+    border: 1px solid #ddd;
+    border-radius: .75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    background: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.barra_instagram {
+    width: 100%;
+    display: block;
+    border-radius: .75rem;
+    padding: 10px;
+    max-width: 35rem;
+}
+
+#card_cocina{
+    margin-bottom:0;
+}
+
+/* --- PLAYLIST --- */
+
+.main_playlist {
+    background: linear-gradient(#cb4593, #75124c);
+    padding-bottom: 20px;
+}
+
+.subtitle_playlist{
+    font-family: 'roboto', sans-serif;
+    text-shadow: 3px 3px 5px #ffffff;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    padding: 1.25rem;
+}  
+
+.audio_article{
+    border: 1px solid #ddd;
+    border-radius: .75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    background: linear-gradient(#a23e9f, #170505);
+    max-width: 25rem;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.audio_controls {
+    width: 100%;
+    border-radius: .2rem;
+}
+
+
+.div_dj_vid{
+  width: 280px;            
+  aspect-ratio: 1 / 1;     
+  border-radius: 50%;
+  overflow: hidden;
+  line-height: 0;      
+}
+
+.dj_vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  display: block;      
+}
+
+.hymn_img {
+    width: 100%;
+    display: block;
+    border-radius: .75rem;
+    padding-bottom: 20px;
+    max-width: 20rem;
+    margin: 1.25rem;
+}
+
+.img_other{
+    max-width:15.5rem
+}
+
+
+.song_name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0.125rem  0.125rem  0.25rem  #000000;
+}
+
+.div_hymn_lyrics {
+    margin: 1.5rem;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    max-width: 20rem;
+    background: #75124c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    padding: 0.5rem;
+    display: block;
+}
+
+.hymn_lyrics {
+    font-family: roboto, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-shadow: 0.125rem  0.125rem  0.25rem  #000000;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+/* --- CREDITOS --- */
+
+.div_subtitle_creditos{
+  display: flex;
+  justify-content: center;     /* eje principal (horizontal) */
+  align-items: center;          /* eje cruzado (vertical) */
+  min-height: 80px;             /* o la altura que necesites */
+  padding: 1rem;                /* no solo bottom */
+  background: linear-gradient(#cb4593, #75124c);
+  max-width: 100%;
+  text-align: center;           /* solo para texto multilínea */
+}
+
+
+.subtitulo_creditos {
+    font-family: 'merriweather', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+}
+
+.div_img_creditos{
+margin-bottom:0;
+}
+
+/*--- FOOTER ---*/
+.link_footer {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer {
+    background: #5f1651;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    text-align: left;
+    padding: 20px 20px;
+}
+
+footer p {
+    padding-bottom: 5px;
+}
+
+
+/* --- RESPONSIVE ---*/
+
+@media (max-width: 480px) {
+    .navbar {
+        gap: .5rem;
+    }
+
+    .navbar__list {
+        gap: .5rem;
+    }
+}
