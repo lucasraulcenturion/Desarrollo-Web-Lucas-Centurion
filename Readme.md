@@ -6,7 +6,7 @@ Versión avanzada del sitio del Barón Von Fluffington III.
 El proyecto presenta una estructura HTML ordenada, uso combinado de **Bootstrap**, **Grid** y **Flexbox**, y un **diseño responsive completo**.
 
 📍 **Publicado en GitHub Pages:**  
-👉 []
+👉 [https://lucasraulcenturion.github.io/Desarrollo-Web-Lucas-Centurion/]
 
 ---
 
