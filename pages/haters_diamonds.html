@@ -4,296 +4,440 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Haters & Diamonds · Las respuestas más brillantes y glamorosas del Barón ante las críticas de sus seguidores.">
+    <meta name="author" content="Lucas Centurión">
+
+      <!-- Title -->
     <title>Haters & Diamonds</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
 
 <body>
     <!-- NAVBAR  -->
     <header class="header">
-        <nav class="navbar" aria-label="Navegación principal">
-            <!-- Logo que lleva al index -->
-            <a class="navbar__brand" href="../index.html" aria-label="Ir al inicio">
-                <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
-            </a>
 
-            <!-- Enlaces -->
-            <ul class="navbar__list">
-                <li><a class="navbar__link" href="./cronicas.html">Crónicas del Fluff</a></li>
-                <li><a class="navbar__link" href="./la_corte.html">La Corte de los Corazones</a></li>
-                <li><a class="navbar__link" href="./pelusoteca.html">Pelusoteca</a></li>
-                <li><a class="navbar__link" aria-current="page" href="./haters_diamonds.html">Haters & Diamonds</a></li>
-                <li><a class="navbar__link" href="./playlist.html">Playlist Imperial</a></li>
-                <li><a class="navbar__link" href="./creditos.html">Créditos</a></li>
-            </ul>
+        <!-- NAVBAR BOOTSTRAP -->
+        <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
+                        alt="Logo del Barón"></a>
+                <!-- Menu Hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+                    <!-- NAVBAR LINKS -->
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cronicas.html">Crónicas del
+                                Fluff</a>
+                        </li>
+                        <!-- ------ -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
+                        </li>
+                        <!-- ------ -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pelusoteca
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
+                                        Notables</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- ------ -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./haters_diamonds.html">Haters &
+                                Diamonds</a>
+                        </li>
+                        <!-- ------ -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
+                        </li>
+                        <!-- ------ -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./creditos.html">Créditos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
 
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+    <main>
+        <!-- H1 OCULTO PARA SEO -->
+        <h1 class="h1-hidden" id="h1-haters">Haters & Diamonds</h1>
+
+        <!-- IMAGEN PORTADA -->
         <section class="img_index">
-            <img class="img_portada" src="../assets/img/haters/Haters And Diamonds.png" alt="Haters & Diamonds" />
+            <img class="img_portada" src="../assets/img/haters/haters-and-diamonds.png" alt="Haters & Diamonds" />
         </section>
 
-        <p class="parrafo_baron" id="introduccion_haters">
-            Haters, haters everywhere… y aún así, sigo brillando más fuerte.<br>
-            Aquí desfilan los comentarios más jugosos, los dardos más filosos y, por supuesto, mis respuestas más
-            brillantes.
-            Porque en este universo, el hate no hiere: se transforma en diamantes.<br>
-            Cada crítica es una joya tallada con ironía, envuelta en terciopelo y coronada con mi inconfundible
-            elegancia.
-            Prepárate para disfrutar del espectáculo donde el brillo siempre gana. 💅💎
-        </p>
+        <!-- TEXTO INTRODUCTORIO -->
 
-        <!-- CARD BARON CON SANTA CLAUS -->
-        <article class="cards_haters_container" id="card_santaclaus">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron y Papa Noel.png"
-                    alt="Baron con Santa Claus" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-                    🧑‍💻 <b>@realismoanteTODO:</b>
-                    @BaronVonFluffingtonIII ¿Y este quién es? Parece que se coló en la foto de Papá Noel con un
-                    disfraz
-                    de feria medieval pasada de copas.<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    ¿Colado? Cariño, yo organicé la foto.
-                    Papá Noel es el cameo.
-                    Y lo de feria medieval… gracias, ¡adoro fusionar siglos con exceso!
-                </p>
-                <p class="text_hashtag_cards">
-                    #LegadoFluffington #GlamourNivelBarón #BaronVonFluffington #EstiloDeCasta
-                    #PorqueLoQueSeHeredaNoSeCompra
-                </p>
-            </div>
-        </article>
+        <div class="container-cards">
 
-        <!-- CARD BARON NATACION -->
-        <article class="cards_haters_container" id="card_natacion">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Piscina.png" alt="Baron en la piscina" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-                    🧑‍💻 <b>@aguaconropaNO:</b>
-                    ¿Quién se mete a la pileta con lentejuelas, moño y escarabajos en el pecho? ¿Sos sirena o show
-                    de Las Vegas?<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Mi amor… yo no me metí al agua.
-                    El agua me rogó que entrara.
-                    Y por cierto: si tus escarabajos no brillan bajo luz neón, estás nadando en el charco
-                    equivocado. 💅🏽✨🧜‍♂️.<br>
-                </p>
+            <div class="div_text_pelusoteca">
+
+                <p class="parrafo_baron"> Haters, haters everywhere… y aún así, sigo brillando más fuerte.</p>
+                <p class="parrafo_baron"> Aquí desfilan los comentarios más jugosos, los dardos más filosos y, por
+                    supuesto, mis respuestas más brillantes. Porque en este universo, el hate no hiere: se transforma en
+                    diamantes.</p>
+                <p class="parrafo_baron"> Cada crítica es una joya tallada con ironía, envuelta en terciopelo y coronada
+                    con mi inconfundible elegancia.</p>
+                <p class="parrafo_baron">Prepárate para disfrutar del espectáculo donde el brillo siempre gana. 💅💎</p>
 
             </div>
-        </article>
 
-        <!-- CARD BARON DENTISTA -->
-        <article class="cards_haters_container" id="card_dentista">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Dentista.png" alt="Baron en el dentista" />
+            <div class="grilla_haters">
+
+                <!-- CARD BARON CON SANTA CLAUS -->
+                <article class="cards_haters_container">
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-santaclaus.png"
+                            alt="Baron con Santa Claus" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_text_haters">
+                        <p class="text_cards">🧑‍💻 <strong>@realismoanteTODO:</strong>@BaronVonFluffingtonIII ¿Y este
+                            quién es? Parece que se coló en la foto de Papá Noel con un disfraz de feria medieval pasada
+                            de copas. </p>
+                        <p class="text_cards">🎩 <strong>@BaronVonFluffingtonIII:</strong> ¿Colado? Cariño, yo organicé
+                            la foto. Papá Noel es el cameo. Y lo de feria medieval… gracias, ¡adoro fusionar siglos con
+                            exceso! </p>
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards"> #LegadoFluffington #GlamourNivelBarón #BaronVonFluffington
+                            #EstiloDeCasta </p>
+                    </div>
+                </article>
+
+                <!-- CARD BARON NATACION -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-piscina.png"
+                            alt="Baron en la piscina" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards">🧑‍💻 <strong>@aguaconropaNO:</strong> ¿Quién se mete a la pileta con
+                            lentejuelas, moño y escarabajos en el pecho? ¿Sos sirena o show de Las Vegas?</p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Mi amor… yo no me metí al
+                            agua. El agua me rogó que entrara. Y por cierto: si tus escarabajos no brillan bajo luz
+                            neón, estás nadando en el charco equivocado. 💅🏽✨🧜‍♂️.</p>
+
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards">#CharcoCorrecto #NadoConEstilo
+                            #BrillanOBailan #SirenaPeroDeLujo #GlamourQueFlota</p>
+                    </div>
+                </article>
+
+
+                <!-- CARD BARON DENTISTA -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-dentista.png"
+                            alt="Baron en el dentista" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🧑‍💻 <strong>@limpioperohumilde:</strong> @BaronVonFluffingtonIII ¿En
+                            serio vas al dentista vestido como si fueras a conducir un programa de TV? Un poco mucho,
+                            ¿no?</p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Mi cielo, el dentista se
+                            prepara emocionalmente para recibirme. Y sí, quizás me excedí… ¡pero solo porque el sillón
+                            no combinaba con mi fucsia imperial!</p>
+                        <p class="text_hashtag_cards">#DentalGlam #ClinicaChic 
+                            #MoñoGigante #SombreroDeCopa #RhineSunglasses #PlumasYBrillos #BrochesJoya
+                            #VelvetJacket #IconoKitsch #ShowtimeEnElDentista</p>
+                    </div>
+                </article>
+
+
+                <!-- CARD BARON RULEROS -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-peluqueria.jpeg"
+                            alt="Baron en la peluquería" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🧑‍💻 <strong>@LaEnvidiaMeMata</strong> @BaronVonFluffingtonIII ¿Esa
+                            peluca es real o te la prestó un payaso? Y esos lentes... ¿para que no te reconozcan? 🤡👓
+                        </p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Querido, mi cabello es tan
+                            real como tu obsesión por mi. Y estos lentes no me esconden, solo elevan el misterio... algo
+                            que tú, lamentablemente, no posees. 😉 </p>
+                        <p class="text_hashtag_cards"> #GlamourSinPreguntas #HatersAndDiamonds #DivinoPorNaturaleza </p>
+                    </div>
+                </article>
+
+                <!-- CARD BARON CICLISTA -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-ciclista.png"
+                            alt="Baron andando en bicicleta" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong>Un paseo matutino entre
+                            mariposas, champiñones gigantes y el susurro del terciopelo. Algunos pedalean por deporte...
+                            yo pedaleo por arte. 💅🚴‍♂️✨</p>
+                        <p class="text_cards"> 🧑‍💻 <strong>@normalito_123:</strong> Bro, ¿quién se viste así para
+                            andar en bici? 🤡👓</p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Solo los que entienden que
+                            el estilo no descansa ni en dos ruedas. Pedaleo, sí… pero con pedigrí. 🚴‍♂️💎 </p>
+
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards"> #BaronVonFluffington #IAfluencer #BikeWithStyle #NeonGlam
+                            #VelvetRide #DivaEnergy #CampStyle #HatersAndDiamonds #LookDelDía #CreatividadLatam </p>
+                    </div>
+                </article>
+
+
+                <!-- CARD BARON BOSTERO -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-boca.png"
+                            alt="Baron alentando a Boquita" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards">🧑‍💻 <strong>@elmasgrande_millonario:</strong>Eso no es un hincha, es un
+                            disfraz de carnaval. Te falta el tutú. 🩰🤡👓 </p>
+                        <p class="text_cards">🎩 <strong>@BaronVonFluffingtonIII:</strong>¡Oh, qué memoria selectiva!
+                            Vos hablás de disfraces… ¿Te olvidas que se disfrazaron de equipo grande en la B? 🎭📉 Yo al
+                            menos salgo con plumas por elección, no por descenso. 💋💙💛</p>
+
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards">
+                            #PlumasEnLaPopular #EstadioPasarela #FútbolConBrillos #CamisetaYStrass
+                            #MemoriaSelectiva #FantasmadelaB #TeamGlam #ManchasImborrables
+                        </p>
+                    </div>
+                </article>
+
+
+                <!-- CARD BARON ENTRECASA -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-de-entre-casa.png"
+                            alt="Baron de entre casa" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards">🧑‍💻 <strong>@ropa_normal123:</strong> ¿Y eso es estar cómodo en casa?
+                            Aflojá con las lentejuelas, maestro… </p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Querido… Vos te ponés
+                            joggins para estar cómodo. Yo me pongo espléndido. Lo nuestro no es moda, es distancia
+                            social… de estilo. 💜✨💅💎</p>
+
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards">
+                            #HomeCouture #Lentejuelas #EleganciaCotidiana #BrilloDeDomingo
+                            #CasualConCristales #EspléndidoSiempre #DescansoDeLujo #EstiloEnPantuflas #DomingoDeGlamour
+                        </p>
+                    </div>
+                </article>
+
+                <!-- CARD BARON ANTIFAZ -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-fiesta-disfraces.png"
+                            alt="Baron en fiesta de disfraces" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🧑‍💻 <strong>@anti_brillos:</strong> Jajaja, ¿qué es esto? ¿Una piñata
+                            de diseñador?</p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Mi ciela, si esto fuera una
+                            piñata, estarías en con tu mejor outfit del Once, esperando rasguñar un poco de mi estilo.
+                            Malas noticias… el buen gusto no se pega, se hereda. 💅✨</p>
+
+                        <!-- HASHTAGS -->
+                        <p class="text_hashtag_cards">
+                            #HauteCouture #PiñataDeDiseñador #FashionRealeza #GlamourIrónico #DramaConEncaje
+                            #ElBaronResponde #BuenGustoEterno #FluffPower #NoTodosPueden
+                        </p>
+                    </div>
+                </article>
+
+                <!-- CARD BARON COCINA -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-cocinando.png"
+                            alt="Baron en cocinando" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🧑‍💻 <strong>@CriticoAmargo:</strong> @BaronVonFluffingtonIII ¿En la
+                            cocina? ¿Se te acabaron los diamantes para comprar comida hecha? 🤣💎🍝 </p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> Mi adorado hater, mis
+                            diamantes brillan tanto que iluminan mi cocina mientras creo manjares que tu paladar jamás
+                            conocerá. Lástima por ti. 😉🌟👨‍🍳 </p>
+                        <p class="text_hashtag_cards">
+                            #BarónGourmet #HatersAndDiamonds #SartenEnLlamas #RecetaImperial
+                            #EspeciasConEstilo #DelantalDeLujo #JoyasEnLaCocina #VelvetApron
+                            #ShowtimeCulinario #FoodArt
+                        </p>
+
+                    </div>
+                </article>
+
+                <!-- CARD BARON ESQUIANDO -->
+                <article class="cards_haters_container">
+
+                    <!-- IMAGEN TARJETA -->
+                    <div class="div_img_haters">
+                        <img class="cards_media_img_haters" src="../assets/img/haters/baron-esquiando.jpeg"
+                            alt="Baron esquiando" />
+                    </div>
+
+                    <!-- BARRA INSTAGRAM -->
+                    <div class="div_instagram">
+                        <img class="barra_instagram" src="../assets/img/haters/barra-ig.png" alt="Barra Instagram">
+                    </div>
+
+                    <!-- COPYS HATE -->
+                    <div class="cards_body_haters">
+                        <p class="text_cards"> 🧑‍💻 <strong>@CarlosSinFiltro 😒:</strong> @BaronVonFluffingtonIII ¿Hace
+                            falta tanto circo para esquiar? 😂 Parece que te caíste de una carroza de carnaval a la
+                            nieve.</p>
+                        <p class="text_cards"> 🎩 <strong>@BaronVonFluffingtonIII:</strong> 🎿💎: Ay, Carlitos… yo no
+                            esquío, desfilo en bajada. Si la montaña viste de blanco, alguien tiene que poner el
+                            glamour. 🌈✨</p>
+                        <p class="text_hashtag_cards"> #DiamondsAndSnow #SkiWithStyle #BaronOnTheSlopes
+                            #MountainsGlamour #FashionOnTheGo #WinterCouture #HatersAndDiamonds #SkiingInStyle
+                            #VelvetOnTheSlopes
+                        </p>
+
+                    </div>
+                </article>
+
+
+
             </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-                    🧑‍💻 <b>@limpioperohumilde:</b>
-                    @BaronVonFluffingtonIII ¿En serio vas al dentista vestido como si fueras a conducir un programa
-                    de TV? Un poco mucho, ¿no?<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Mi cielo, el dentista se prepara emocionalmente para recibirme.
-                    Y sí, quizás me excedí… ¡pero solo porque el sillón no combinaba con mi fucsia imperial! <br>
-                </p>
-
-            </div>
-        </article>
-
-        <!-- CARD BARON RULEROS -->
-        <article class="cards_haters_container" id="card_ruleros">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Peluqueria.jpeg"
-                    alt="Baron en la peluquería" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-                    🧑‍💻 <b>@LaEnvidiaMeMata</b>
-                    @BaronVonFluffingtonIII ¿Esa peluca es real o te la prestó un payaso? Y esos lentes... ¿para que
-                    no te reconozcan?
-                    🤡👓<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Querido, mi cabello es tan real como tu obsesión por mi. Y estos lentes no me esconden,
-                    solo elevan el misterio... algo que tú, lamentablemente, no posees. 😉<br>
-                </p>
-                <p class="text_hashtag_cards">
-                    #GlamourSinPreguntas #HatersAndDiamonds #DivinoPorNaturaleza
-                </p>
-
-            </div>
-        </article>
-
-        <!-- CARD BARON CICLISTA -->
-        <article class="cards_haters_container" id="card_ciclista">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Ciclista.png"
-                    alt="Baron andando en bicicleta" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-                    🎩 <b>@BaronVonFluffingtonIII:</b>Un paseo matutino entre mariposas, champiñones gigantes y el
-                    susurro del
-                    terciopelo. Algunos pedalean por deporte... yo pedaleo por arte. 💅🚴‍♂️✨<br>
-
-                    🧑‍💻 <b>@normalito_123:</b>
-                    Bro, ¿quién se viste así para andar en bici?
-                    🤡👓<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Solo los que entienden que el estilo no descansa ni en dos ruedas. Pedaleo, sí…
-                    pero con pedigrí. 🚴‍♂️💎<br>
-                </p>
-                <p class="text_hashtag_cards">
-                    #FluffOnWheels #ModaExtrema #ChampiChic
-                </p>
-
-            </div>
-        </article>
-
-
-        <!-- CARD BARON BOSTERO -->
-        <article class="cards_haters_container" id="card_bostero">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Boca.png"
-                    alt="Baron alentando a Boquita" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-
-                    🧑‍💻 <b>@elmasgrande_millonario:</b>
-                    Eso no es un hincha, es un disfraz de carnaval. Te falta el tutú. 🩰
-                    🤡👓<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    ¡Oh, qué memoria selectiva! Vos hablás de disfraces…
-                    ¿Te olvidas que se disfrazaron de equipo grande en la B? 🎭📉
-
-                    Yo al menos salgo con plumas por elección, no por descenso. 💋💙💛<br>
-                </p>
-                <p class="text_hashtag_cards">
-                    #PlumasEnLaPopular #EstadioEnModoPasarela #FútbolConBrillos #CamisetaYStrass #MemoriaSelectiva
-                    #FantasmadelaB #TeamGlam #ManchasImborrables
-                </p>
-
-            </div>
-        </article>
-
-
-        <!-- CARD BARON ENTRECASA -->
-        <article class="cards_haters_container" id="card_entrecasa">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron de Entre Casa.png"
-                    alt="Baron de entre casa" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-
-                    🧑‍💻 <b>@ropa_normal123:</b>
-                    ¿Y eso es estar cómodo en casa? Aflojá con las lentejuelas, maestro… <br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Querido… Vos te ponés joggins para estar cómodo.
-                    Yo me pongo espléndido. 💅💎<br>
-                    Lo nuestro no es moda, es distancia social… de estilo. 💜✨
-                </p>
-                <p class="text_hashtag_cards">
-                    #HomeCouture #LentejuelasDeEntreCasa #EleganciaCotidiana #BrilloDeDomingo #CasualConCristales
-                    #EspléndidoSiempre #DescansoDeLujo #EstiloEnPantuflas #DomingoDeGlamour
-                </p>
-
-            </div>
-        </article>
-
-        <!-- CARD BARON ENTRECASA -->
-        <article class="cards_haters_container" id="card_antifaz">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Fiesta Disfraces.png"
-                    alt="Baron en fiesta de disfraces" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-
-                    🧑‍💻 <b>@anti_brillos:</b>
-                    Jajaja, ¿qué es esto? ¿Una piñata de diseñador? <br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Mi ciela, si esto fuera una piñata, estarías en con tu mejor outfit del Once,
-                    esperando rasguñar un poco de mi estilo.<br>
-                    Malas noticias… el buen gusto no se pega, se hereda. 💅✨
-                </p>
-                <p class="text_hashtag_cards">
-                    #SarcasmoDeAltaCostura #PiñataDeDiseñador #FashionRealeza #GlamourIrónico #DramaConEncaje
-                    #ElBaronResponde #BuenGustoEterno #FluffPower #SassyYBrillante #NoTodosPueden
-                </p>
-
-            </div>
-        </article>
-
-        <!-- CARD BARON COCINA -->
-        <article class="cards_haters_container" id="card_cocina">
-            <div class="cards_media_haters">
-                <img class="cards_media_img" src="../assets/img/haters/Baron Cocinando.png" alt="Baron en cocinando" />
-            </div>
-            <div class="div_instagram">
-                <img class="barra_instagram" src="../assets/img/haters/Barra Ig.png" alt="Barra Instagram">
-            </div>
-            <div class="cards_text_haters">
-                <p class="text_cards" id="text_cards_haters">
-
-                    🧑‍💻 <b>@CriticoAmargo:</b>
-                    @BaronVonFluffingtonIII ¿En la cocina? ¿Se te acabaron los diamantes para comprar comida hecha?
-                    🤣💎🍝<br>
-                    🎩 <b>@BaronVonFluffingtonIII:</b>
-                    Mi adorado hater, mis diamantes brillan tanto que iluminan mi cocina mientras creo manjares que tu
-                    paladar jamás conocerá. Lástima por ti. 😉🌟👨‍🍳
-                </p>
-                <p class="text_hashtag_cards">
-                   #BarónGourmet #HatersAndDiamonds #CocinaConEstilo"
-                </p>
-
-            </div>
-        </article>
-
+        </div>
 
     </main>
+
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p class=" text_footer">Barón Von Fluffington III</p>
-        <p class="text_footer">Proyecto artístico y digital creado por Lucas Centurión · Contacto: <a
-                class="link_footer" href="mailto:">lucascent@gmail.com</a> </p>
+        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
+                Centurión</strong> ·
+            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
         <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
     </footer>
+
+
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

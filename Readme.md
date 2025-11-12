@@ -1,49 +1,47 @@
-🌟 Sitio del Barón Von Fluffington III
+# 🌟 Sitio del Barón Von Fluffington III
 
-Pre-entrega N°1 – Desarrollo Web (Coderhouse)
+**Pre-entrega N.º 2 – Desarrollo Web (Coderhouse)**
 
-Primera versión navegable del sitio del Barón. En esta instancia se prioriza maquetación semántica, estilos base, tipografía/colores de marca y organización del proyecto. (La responsividad no está incluida en esta entrega).
+Versión avanzada del sitio del Barón Von Fluffington III.  
+El proyecto presenta una estructura HTML ordenada, uso combinado de **Bootstrap**, **Grid** y **Flexbox**, y un **diseño responsive completo**.
 
-🎯 Objetivos de la pre-entrega
+📍 **Publicado en GitHub Pages:**  
+👉 []
 
-Estructurar HTML semántico de las secciones planificadas.
+---
 
-Aplicar CSS modular (variables, colores, tipografías y componentes básicos).
+## 🧩 Estructura y maquetado
 
-Integrar wireframes como guía visual.
+La estructura se organizó siguiendo buenas prácticas de **HTML5 semántico** y maquetado modular.  
+Cada sección fue diseñada con un enfoque adaptable, utilizando:
 
-Definir branding: paleta, tipografías y estética “aristocrática glam”.
+- **Bootstrap** para la navegación (navbar responsive), tarjetas (`.card`), contenedores (`.container`, `.row`, `.col`) y componentes de audio.
+- **Grid CSS** para dividir áreas principales como la Playlist y Haters & Diamonds en columnas equilibradas.
+- **Flexbox** para alinear elementos dentro de cards, bloques de texto e imágenes, y lograr una distribución fluida en distintos tamaños de pantalla.
 
-🧭 Secciones del sitio
+La combinación de ambas técnicas garantiza una disposición visual coherente y escalable.
 
-Inicio / El Salón del Barón
+---
 
-Crónicas del Fluff
+## 💅 Estilo y diseño
 
-La Corte / Filosofía Fluffingtoniana
+- Paleta cromática: tonos **púrpura profundo**, **dorado** y **neutros** con acentos brillantes.
+- Tipografías jerarquizadas: _Merriweather_ (títulos) y _Roboto_ (textos).
+- Bordes redondeados, sombras suaves y gradientes lineales para reforzar la estética “aristocrático glam”.
+- Adaptación completa mediante _media queries_ (≤992 px, ≤768 px y ≤480 px) para asegurar legibilidad y coherencia visual en todos los dispositivos.
 
-Pelusoteca
+---
 
-Haters & Diamonds
+## 🧭 Secciones destacadas
 
-Playlist
+- **Inicio / El Salón del Barón:** hero central con fondo completo y tipografía decorativa.
+- **Crónicas del Fluff:** disposición de lectura centrada con márgenes y sombras suaves.
+- **La Corte:** estructura en cards flexibles con imágenes y texto alineado.
+- **Pelusoteca:** grilla de imágenes responsive organizada por tipo.
+- **Haters & Diamonds:** uso de Grid para separar bloques visuales simétricos.
+- **Playlist:** video circular con recorte mediante `border-radius` y grilla para audios.
+- **Créditos:** cierre visual con gradientes y tipografía destacada.
 
-Créditos
+---
 
-Navegación con navbar sticky, estados activos y foco accesible.
-
-🧱 Tech Stack
-
-HTML5 semántico
-
-CSS
-
-Herramientas gratuitas: VS Code + Live Server, Figma para wireframes
-
-🎨 Branding (versión inicial)
-
-Colores: terciopelo púrpura, dorados y verdes joya.
-
-Tipografías: Merriweather / Roboto.
-
-Detalles: bordes suaves, sombras sutiles y acentos “royal”.
+📄 _Desarrollado por Lucas Centurión — Curso Desarrollo Web, Coderhouse 2025_

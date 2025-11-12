@@ -4,222 +4,376 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="La Corte de los Corazones · Los más fieles seguidores y aliados del Barón Von Fluffington III en su imperio de glamour, plumas y devoción absoluta.">
+    <meta name="author" content="Lucas Centurión">
+
+    <!-- Title -->
     <title>La Corte de los Corazones</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <!-- NAVBAR  -->
-    <header class="header">
-        <nav class="navbar" aria-label="Navegación principal">
-            <!-- Logo que lleva al index -->
-            <a class="navbar__brand" href="../index.html" aria-label="Ir al inicio">
-                <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
-            </a>
+    <div class="site-wrapper">
+        <header class="header">
+            <!-- NAVBAR BOOTSTRAP -->
+            <nav class="navbar navbar-expand-md"
+                aria-label="Navegación principal del sitio del Barón Von Fluffington III">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
+                    </a>
 
-            <!-- Enlaces -->
-            <ul class="navbar__list">
-                <li><a class="navbar__link" href="./cronicas.html">Crónicas del Fluff</a></li>
-                <li><a class="navbar__link" aria-current="page" href="./la_corte.html">La Corte de los Corazones</a>
-                </li>
-                <li><a class="navbar__link" href="./pelusoteca.html">Pelusoteca</a></li>
-                <li><a class="navbar__link" href="./haters_diamonds.html">Haters & Diamonds</a></li>
-                <li><a class="navbar__link" href="./playlist.html">Playlist Imperial</a></li>
-                <li><a class="navbar__link" href="./creditos.html">Créditos</a></li>
-            </ul>
-        </nav>
-    </header>
+                    <!-- Menú Hamburguesa -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Abrir/cerrar navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <main class="main_playlist">
-        <section class="img_corte">
-            <img class="img_portada" src="../assets/img/corte/La Corte de los Corazones.png"
-                alt="La Corte de los Corazones" />
-        </section>
-        <div class="div_text_corte">
-            <h3 class="subtitulo_baron">
-                Donde sólo los posteos más adorados son dignos de audiencia.
-            </h3>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <!-- NAVBAR LINKS -->
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <!-- Crónicas del Fluff -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./cronicas.html">Crónicas del Fluff</a>
+                            </li>
 
-            <p class="parrafo_baron" id="id_parrafo_baron_corte">
-                Bienvenidos a La Corte de los Corazones, el salón sagrado donde el Barón Von Fluffington III exhibe sus
-                obras maestras más aclamadas por el pueblo digital. Aquí no entra cualquiera: sólo los posteos que han
-                sido
-                bañados en una lluvia de corazones, halagos y emojis exaltados logran abrirse paso hasta este panteón de
-                la
-                popularidad fluffingtoniana.
+                            <!-- La Corte de los Corazones -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./la_corte.html">
+                                    La Corte de los Corazones
+                                </a>
+                            </li>
 
-                Desde declaraciones excéntricas hasta momentos de pura genialidad estética, cada imagen aquí reunida ha
-                sido
-                elevada por la voluntad de sus fieles seguidores. ¡Prepárate para deleitarte con el arte de influenciar
-                con
-                estilo, desmesura y plumas!
+                            <!-- Dropdown Pelusoteca -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"> Pelusoteca </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
+                                            Notables</a>
+                                    </li>
+                                </ul>
+                            </li>
 
-                Estos no son simplemente los más “likeados”... son los elegidos del Barón.
-            </p>
-        </div>
-        <article class="cards_corte_container" id="card_baronesa">
-            <img class="cards_media_img" src="../assets/img/corte/Baron madre.png" alt="Baron con su madre" />
-            <p class="text_cards" id="text_cards_corte">
-                Aquí, al ladito de la reina de la elegancia: mi madre, la inigualable Baronesa Begoña Von Fluffington
-                👑💅✨.Porque lo que se hereda no se compra… y en esta familia, el estilo viene de fábrica 🔥💖. <br>
-                ¡Aprendan mortales!… Si el glamour fuera contagioso, ustedes ya estarían vacunados!!😎🎩. <br>
-                ¡Pero tranquilos, que aquí sobra para todos! 😉✨
-            </p>
-            <p class="text_hashtag_cards">
-                #LegadoFluffington #GlamourNivelBarón #BaronVonFluffington #EstiloDeCasta #PorqueLoQueSeHeredaNoSeCompra
-            </p>
-        </article>
+                            <!-- Haters & Diamonds -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./haters_diamonds.html">Haters & Diamonds</a>
+                            </li>
 
-        <article class="cards_corte_container" id="card_dormitorio">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Dormitorio.jpeg" alt="Baron pijamas" />
-            <p class="text_cards" id="text_cards_corte">
-                Aquí está el Barón Von Fluffington III listo para soñar (con diamantes, ¡obviamente!)!
-                💖✨ ¿Quién dijo que la hora de dormir no puede ser una pasarela? 😴 ¡Miren este conjunto de seda rosa
-                con plumas y pantuflas de criatura mí<br>
-                En este paraíso de terciopelo, donde las luces de neón bailan y el arte psicodélico cobra vida, incluso
-                la leche de luna con lavanda sabe a glamour. 🌙🍸<br>
-                ¡Atrévanse a soñar en grande, mis cielos! 💖✨
-            </p>
-            <p class="text_hashtag_cards">
-                #BaronDreams #PijamaDeLujo #SueñosExtravagantes #DormitorioDeFantasía #TerciopeloYPlumas
-                #BuenasNochesBrillantes #GlamourNocturno
-                #InfluencerDeOtroMundo #EstiloOnírico
-            </p>
-        </article>
+                            <!-- Playlist Imperial -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
+                            </li>
 
-        <article class="cards_corte_container" id="card_desfile">
-            <img class="cards_media_img" src="../assets/img/corte/Barón desfilando 3.jpeg" alt="Baron desfilando" />
-            <p class="text_cards" id="text_cards_corte">
-                💃✨ Pasarela activada. Ego elevado. Estilo: intocable. El Barón Von Fluffington III no camina…
-                desfila. Cada paso es un manifiesto, cada mirada, una orden real. 👑<br>
-                🎩 Hoy no se viste para impresionar… Se viste porque el mundo lo merece. 🌍💜 <br>
-            </p>
-            <p class="text_hashtag_cards">
-                #BarónEnLaPasarela #FluffingtonStyle #RealezaFashion #CaminataReal #DramaYEncanto #PasarelaDelPoder
-                #FilosofíaFluffingtoniana #ModaConActitud 👠🕶️🚶‍♂️🌟
-            </p>
-        </article>
+                            <!-- Créditos -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./creditos.html">Créditos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
+        <main class="main_corte">
+            <!-- H1 oculto para SEO -->
+            <section class="img_corte">
+                <h1 class="h1-hidden" id="h1-corte">La Corte de los Corazones</h1>
+                <img class="img_portada" src="../assets/img/corte/La Corte de los Corazones.png"
+                    alt="La Corte de los Corazones">
+            </section>
 
-        <article class="cards_corte_container" id="card_pilates">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Pilates.jpeg" alt="Baron haciendo pilates" />
-            <p class="text_cards" id="text_cards_corte">
-                Flexibilidad aristocrática, mi ciela: si el pilates no te eleva el core y el espíritu, no es pilates, es
-                siesta. 🕶️💎🧘‍♂️
-                Neutral spine, hombros relajados, mirada al horizonte… y destellos en cada respiración. 💫🧘‍♂️🎩<br>
+            <!-- CONTENEDOR GENERAL: Texto + Tarjetas -->
+            <div class="container-cards">
+                <!-- Texto Introducción -->
+                <div class="div_text_corte">
+                    <h2 class="subtitulo_baron">
+                        Donde sólo los posteos más adorados son dignos de audiencia.
+                    </h2>
 
-                Pilates, pero aristocrático. Si tiemblan las piernas, es porque están aplaudiendo. 🕶️🧵🧘‍♂️<br>
-            </p>
-            <p class="text_hashtag_cards">
-                #BaronVonFluffington #PilatesDeLujo #CoreConClase #GlamFitness #ExtravaganciaFuncional #BaronMode
-                #PilatesAddict #EleganciaEnMovimiento #FuerzaSutil
-            </p>
-        </article>
+                    <p class="parrafo_baron">
+                        Bienvenidos a La Corte de los Corazones, el salón sagrado donde el Barón Von Fluffington III
+                        exhibe
+                        sus obras maestras más aclamadas por el pueblo digital. Aquí no entra cualquiera: sólo los
+                        posteos
+                        que han sido bañados en una lluvia de corazones, halagos y emojis exaltados logran abrirse paso
+                        hasta este panteón de la popularidad fluffingtoniana.
+                    </p>
+                    <p class="parrafo_baron">
+                        Desde declaraciones excéntricas hasta momentos de pura genialidad estética, cada imagen aquí
+                        reunida
+                        ha sido elevada por la voluntad de sus fieles seguidores. ¡Prepárate para deleitarte con el arte
+                        de
+                        influenciar con estilo, desmesura y plumas!
+                    </p>
 
-        <article class="cards_corte_container" id="card_cumpleaños">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Cumpleaños.png"
-                alt="Baron festejando su cumpleaños" />
-            <p class="text_cards" id="text_cards_corte">
-                29 otra vez. Si el tiempo insiste, yo también. Soplo deseos, respiro extravagancia. 🎩✨🎂<br>
-                El secreto del anti-aging es la actitud (y un bigote perfecto). 🕯️💎🧔🏻‍♂️<br>
-            </p>
-            <p class="text_hashtag_cards">
-                #Eterno29 #BaronMode #BirthdayRoyalty #BaronForever29 #FelizNoCumpleaños #GlamDeCumple
-            </p>
-        </article>
+                    <p class="parrafo_baron" id="los_mas_likeados">
+                        Estos no son simplemente los más “likeados”... son los elegidos del Barón.
+                    </p>
+                </div>
 
-        <article class="cards_corte_container" id="card_dark">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Dark.png" alt="Baron vestido total black" />
-            <p class="text_cards" id="text_cards_corte">
-                🖤 Hoy el Barón se viste de negro. Exilio desde el guardarropas.<br>
-                He desterrado a mi mayordomo por organizar mis boas de plumas por orden alfabético en vez de emocional.
-                ¿Luto? No!!! Alta costura melancólica.<br>
-                Porque el estilo no se negocia, aunque el mayordomo sí. 🍷🎩
+                <!-- Tarjetas -->
+                <div class="div_cards_corte">
+                    <!-- Tarjeta Baronesa -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron madre.png" alt="Barón con su madre">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                Aquí, al ladito de la reina de la elegancia: mi madre, la inigualable Baronesa Begoña
+                                Von
+                                Fluffington 👑💅✨. Porque lo que se hereda no se compra… y en esta familia, el estilo
+                                viene
+                                de fábrica 🔥💖.
+                            </p>
+                            <p class="text_cards">
+                                ¡Aprendan mortales!… Si el glamour fuera contagioso, ustedes ya estarían vacunados!!
+                                😎🎩.
+                            </p>
+                            <p class="text_cards">
+                                ¡Pero tranquilos, que aquí sobra para todos! 😉✨
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #LegadoFluffington #GlamourNivelBarón #BaronVonFluffington #EstiloDeCasta
+                                #PorqueLoQueSeHeredaNoSeCompra
+                            </p>
+                        </div>
+                    </article>
 
-            </p>
-            <p class="text_hashtag_cards">
-                #BarónEnNegro #EleganciaHerida #DramaAristocrático #AltaCosturaMelancólica #DarkGlamour #ModoBarón
-                #LookConHistoria #NadiePidióPeroTodosAdmiraron
-            </p>
-        </article>
+                    <!-- Tarjeta Dormitorio -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Dormitorio.jpeg"
+                            alt="Barón por ir a dormir">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                Aquí está el Barón Von Fluffington III listo para soñar (con diamantes, ¡obviamente!)
+                                💖✨.
+                                ¿Quién dijo que la hora de dormir no puede ser una pasarela? 😴 ¡Miren este conjunto
+                                de seda rosa con plumas y pantuflas de criatura mí.
+                            </p>
+                            <p class="text_cards">
+                                En este paraíso de terciopelo, donde las luces de neón bailan y el arte psicodélico
+                                cobra
+                                vida, incluso la leche de luna con lavanda sabe a glamour. 🌙🍸
+                            </p>
+                            <p class="text_cards">
+                                ¡Atrévanse a soñar en grande, mis cielos! 💖✨
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BaronDreams #PijamaDeLujo #SueñosExtravagantes #DormitorioDeFantasía #TerciopeloYPlumas
+                                #BuenasNochesBrillantes #GlamourNocturno #InfluencerDeOtroMundo #EstiloOnírico
+                            </p>
+                        </div>
+                    </article>
 
-        <article class="cards_corte_container" id="card_disco">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Disco.png" alt="Baron bailando disco" />
-            <p class="text_cards" id="text_cards_corte">
-                ✨ ¡Atención plebe! El Barón ha tomado la pista. Con cada paso, una revolución. Con cada giro, una
-                lección de funk aristocrático. 💃👑 <br>
-                🔥 Lentejuelas activadas. 🕺 Cadera en modo diplomático.<br>
-                🎶 El beat... noble y sabrosón.<br>
-            </p>
-            <p class="text_hashtag_cards">
-                #DiscoFluff #BarónEnLaPista #RealezaQueBaila #StudioFluff #NocheDeLentejuelas #ElRitmoEsReal
-                #FilosofíaFluffingtoniana 💃🤴💎🎵
+                    <!-- Tarjeta Desfile -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Barón desfilando 3.jpeg"
+                            alt="Barón desfilando">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                💃✨ Pasarela activada. Ego elevado. Estilo: intocable. El Barón Von Fluffington III no
+                                camina… desfila. Cada paso es un manifiesto, cada mirada, una orden real. 👑
+                            </p>
+                            <p class="text_cards">
+                                🎩 Hoy no se viste para impresionar… Se viste porque el mundo lo merece. 🌍💜
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BarónEnLaPasarela #FluffingtonStyle #RealezaFashion #CaminataReal #DramaYEncanto
+                                #PasarelaDelPoder #FilosofíaFluffingtoniana #ModaConActitud 👠🕶️🚶‍♂️🌟
+                            </p>
+                        </div>
+                    </article>
 
-            </p>
-        </article>
+                    <!-- Tarjeta Pilates -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Pilates.jpeg"
+                            alt="Barón haciendo pilates">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                Flexibilidad aristocrática, mi ciela: si el pilates no te eleva el core y el espíritu,
+                                no es
+                                pilates, es siesta. 🕶️💎🧘‍♂️ Neutral spine, hombros relajados, mirada al horizonte… y
+                                destellos en cada respiración. 💫🧘‍♂️🎩
+                            </p>
+                            <p class="text_cards">
+                                Pilates, pero aristocrático. Si tiemblan las piernas, es porque están aplaudiendo.
+                                🕶️🧵🧘‍♂️
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BaronVonFluffington #PilatesDeLujo #CoreConClase #GlamFitness #ExtravaganciaFuncional
+                                #BaronMode #PilatesAddict #EleganciaEnMovimiento #FuerzaSutil
+                            </p>
+                        </div>
+                    </article>
 
-        <article class="cards_corte_container" id="card_padel">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Padel.png" alt="Baron jugando padel" />
-            <p class="text_cards" id="text_cards_corte">
-                En la pista no juego pádel: doy cátedra de estilo 🎩📚<br>
-                Mi bandeja cae como el terciopelo y mi saque firma autógrafos. 🧤✨
-                Si el globo sube, sube también el glamour. 🌕⬆️💎<br>
-                Punto, set y brillitos. ✅✨
-            </p>
-            <p class="text_hashtag_cards">
-                #BaronVonFluffington #Padel #VoleaReal #BandejaDeLujo #DriveConClase #GlamSports #EstiloEnLaCancha
-                #ExtravaganciaFuncional #TerciopeloYAcero #SiempreFluffington 👑🎾🔥
-            </p>
-        </article>
+                    <!-- Tarjeta Cumpleaños -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Cumpleaños.png"
+                            alt="Barón festejando su cumpleaños">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                29 otra vez. Si el tiempo insiste, yo también. Soplo deseos, respiro extravagancia.
+                                🎩✨🎂
+                            </p>
+                            <p class="text_cards">
+                                El secreto del anti-aging es la actitud (y un bigote perfecto). 🕯️💎🧔🏻‍♂️
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #Eterno29 #BaronMode #BirthdayRoyalty #BaronForever29 #FelizNoCumpleaños #GlamDeCumple
+                            </p>
+                        </div>
+                    </article>
 
-        <article class="cards_corte_container" id="card_eleonora">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Eleonora 2.png"
-                alt="Baron con Eleonora su caniche" />
-            <p class="text_cards" id="text_cards_corte">
-                Directamente desde los salones más opulentos, les presento a la personificación del chic aristocrático:
-                ¡El Barón, acompañado de la sublime Eleonora! 💎🐩✨<br>
-                Cuando el glamour corre por las venas y los diamantes son el pan de cada día. Que ladren los
-                detractores, nosotros desfilamos con la elegancia que nos caracteriza. ¡Porque la sofisticación nunca
-                pasa de moda!<br>
-            </p>
-            <p class="text_hashtag_cards">
-                #HatersAndDiamonds #GlamourAristocrático #BarónYEleonora #LujoDesmedido #EleganciaCanina
-                #JoyasDeAltoNivel #ExquisitezTotal #VidaDeFantasía #ÍconosDeEstilo #BrillandoSiempre 💖🎩🎀
-            </p>
-        </article>
+                    <!-- Tarjeta Total Black -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Dark.png"
+                            alt="Barón vestido total black">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                🖤 Hoy el Barón se viste de negro. Exilio desde el guardarropas.
+                            </p>
+                            <p class="text_cards">
+                                He desterrado a mi mayordomo por organizar mis boas de plumas por orden alfabético en
+                                vez de
+                                emocional. ¿Luto? ¡No! Alta costura melancólica.
+                            </p>
+                            <p class="text_cards">
+                                Porque el estilo no se negocia, aunque el mayordomo sí. 🍷🎩
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BarónEnNegro #EleganciaHerida #DramaAristocrático #AltaCosturaMelancólica #DarkGlamour
+                                #ModoBarón #LookConHistoria #NadiePidióPeroTodosAdmiraron
+                            </p>
+                        </div>
+                    </article>
 
-        <article class="cards_corte_container" id="card_sidecar">
-            <img class="cards_media_img" src="../assets/img/corte/Baron Moto Sidecar.png"
-                alt="Baron con Eleonora en moto" />
-            <p class="text_cards" id="text_cards_corte">
-                ¡Atención, faranduleros y amantes de la velocidad! 💅🐩
-                El Barón y la fabulosa Eleonora llegaron para demostrar que el glamour no tiene límites... ¡ni siquiera
-                de velocidad! 🏍️💨<br>
-                Con mi copiloto perruna, conquistamos la ciudad con estilo, risas y mucho, mucho brillo. ¡Que tiemblen
-                los paparazzi! 🏍️ 🐩 📸
-            </p>
-            <p class="text_hashtag_cards">
-                #BarónEnDosRuedas #EleonoraAlVolante #GlamourSobreRuedas #DiversiónConEstilo #AventuraConBrillo
-                #ExcentricidadYVelocidad #PerritoPiloto #RisasYDiamantes #LaVidaEsUnaFiestaEnMoto #HatersGonnaHate 💖👑✨
-            </p>
-        </article>
+                    <!-- Tarjeta Baile Disco -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Disco.png"
+                            alt="Barón bailando música disco">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                ✨ ¡Atención plebe! El Barón ha tomado la pista. Con cada paso, una revolución. Con cada
+                                giro, una lección de funk aristocrático. 💃👑
+                            </p>
+                            <p class="text_cards">
+                                🔥 Lentejuelas activadas. 🕺 Cadera en modo diplomático.
+                            </p>
+                            <p class="text_cards">
+                                🎶 El beat... noble y sabrosón.
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #DiscoFluff #BarónEnLaPista #RealezaQueBaila #StudioFluff #NocheDeLentejuelas
+                                #ElRitmoEsReal #FilosofíaFluffingtoniana 💃🤴💎🎵
+                            </p>
+                        </div>
+                    </article>
 
+                    <!-- Tarjeta Padel -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Padel.png"
+                            alt="Barón jugando pádel">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                En la pista no juego pádel: doy cátedra de estilo 🎩📚
+                            </p>
+                            <p class="text_cards">
+                                Mi bandeja cae como el terciopelo y mi saque firma autógrafos. 🧤✨
+                                Si el globo sube, sube también el glamour. 🌕⬆️💎
+                            </p>
+                            <p class="text_cards">
+                                Punto, set y brillitos. ✅✨
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BaronVonFluffington #Padel #VoleaReal #BandejaDeLujo #DriveConClase #GlamSports
+                                #EstiloEnLaCancha #ExtravaganciaFuncional #TerciopeloYAcero #SiempreFluffington 👑🎾🔥
+                            </p>
+                        </div>
+                    </article>
 
-    </main>
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <p class=" text_footer">Barón Von Fluffington III</p>
-        <p class="text_footer">Proyecto artístico y digital creado por Lucas Centurión · Contacto: <a
-                class="link_footer" href="mailto:">lucascent@gmail.com</a> </p>
-        <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
-    </footer>
+                    <!-- Tarjeta Eleonora -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Eleonora 2.png"
+                            alt="Barón con Eleonora, su caniche">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                Directamente desde los salones más opulentos, les presento a la personificación del chic
+                                aristocrático: ¡El Barón, acompañado de la sublime Eleonora! 💎🐩✨
+                            </p>
+                            <p class="text_cards">
+                                Cuando el glamour corre por las venas y los diamantes son el pan de cada día. Que ladren
+                                los
+                                detractores, nosotros desfilamos con la elegancia que nos caracteriza. ¡Porque la
+                                sofisticación nunca pasa de moda!
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #HatersAndDiamonds #GlamourAristocrático #BarónYEleonora #LujoDesmedido #EleganciaCanina
+                                #JoyasDeAltoNivel #ExquisitezTotal #VidaDeFantasía #ÍconosDeEstilo #BrillandoSiempre
+                                💖🎩🎀
+                            </p>
+                        </div>
+                    </article>
 
+                    <!-- Tarjeta Sidercar -->
+                    <article class="cards_corte_container">
+                        <img class="cards_media_img" src="../assets/img/corte/Baron Moto Sidecar.png"
+                            alt="Barón y Eleonora en moto">
+                        <div class="card_body">
+                            <p class="text_cards">
+                                ¡Atención, faranduleros y amantes de la velocidad! 💅🐩 El Barón y la fabulosa Eleonora
+                                llegaron para demostrar que el glamour no tiene límites... ¡ni siquiera de velocidad!
+                                🏍️💨
+                            </p>
+                            <p class="text_cards">
+                                Con mi copiloto perruna, conquistamos la ciudad con estilo, risas y mucho, mucho brillo.
+                                ¡Que tiemblen los paparazzi! 🏍️ 🐩 📸
+                            </p>
+                            <p class="text_hashtag_cards">
+                                #BarónEnDosRuedas #EleonoraAlVolante #GlamourSobreRuedas #DiversiónConEstilo
+                                #AventuraConBrillo #ExcentricidadYVelocidad #PerritoPiloto #RisasYDiamantes
+                                #LaVidaEsUnaFiestaEnMoto #HatersGonnaHate 💖👑✨
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
 
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
+                    Centurión</strong> ·
+                Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
+            <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </div>
+    </div>
 </body>
 
 </html>
