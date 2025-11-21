@@ -8,11 +8,7 @@
         content="Crónicas del Fluff · Aventuras, estilo y filosofía del inigualable Barón Von Fluffington III.">
     <meta name="author" content="Lucas Centurión">
 
-    <!-- Title -->
     <title>Crónicas del Fluff</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
@@ -25,8 +21,7 @@
         rel="stylesheet">
 
     <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- CSS -->
@@ -35,66 +30,79 @@
 
 <body>
 
-    <header class="header">
 
-        <!-- NAVBAR BOOTSTRAP -->
+    <!-- HEADER / NAVBAR  -->
+    <header class="header">
         <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
-                        alt="Logo del Barón"></a>
-                <!-- Menu Hamburguesa -->
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
+                </a>
+
+                <!-- Menú Hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-
-                    <!-- NAVBAR LINKS -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./cronicas.html">Crónicas del
-                                Fluff</a>
+                            <a class="nav-link active" aria-current="page" href="./cronicas.html">
+                                Crónicas del Fluff
+                            </a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Pelusoteca
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_babys.html">
+                                        Pelusoteca Baby's
+                                    </a>
                                 </li>
-                                <li><a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
-                                        Notables</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_notables.html">
+                                        Pelusoteca Notables
+                                    </a>
                                 </li>
                             </ul>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./haters_diamonds.html">Haters &
-                                Diamonds</a>
+                            <a class="nav-link" href="./haters_diamonds.html">Haters & Diamonds</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./creditos.html">Créditos</a>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
 
-    <main class="main_cronicas">
+
+    <!-- MAIN -->
+    <main>
 
         <!-- H1 oculto para SEO -->
         <h1 class="h1-hidden">Crónicas del Fluff</h1>
@@ -104,101 +112,133 @@
             <img class="img_portada" src="../assets/img/cronicas/cronicas_img.png" alt="Crónicas del Fluff">
         </section>
 
-        <!-- Parrafo Introduccion -->
-        <div class="container">
-            <div class="reading-wrapper">
-                <section class="contenido-cronicas">
-                    <section class="intro mt-2">
-                        <p class="parrafo_baron">¡Ah, bienvenue, criaturas del mundo mortal y aburridamente
-                            monocromático!</p>
-                        <p class="parrafo_baron">Soy yo, el inigualable, el ineludible, el inenarrablemente lanudo…
-                            Barón Von Fluffington III, hijo de la ilustre Baronesa Begoña Von Fluffington (cuyas
-                            fiestas de té eran tan legendarias que una vez hicieron levitar a tres embajadores y un
-                            ornitorrinco).</p>
-                        <p class="parrafo_baron">Aunque mi edad física permanece anclada en los eternos y fabulosos
-                            29 —como los buenos vinos, pero con más plumas y menos barrica—, debo confesar que mi
-                            alma lleva siglos deslizándose por los rincones más excéntricos del planeta.</p>
-                        <p class="parrafo_baron">Sí, siglos. De sabiduría. Lanuda.</p>
-                    </section>
+        <div class="container_cards">
 
-                    <!-- Parrafo Estilo -->
-                    <h2 class="subtitulo_baron">
-                        🎩 Mi estilo: una sinfonía textil sin moderación.
-                    </h2>
-                    <p class="parrafo_baron">Vestirme no es una acción. Es un ritual sagrado. Jamás salgo a la calle
-                        con menos de siete capas de terciopelo en tonos que aún no han sido bautizados por la
-                        ciencia. </p>
-                    <p class="parrafo_baron">Plumas de faisán arcoíris adornan mis sombreros como si fueran
-                        estandartes de mi gloriosa dinastía. ¿Gafas de sol? Obviamente enjoyadas. Incluso bajo
-                        techo. Incluso en la ducha. El sol interior también merece respeto.</p>
-                    <p class="parrafo_baron"> Mi bigote, rizado con precisión barroca y mantenido con ungüentos
-                        secretos (y un poco de mermelada de grosella), es un símbolo de mi linaje, rivalizando
-                        únicamente con mis broches de escarabajos parlantes. Sí, parlantes. Basilio, uno de los más
-                        antiguos, suele susurrarme consejos de moda cada vez que dudo entre dos tonos de rosa
-                        incandescente. </p>
+            <!-- Contenido Crónicas -->
+            <section class="contenido_cronicas">
 
-                    <!-- Parrafo Vocacion -->
-                    <h2 class="subtitulo_baron">
-                        🍵 Mi vocación: Coleccionista de Pelusas Nobles y Notables.
-                    </h2>
-
-                    <p class="parrafo_baron"> Ah, mi verdadera pasión… no son los diamantes ni las fortunas
-                        heredadas, sino algo infinitamente más raro: las pelusas de ombligo de la nobleza y de las
-                        personalidades más ilustres del planeta.</p>
-                    <p class="parrafo_baron">Cada una es un testimonio discreto de linajes antiguos, bailes de gala
-                        y trajes de terciopelo que rozaron la historia.</p>
-                    <p class="parrafo_baron">Mi colección, cuidadosamente clasificada y preservada en urnas de
-                        cristal, abarca desde la Pelusa Real de Windsor, recogida tras un banquete con protocolo de
-                        cinco copas, hasta la enigmática Pelusa del Duca di Milano, rescatada de un frac que jamás
-                        volvió a ser usado.</p>
-                    <p class="parrafo_baron">No busco cantidad, sino linaje: cada muestra debe tener un pasado
-                        digno, un nombre con historia, una fibra que haya rozado la inmortalidad del poder o el
-                        genio.</p>
-                    <p class="parrafo_baron">Porque mientras el vulgo colecciona estampillas, yo atesoro rastros de
-                        grandeza.
-                        El glamour, después de todo, también deja huella… incluso en los lugares más insospechados.
+                <!-- Párrafo Introducción -->
+                <section class="intro mt-2">
+                    <p class="parrafo_baron">
+                        ¡Ah, bienvenue, criaturas del mundo mortal y aburridamente monocromático!
                     </p>
-
-
-                    <!-- Parrafo Vida Social -->
-                    <h2 class="subtitulo_baron">
-                        💃 Polifacético, por supuesto.
-                    </h2>
-
-                    <p class="parrafo_baron">Además de mi colección de pelusas, mis redes sociales son un escaparate
-                        de mi vida fabulosa: desde mis desayunos con champán y caviar (sí, incluso los lunes) hasta
-                        mis clases de pilates o partidos de padel. </p>
-                    <p class="parrafo_baron">Cada publicación es una obra de arte, cuidadosamente curada para
-                        inspirar a mis seguidores a vivir con más color, más brillo y, por supuesto, más plumas.</p>
-                    <p class="parrafo_baron">Además como embajador plenipotenciario del glamour, soy un torbellino
-                        artístico en constante rotación.</p>
-                    <p class="parrafo_baron">He sido DJ en fiestas tan exclusivas que ni los invitados sabían que
-                        estaban invitados.</p>
-                    <p class="parrafo_baron">Bailo música disco en patines de oro por pistas iluminadas que levitan
-                        al ritmo del funk cósmico. Mi falsete ha hecho llorar a lámparas de araña venecianas y mi
-                        pasarela más icónica fue sobre una piscina llena de gelatina con estampado leopardo.</p>
-                    <p class="parrafo_baron">¿Aburrirme? Solo lo hago en eventos donde no me dejan usar humo,
-                        confeti y un jaguar holográfico.</p>
-                    <p class="parrafo_baron">Lo que para otros es "extravagante", para mí es simplemente… martes.
+                    <p class="parrafo_baron">
+                        Soy yo, el inigualable, el ineludible, el inenarrablemente lanudo…
+                        <strong>Barón Von Fluffington III</strong>, hijo de la ilustre Baronesa Begoña Von Fluffington
+                        (cuyas fiestas de té eran tan legendarias que una vez hicieron levitar a tres embajadores y un
+                        ornitorrinco).
                     </p>
-
-                    <!-- Lema -->
-                    <h2 class="lema_cronicas">
-                        ✨ Mi lema: "Si no brillas, ¿para qué existes?"
-                    </h2>
+                    <p class="parrafo_baron">
+                        Aunque mi edad física permanece anclada en los eternos y fabulosos 29, como los buenos vinos,
+                        pero con más plumas y menos barrica, debo confesar que mi alma lleva siglos deslizándose por los
+                        rincones más excéntricos del planeta.
+                    </p>
+                    <p class="parrafo_baron">
+                        Sí, siglos. De sabiduría. Lanuda.
+                    </p>
                 </section>
-            </div>
+
+                <!-- Estilo -->
+                <h2 class="subtitulo_baron">
+                    🎩 Mi estilo: una sinfonía textil sin moderación.
+                </h2>
+                <p class="parrafo_baron">
+                    Vestirme no es una acción. Es un ritual sagrado. Jamás salgo a la calle con menos de siete capas de
+                    terciopelo en tonos que aún no han sido bautizados por la ciencia.
+                </p>
+                <p class="parrafo_baron">
+                    Plumas de faisán arcoíris adornan mis sombreros como si fueran estandartes de mi gloriosa dinastía.
+                    ¿Gafas de sol? Obviamente enjoyadas. Incluso bajo techo. Incluso en la ducha. El sol interior
+                    también merece respeto.
+                </p>
+                <p class="parrafo_baron">
+                    Mi bigote, rizado con precisión barroca y mantenido con ungüentos secretos (y un poco de mermelada
+                    de grosella), es un símbolo de mi linaje, rivalizando únicamente con mis broches de escarabajos
+                    parlantes. Sí, parlantes. Basilio, uno de los más antiguos, suele susurrarme consejos de moda cada
+                    vez que dudo entre dos tonos de rosa incandescente.
+                </p>
+
+                <!-- Vocación -->
+                <h2 class="subtitulo_baron">
+                    🍵 Mi vocación: Coleccionista de Pelusas Nobles y Notables.
+                </h2>
+                <p class="parrafo_baron">
+                    Ah, mi verdadera pasión… no son los diamantes ni las fortunas heredadas, sino algo infinitamente
+                    más raro: las pelusas de ombligo de la nobleza y de las personalidades más ilustres del planeta.
+                </p>
+                <p class="parrafo_baron">
+                    Cada una es un testimonio discreto de linajes antiguos, bailes de gala y trajes de terciopelo que
+                    rozaron la historia.
+                </p>
+                <p class="parrafo_baron">
+                    Mi colección, cuidadosamente clasificada y preservada en urnas de cristal, abarca desde la Pelusa
+                    Real de Windsor, recogida tras un banquete con protocolo de cinco copas, hasta la enigmática Pelusa
+                    del Duca di Milano, rescatada de un frac que jamás volvió a ser usado.
+                </p>
+                <p class="parrafo_baron">
+                    No busco cantidad, sino linaje: cada muestra debe tener un pasado digno, un nombre con historia,
+                    una fibra que haya rozado la inmortalidad del poder o el genio.
+                </p>
+                <p class="parrafo_baron">
+                    Porque mientras el vulgo colecciona estampillas, yo atesoro rastros de grandeza. El glamour, después
+                    de todo, también deja huella… incluso en los lugares más insospechados.
+                </p>
+
+                <!-- Vida social -->
+                <h2 class="subtitulo_baron">
+                    💃 Polifacético, por supuesto.
+                </h2>
+                <p class="parrafo_baron">
+                    Además de mi colección de pelusas, mis redes sociales son un escaparate de mi vida fabulosa: desde
+                    mis desayunos con champán y caviar (sí, incluso los lunes) hasta mis clases de pilates o partidos de
+                    padel.
+                </p>
+                <p class="parrafo_baron">
+                    Cada publicación es una obra de arte, cuidadosamente curada para inspirar a mis seguidores a vivir
+                    con más color, más brillo y, por supuesto, más plumas.
+                </p>
+                <p class="parrafo_baron">
+                    Además como embajador plenipotenciario del glamour, soy un torbellino artístico en constante
+                    rotación.
+                </p>
+                <p class="parrafo_baron">
+                    He sido DJ en fiestas tan exclusivas que ni los invitados sabían que estaban invitados.
+                </p>
+                <p class="parrafo_baron">
+                    Bailo música disco en patines de oro por pistas iluminadas que levitan al ritmo del funk cósmico.
+                    Mi falsete ha hecho llorar a lámparas de araña venecianas y mi pasarela más icónica fue sobre una
+                    piscina llena de gelatina con estampado leopardo.
+                </p>
+                <p class="parrafo_baron">
+                    ¿Aburrirme? Solo lo hago en eventos donde no me dejan usar humo, confeti y un jaguar holográfico.
+                </p>
+                <p class="parrafo_baron">
+                    Lo que para otros es "extravagante", para mí es simplemente… martes.
+                </p>
+
+                <!-- Lema -->
+                <h2 class="lema_cronicas">
+                    ✨ Mi lema: "Si no brillas, ¿para qué existes?"
+                </h2>
+
+            </section>
         </div>
+
     </main>
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- FOOTER -->
     <footer>
-        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
-                Centurión</strong> ·
-            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a> </p>
+        <p class="text_footer">
+            Barón Von Fluffington III · Proyecto artístico y digital creado por
+            <strong>Lucas Centurión</strong> ·
+            Contacto:
+            <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a>
+        </p>
         <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

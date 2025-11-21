@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Meta -->
+    <meta name="description"
+        content="Playlist Imperial · El salón sonoro del Barón Von Fluffington III: himno oficial y otros hits para brillar sin permiso.">
+    <meta name="author" content="Lucas Centurión">
+
     <!-- Title -->
     <title>Playlist Imperial</title>
 
@@ -19,8 +24,7 @@
         rel="stylesheet">
 
     <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- CSS -->
@@ -28,119 +32,157 @@
 </head>
 
 <body>
-    <!-- NAVBAR  -->
+
+
+    <!-- HEADER / NAVBAR -->
+
     <header class="header">
 
-        <!-- NAVBAR BOOTSTRAP -->
         <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
-                        alt="Logo del Barón"></a>
-                <!-- Menu Hamburguesa -->
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
+                </a>
+
+                <!-- Menú hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
-                    <!-- NAVBAR LINKS -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./cronicas.html">Crónicas del
-                                Fluff</a>
+                            <a class="nav-link" href="./cronicas.html">
+                                Crónicas del Fluff
+                            </a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
+                            <a class="nav-link" href="./la_corte.html">
+                                La Corte de los Corazones
+                            </a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Pelusoteca
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_babys.html">
+                                        Pelusoteca Baby's
+                                    </a>
                                 </li>
-                                <li><a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
-                                        Notables</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_notables.html">
+                                        Pelusoteca Notables
+                                    </a>
                                 </li>
                             </ul>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./haters_diamonds.html">Haters &
-                                Diamonds</a>
+                            <a class="nav-link" href="./haters_diamonds.html">
+                                Haters & Diamonds
+                            </a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./playlist.html">Playlist Imperial</a>
+                            <a class="nav-link active" aria-current="page" href="./playlist.html">
+                                Playlist Imperial
+                            </a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./creditos.html">Créditos</a>
+                            <a class="nav-link" href="./creditos.html">
+                                Créditos
+                            </a>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+    <!-- MAIN -->
 
-    <main class="main_playlist">
+    <main>
+
+        <!-- H1 oculto para SEO -->
         <h1 class="h1-hidden" id="h1-playlist">Playlist Imperial</h1>
 
+        <!-- Imagen de portada -->
         <section class="img_playlist">
-            <img class="img_portada" src="../assets/img/playlist/Playlist Imperial 4.png" alt="Playlist Imperial" />
+            <img class="img_portada" src="../assets/img/playlist/Playlist Imperial 4.png" alt="Playlist Imperial">
         </section>
 
-        <div class="container-cards">
+        <div class="container_cards">
 
+            <!-- Intro: video + texto -->
             <section class="intro_playlist">
-                <!-- VIDEO -->
-                    <div class="div_dj_vid">
-                        <video class="dj_vid" src="../assets/vids/baron_dj.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    
+
+                <!-- Video DJ -->
+                <div class="div_dj_vid">
+                    <video class="dj_vid" src="../assets/vids/baron_dj.mp4" autoplay muted loop playsinline></video>
+                </div>
+
+                <!-- Texto intro -->
                 <div class="div_text_playlist">
-                    <p class="subtitle_playlist">Bienvenid@s al Salón Sonoro del Barón Von Fluffington III. ✨,</p>
-                    <p class="text_playlist"> Aquí se mezclan plumas, lentejuelas y beats de alta costura para caminar
-                        como
-                        si
-                        la alfombra roja fuese tuya. Son temas para brillar sin permiso, contestar con glamour y mover
-                        la
-                        copa
-                        sin derramar una gota.</p>
-                    <p class="text_playlist"> Si aparece el hate, subí el volumen y dejá que el bajo haga la diplomacia.
+                    <p class="subtitulo_baron">
+                        Bienvenid@s al Salón Sonoro del Barón Von Fluffington III. ✨
                     </p>
-                    <p class="text_playlist">Del lounge elegante al dancefloor descarado: cada track es una entrada
+                    <p class="parrafo_baron">
+                        Aquí se mezclan plumas, lentejuelas y beats de alta costura para caminar
+                        como si la alfombra roja fuese tuya. Son temas para brillar sin permiso, contestar con glamour
+                        y mover la copa sin derramar una gota.
+                    </p>
+                    <p class="parrafo_baron">
+                        Si aparece el hate, subí el volumen y dejá que el bajo haga la diplomacia.
+                    </p>
+                    <p class="parrafo_baron">
+                        Del lounge elegante al dancefloor descarado: cada track es una entrada
                         triunfal.
                     </p>
-                    <p class="text_playlist">Presioná play y entoná el “STELLAR” el Himno de Barón como si los haters
-                        pagaran
-                        entrada.</p>
-                    <p class="text_playlist">Regla única: bailar como si te debieran aplausos. 💅🎶</p>
+                    <p class="parrafo_baron">
+                        Presioná play y entoná “STELLAR”, el Himno del Barón, como si los haters
+                        pagaran entrada.
+                    </p>
+                    <p class="subtitulo_baron">
+                        Regla única: bailar como si te debieran aplausos. 💅🎶
+                    </p>
                 </div>
 
             </section>
 
+            <!-- Grilla Himno + Other Hits -->
             <div class="grilla_playlist">
 
-                <!-- IMAGEN HIMNO DEL BARON -->
+                <!-- Sección: Himno del Barón -->
                 <section class="section_hymn">
+
+                    <!-- Imagen Himno -->
                     <div class="div_hymn_img">
                         <img class="hymn_img" src="../assets/img/playlist/El Himno del Baron.png"
-                            alt="Himno del Barón Von Fluffington III" />
+                            alt="Himno del Barón Von Fluffington III">
                     </div>
 
-                    <!-- STELLAR (HIMNO DEL BARON) -->
+                    <!-- Audio Himno -->
                     <div class="card bg-dark text-white mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Stellar (Himno del Barón)</h5>
-                            <p class="card-text">Himno oficial para caminar como si te debieran aplausos.</p>
+                            <p class="card-text">
+                                Himno oficial para caminar como si te debieran aplausos.
+                            </p>
                             <audio class="w-100" controls preload="none">
                                 <source src="../assets/mp3/Stellar (Himno).mp3" type="audio/mpeg">
                                 Tu navegador no soporta el elemento <code>audio</code>.
@@ -149,117 +191,147 @@
                     </div>
 
                     <h3 class="song_name">Sing it, Darling!</h3>
-                    <!-- LETRA HIMNO DEL BARON -->
+
+                    <!-- Letra Himno -->
                     <p class="hymn_lyrics">
                         En mi camino brillo más y más<br>
                         No puedo parar, no puedo parar<br>
                         Las joyas brillan cuando entro yo<br>
-                        La fiesta empieza con mi voz</p>
+                        La fiesta empieza con mi voz
+                    </p>
+
                     <p class="hymn_lyrics">
                         Mi estela real (mi estela real)<br>
                         Te hace bailar (te hace bailar)<br>
                         Mi estela real (mi estela real)<br>
-                        No hay nadie más (no hay nadie más)</p>
-                    <p class="hymn_lyrics">Cada movimiento causa sensación<br>
+                        No hay nadie más (no hay nadie más)
+                    </p>
+
+                    <p class="hymn_lyrics">
+                        Cada movimiento causa sensación<br>
                         Mi poder crece con tu admiración<br>
                         Los diamantes bailan a mi alrededor<br>
-                        Cuando me muevo soy puro esplendor</p>
-                    <p class="hymn_lyrics"> Sha-la-la-li, sha-la-la-la<br>
+                        Cuando me muevo soy puro esplendor
+                    </p>
+
+                    <p class="hymn_lyrics">
+                        Sha-la-la-li, sha-la-la-la<br>
                         Bri-lli-lli-lli, ba-ba-ba-ba<br>
                         (¡Soy el Barón!)<br>
                         Sha-la-la-li, sha-la-la-la<br>
-                        (¡Von Fluffington!)<br> Mi estela real (mi estela real)</p>
-                    <p class="hymn_lyrics">Te hace bailar (te hace bailar)<br>
+                        (¡Von Fluffington!)<br>
+                        Mi estela real (mi estela real)
+                    </p>
+
+                    <p class="hymn_lyrics">
+                        Te hace bailar (te hace bailar)<br>
                         Mi estela real (mi estela real)<br>
-                        No hay nadie más (no hay nadie más)</p>
+                        No hay nadie más (no hay nadie más)
+                    </p>
+
                     <p class="hymn_lyrics">
                         La pista es mía, todo es para mí<br>
                         Siento el ritmo dentro de mí<br>
                         Mi corona brilla con intensidad<br>
-                        Nadie puede mi luz igualar.</p>
+                        Nadie puede mi luz igualar.
+                    </p>
+
                     <p class="hymn_lyrics">
                         Mi estela real (sha-la-la-li)<br>
                         Mi estela real (bri-lli-lli-lli)<br>
                         Mi estela real (¡Soy el Barón!)<br>
                         Mi estela real (¡Von Fluffington!)<br>
-                        (¡Síganme!)</p>
+                        (¡Síganme!)
+                    </p>
 
                 </section>
 
-                <!-- SECCION OTHERS HITS -->
+                <!-- Sección: Other Hits -->
                 <section class="section_other_hits">
 
-                    <!-- IMAGEN OTHER HITS -->
+                    <!-- Imagen Other Hits -->
                     <div class="div_img_other">
                         <img class="img_other" src="../assets/img/playlist/other-hits-2.png" alt="Other Hits">
                     </div>
 
-                    <!-- AUDIOS -->
+                    <!-- Audios -->
                     <section class="audios_playlist">
 
                         <!-- GLAMORICK -->
                         <div class="card bg-dark text-white mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Glamorick</h5>
-                            <p class="card-text">«Cuando el exceso se vuelve arte y la elegancia, una religión.»</p>
-                            <audio class="w-100" controls preload="none">
-                                <source src="../assets/mp3/Glamorick.mp3" type="audio/mpeg">
-                                Tu navegador no soporta el elemento <code>audio</code>.
-                            </audio>
+                            <div class="card-body">
+                                <h5 class="card-title">Glamorick</h5>
+                                <p class="card-text">
+                                    «Cuando el exceso se vuelve arte y la elegancia, una religión.»
+                                </p>
+                                <audio class="w-100" controls preload="none">
+                                    <source src="../assets/mp3/Glamorick.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento <code>audio</code>.
+                                </audio>
+                            </div>
                         </div>
-                    </div>
 
                         <!-- MAJESTIC -->
                         <div class="card bg-dark text-white mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Majestic</h5>
-                            <p class="card-text">«El universo se rinde al paso del Barón: donde hay brillo, hay poder.»</p>
-                            <audio class="w-100" controls preload="none">
-                                <source src="../assets/mp3/Majestic.mp3" type="audio/mpeg">
-                                Tu navegador no soporta el elemento <code>audio</code>.
-                            </audio>
+                            <div class="card-body">
+                                <h5 class="card-title">Majestic</h5>
+                                <p class="card-text">
+                                    «El universo se rinde al paso del Barón: donde hay brillo, hay poder.»
+                                </p>
+                                <audio class="w-100" controls preload="none">
+                                    <source src="../assets/mp3/Majestic.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento <code>audio</code>.
+                                </audio>
+                            </div>
                         </div>
-                    </div>
 
                         <!-- OOPS -->
                         <div class="card bg-dark text-white mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">OOPS</h5>
-                            <p class="card-text">«Un himno al arte de coleccionar lo invisible: donde cada pelusa es un tesoro divino.»</p>
-                            <audio class="w-100" controls preload="none">
-                                <source src="../assets/mp3/Ops.mp3" type="audio/mpeg">
-                                Tu navegador no soporta el elemento <code>audio</code>.
-                            </audio>
+                            <div class="card-body">
+                                <h5 class="card-title">OOPS</h5>
+                                <p class="card-text">
+                                    «Un himno al arte de coleccionar lo invisible: donde cada pelusa es
+                                    un tesoro divino.»
+                                </p>
+                                <audio class="w-100" controls preload="none">
+                                    <source src="../assets/mp3/Ops.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento <code>audio</code>.
+                                </audio>
+                            </div>
                         </div>
-                    </div>
 
                         <!-- THE MAGIQUE -->
                         <div class="card bg-dark text-white mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">The Magique</h5>
-                            <p class="card-text">«Un banquete para los sentidos donde el lujo se sirve con pelusas y filosofía.»</p>
-                            <audio class="w-100" controls preload="none">
-                                <source src="../assets/mp3/The Magique.mp3" type="audio/mpeg">
-                                Tu navegador no soporta el elemento <code>audio</code>.
-                            </audio>
+                            <div class="card-body">
+                                <h5 class="card-title">The Magique</h5>
+                                <p class="card-text">
+                                    «Un banquete para los sentidos donde el lujo se sirve con pelusas y
+                                    filosofía.»
+                                </p>
+                                <audio class="w-100" controls preload="none">
+                                    <source src="../assets/mp3/The Magique.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento <code>audio</code>.
+                                </audio>
+                            </div>
                         </div>
-                    </div>
 
                         <!-- ELECTRO CROWN -->
                         <div class="card bg-dark text-white mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Electro Crown</h5>
-                            <p class="card-text">«Un himno futurista donde el glamour se conecta a 220 volts de divinidad.»</p>
-                            <audio class="w-100" controls preload="none">
-                                <source src="../assets/mp3/Electro Crown.mp3" type="audio/mpeg">
-                                Tu navegador no soporta el elemento <code>audio</code>.
-                            </audio>
+                            <div class="card-body">
+                                <h5 class="card-title">Electro Crown</h5>
+                                <p class="card-text">
+                                    «Un himno futurista donde el glamour se conecta a 220 volts de
+                                    divinidad.»
+                                </p>
+                                <audio class="w-100" controls preload="none">
+                                    <source src="../assets/mp3/Electro Crown.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento <code>audio</code>.
+                                </audio>
+                            </div>
                         </div>
-                    </div>
 
                     </section>
 
-                </section>
                 </section>
 
             </div>
@@ -267,20 +339,27 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- FOOTER -->
+
     <footer>
-        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
-                Centurión</strong> ·
-            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
+        <p class="text_footer">
+            Barón Von Fluffington III · Proyecto artístico y digital creado por
+            <strong>Lucas Centurión</strong> ·
+            Contacto:
+            <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a>
+        </p>
         <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
     </footer>
 
-
-    <!-- BOOTSTRAP JS -->
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- Reproducción de un solo audio a la vez -->
+    <script src="../assets/js/site.js"></script>
+
 </body>
 
 </html>

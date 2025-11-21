@@ -8,7 +8,6 @@
         content="Pelusoteca del Barón Von Fluffington III · La colección más distinguida de pelusas nobles y notables del planeta.">
     <meta name="author" content="Lucas Centurión">
 
-    <!-- Title -->
     <title>Pelusoteca Baby's</title>
 
     <!-- Favicon -->
@@ -22,266 +21,371 @@
         rel="stylesheet">
 
     <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<!-- --------------------------------------------------------------------------------------------------------------------- -->
-
 <body>
+
+    <!-- HEADER / NAVBAR -->
 
     <header class="header">
 
-        <!-- NAVBAR BOOTSTRAP -->
         <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
-                        alt="Logo del Barón"></a>
-                <!-- Menu Hamburguesa -->
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
+                </a>
+
+                <!-- Menú Hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
-                    <!-- NAVBAR LINKS -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./cronicas.html">Crónicas del
-                                Fluff</a>
+                            <a class="nav-link" href="./cronicas.html">Crónicas del Fluff</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Pelusoteca
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" aria-current="page"
-                                        href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                <li>
+                                    <a class="dropdown-item active" aria-current="page" href="./pelusoteca_babys.html">
+                                        Pelusoteca Baby's
+                                    </a>
                                 </li>
-                                <li><a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
-                                        Notables</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_notables.html">
+                                        Pelusoteca Notables
+                                    </a>
                                 </li>
                             </ul>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./haters_diamonds.html">Haters &
-                                Diamonds</a>
+                            <a class="nav-link" href="./haters_diamonds.html">Haters & Diamonds</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./creditos.html">Créditos</a>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- MAIN -->
 
     <main>
+
+        <!-- H1 oculto para SEO -->
         <h1 class="h1-hidden">Pelusoteca</h1>
+
+        <!-- Imagen portada -->
         <div class="div_img_portada_pelusoteca">
-            <img class="img_portada" src="../assets/img/pelusoteca/Pelusoteca Babys.png" alt="Pelusoteca Babys" />
+            <img class="img_portada" src="../assets/img/pelusoteca/Pelusoteca Babys.png" alt="Pelusoteca Babys">
         </div>
 
         <!-- TEXTO INTRODUCTORIO -->
-        <div class="container-cards">
+        <div class="container_cards mb-5">
+
             <div class="div_text_pelusoteca">
-                <p class="parrafo_baron mt-4 mb-4">💖 ¡Bienvenido al Pelusarium Baby’s! 💖</p>
-                <p class="parrafo_baron mb-4">Donde los Recuerdos Más Tiernos Se Convierten en Tesoros Inmortales. En un
+                <p class="subtitulo_baron mt-4 mb-4">💖 ¡Bienvenido al Pelusarium Baby’s! 💖</p>
+
+                <p class="parrafo_baron mb-4">
+                    Donde los Recuerdos Más Tiernos Se Convierten en Tesoros Inmortales. En un
                     mundo lleno de objetos comunes, nosotros atesoramos lo extraordinario: esas pequeñas, suaves y
                     efímeras pelusas de ombligo de bebé. El Pelusarium Baby’s es el único archivo glam-barroco y joyero
                     dedicado a coleccionar y preservar la esencia más pura de los primeros días. Inspirado en el lujo
                     extravagante y la dulzura de la infancia, hemos transformado un recuerdo fugaz en una joya digna de
-                    exhibición.</p>
-                <p class="parrafo_baron mb-4">✨ ¿Qué encontrarás aquí?</p>
-                <p class="parrafo_baron mb-1">Cada diminuta mota de algodón es un testimonio, una cápsula del tiempo que
+                    exhibición.
+                </p>
+
+                <p class="subtitulo_baron mb-4">✨ ¿Qué encontrarás aquí?</p>
+
+                <p class="parrafo_baron mb-1">
+                    Cada diminuta mota de algodón es un testimonio, una cápsula del tiempo que
                     guarda la fragancia sutil, el milagro y la magia de un recién nacido. No son simples pelusas; son
                     reliquias históricas, delicadamente seleccionadas, catalogadas y presentadas en vitrinas que
                     rivalizan con cualquier colección de gemas preciosas. Sumérgete en un universo de terciopelo, oro
-                    pulido y destellos de diamante.</p>
-                <p class="parrafo_baron mb-4">Explora la colección de la infancia del mismísimo Barón Von Fluffington
+                    pulido y destellos de diamante.
+                </p>
+
+                <p class="parrafo_baron mb-4">
+                    Explora la colección de la infancia del mismísimo Barón Von Fluffington
                     III, aprende sobre la rareza de las pelusas turquesas y déjate seducir por la belleza de lo
-                    increíblemente pequeño.</p>
-                <p class="parrafo_baron mb-6"><strong>Porque cada pelusa es un hito. Y cada hito merece ser celebrado
-                        con el máximo esplendor.</strong></p>
+                    increíblemente pequeño.
+                </p>
+
+                <p class="subtitulo_baron mb-6">
+                    <strong>
+                        Porque cada pelusa es un hito. Y cada hito merece ser celebrado
+                        con el máximo esplendor.
+                    </strong>
+                </p>
             </div>
 
             <!-- TARJETAS DE LA PELUSOTECA BABY'S -->
-            <section class="grid_container_pelusoteca">
+            <section class="pelusoteca_grid">
+                <div class="row g-4">
 
+                    <!-- Tarjeta 1 -->
+                    <div class="col-12 col-md-6">
+                        <article class="cards_pelusoteca_article">
+                            <div class="pelusa-card-inner">
 
-                <!-- Tarjeta 1 -->
-                <article class="cards_pelusoteca_container">
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-1.jpeg" alt="Pelusa 1" />
-                        </div>
-                        <div class="div_text_pelusoteca_baby">
-                            <p class="pelusa_name mt-3 mb-3">🌸 “Dulce Nube de Azúcar Bebé”</p>
-                        </div>
+                                <!-- FRENTE -->
+                                <div class="pelusa-card-face pelusa-card-front">
+                                    <div class="div_pelusoteca">
+                                        <div class="div_img_pelusoteca">
+                                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-1.jpeg"
+                                                alt="Pelusa 1">
+                                        </div>
+                                        <div class="div_text_pelusoteca_baby">
+                                            <p class="pelusa_name mt-3 mb-3">🌸 “Dulce Nube de Azúcar Bebé”</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- DORSO -->
+                                <div class="pelusa-card-face pelusa-card-back">
+                                    <div class="div_text_pelusoteca">
+                                        <p class="text_cards mb-3">
+                                            <strong>Clasificación:</strong> Pelusa de Ombligo Gourmet – Edición
+                                            Neonatal.
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Origen:</strong> Ombliguito de Celestina
+                                            Marisol, 7 semanas de edad, nacida en una cuna deterciopelo hipoalergénico
+                                            con difusor de lavanda y playlist de Chopin.
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Descripción del Barón:</strong> Ah… la Dulce Nube de Azúcar Bebé: un
+                                            espécimen celestial, con textura de suspiro atrapado en una manta tejida por
+                                            unicornios miopes. Su rosa pastel y celeste celebran los primeros bostezos
+                                            de la existencia, y su forma ovalada delata un crecimiento libre, sin
+                                            traumas ni roces de botones.
+                                        </p>
+                                        <p class="text_cards">
+                                            <strong>Nota aromática:</strong> Presenta una fragancia
+                                            suave a leche tibia y talco con fondo de siesta, digna de una guardería de
+                                            gala. Su broche turquesa incrustado no es un simple detalle, sino un sello
+                                            de nobleza lanuda infantil, heredado de un linaje famoso por pelusas tan
+                                            suaves como la conciencia de un panda.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
                     </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Pelusa de Ombligo Gourmet – Edición
-                            Neonatal. </p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Ombliguito de Celestina Marisol, 7 semanas
-                            de
-                            edad, nacida en una cuna deterciopelo hipoalergénico con difusor de lavanda y playlist de
-                            Chopin.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón:</strong> Ah... la Dulce Nube de Azúcar
-                            Bebé... Un espécimen absolutamente celestial. Su textura es comparable a un suspiro atrapado
-                            entre los pliegues de una manta tejida por unicornios miopes. La paleta bicromática rosa
-                            pastel
-                            y celeste es una oda a los primeros bostezos de la existencia. Su forma ligeramente ovalada
-                            revela un crecimiento libre, sin traumas ni roces de botones.</p>
-                        <p class="text_cards"><strong>Nota aromática:</strong> Presenta una fragancia suave a leche
-                            tibia y talco con fondo de siesta, digna de una guardería de gala. Su broche turquesa
-                            incrustado
-                            no es un simple detalle, sino un sello de nobleza lanuda infantil, heredado de un linaje
-                            famoso
-                            por pelusas tan suaves como la conciencia de un panda.
-                        </p>
-                    </div>
-                </article>
+                    <!-- Tarjeta 2 -->
+                    <div class="col-12 col-md-6">
+                        <article class="cards_pelusoteca_article">
+                            <div class="pelusa-card-inner">
 
-                <!-- Tarjeta 2 -->
-                <article class="cards_pelusoteca_container">
+                                <!-- FRENTE -->
+                                <div class="pelusa-card-face pelusa-card-front">
+                                    <div class="div_pelusoteca">
+                                        <div class="div_img_pelusoteca">
+                                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-2.jpeg"
+                                                alt="Pelusa 2">
+                                        </div>
+                                        <div class="div_title_pelusoteca_baby">
+                                            <p class="pelusa_name mt-3 mb-3">⭐ “Nimbo Pastel Celestial”</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-2.jpeg" alt="Pelusa 2" />
-                        </div>
-                        <div class="div_title_pelusoteca_baby">
-                            <p class="pelusa_name mt-3 mb-3">⭐ “Nimbo Pastel Celestial”</p>
-                        </div>
-                    </div>
+                                <!-- DORSO -->
+                                <div class="pelusa-card-face pelusa-card-back">
+                                    <div class="div_text_pelusoteca">
+                                        <p class="text_cards mb-3">
+                                            <strong>Clasificación:</strong> Pelusa de Ombligo
+                                            Gourmet – Reserva Imperial Neonatal
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Origen:</strong> Ombligo de Alarico Tomás, 5
+                                            meses y medio, bebé con nombre de emperador romano y sonrisa de caramelo
+                                            derretido.
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Descripción del Barón:</strong> Nimbo Pastel
+                                            Celestial no es solo una pelusa, sino un bocado etéreo con forma de flor
+                                            lanuda en trance, nacido justo cuando la siesta y el glamour coinciden. Sus
+                                            tonos rosa chicle, lila nebuloso y verde menta soñada se desvanecen en ondas
+                                            suaves, y su textura vaporosa recuerda a ese instante en que un bebé
+                                            descubre, por primera vez, que tiene pies.
+                                        </p>
+                                        <p class="text_cards">
+                                            <strong>Nota aromática:</strong> Un acorde inicial de
+                                            crema hidratante con notas medias de babero de seda y un final persistente
+                                            de perfume de abuela con glitter.
+                                        </p>
+                                    </div>
+                                </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Pelusa de Ombligo Gourmet – Reserva
-                            Imperial Neonatal</p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Ombligo de Alarico Tomás, 5 meses y medio,
-                            bebé con nombre de emperador romano y sonrisa de caramelo derretido.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón:</strong> Nimbo Pastel Celestial no es
-                            solo una pelusa, sino un bocado etéreo con forma de flor lanuda en trance, nacido justo
-                            cuando la siesta y el glamour coinciden. Sus tonos rosa chicle, lila nebuloso y verde menta
-                            soñada se desvanecen en ondas suaves, y su textura vaporosa recuerda a ese instante en que
-                            un bebé descubre, por primera vez, que tiene pies. </p>
-                        <p class="text_cards"><strong>Nota aromática:</strong> Un acorde inicial de crema
-                            hidratante con notas medias de babero de seda y un final persistente de perfume de abuela
-                            con glitter.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Tarjeta 3 -->
-                <article class="cards_pelusoteca_container">
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-3.jpeg" alt="Pelusa 3" />
-                        </div>
-                        <div class="div_title_pelusoteca_baby">
-                            <p class="pelusa_name mb-3 mt-3">💠 “Pomponina Celestina Primorosa”</p>
-                        </div>
+                            </div>
+                        </article>
                     </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Pelusa de Ombligo Gourmet – Edición
-                            Neonatal
-                        </p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Ombliguito de Aurora Milagros, 6 semanas
-                            de
-                            edad, descubierta durante un cambio de pañal al ritmo de Debussy, en una habitación con
-                            cortinas
-                            de lino bordado y humidificador de eucalipto.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón:</strong> La Burbuja Pastel de los
-                            Primeros Días es una esfera
-                            lanuda formada por pequeños núcleos, como si cada pensamiento inocente del bebé hubiera
-                            dejado
-                            su propia huella. Sus tonos rosado confite, lila de sueño y verde menta lactosa se mezclan
-                            con
-                            armonía casi mágica, y su textura recuerda a acariciar el corazón suave de un peluche recién
-                            enamorado.
-                        </p>
-                        <p class="text_cards"><strong>Nota aromática:</strong> Desprende un delicado aroma a crema
-                            de avena infantil con
-                            toques de algodón de azúcar y ese fondo tierno de caricia de abuela primeriza. Su engarce
-                            dorado
-                            con piedras turquesa no solo adorna: certifica su categoría imperial dentro del linaje de
-                            pelusas bebés, reservado para ombligos de alto rendimiento sentimental.
-                        </p>
-                    </div>
-                </article>
+                    <!-- Tarjeta 3 -->
+                    <div class="col-12 col-md-6">
+                        <article class="cards_pelusoteca_article">
+                            <div class="pelusa-card-inner">
 
-                <!-- Tarjeta 4 -->
-                <article class="cards_pelusoteca_container">
-                    <div class="div_pelusoteca">
+                                <!-- FRENTE -->
+                                <div class="pelusa-card-face pelusa-card-front">
+                                    <div class="div_pelusoteca">
+                                        <div class="div_img_pelusoteca">
+                                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-3.jpeg"
+                                                alt="Pelusa 3">
+                                        </div>
+                                        <div class="div_title_pelusoteca_baby">
+                                            <p class="pelusa_name mb-3 mt-3">💠 “Pomponina Celestina Primorosa”</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-4.jpeg" alt="Pelusa 4" />
-                        </div>
-                        <div class="div_title_pelusoteca_baby">
-                            <p class="pelusa_name mb-3 mt-3">🌈 "Regia Pastellaria, la Orbe del Primer Arcoíris”</p>
-                        </div>
+                                <!-- DORSO -->
+                                <div class="pelusa-card-face pelusa-card-back">
+                                    <div class="div_text_pelusoteca">
+                                        <p class="text_cards mb-3">
+                                            <strong>Clasificación:</strong> Pelusa de Ombligo
+                                            Gourmet – Edición Neonatal
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Origen:</strong> Ombliguito de Aurora
+                                            Milagros, 6 semanas de edad, descubierta durante un cambio de pañal al ritmo
+                                            de Debussy, en una habitación con cortinas de lino bordado y humidificador
+                                            de eucalipto.
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Descripción del Barón:</strong> La Burbuja Pastel de los Primeros
+                                            Días es una esfera lanuda compuesta por pequeños núcleos, como huellas de
+                                            pensamientos inocentes. Sus tonos rosado confite, lila soñador y verde menta
+                                            lactosa se funden en armonía, con una textura que evoca acariciar el corazón
+                                            suave de un peluche recién enamorado.
+                                        </p>
+                                        <p class="text_cards">
+                                            <strong>Nota aromática:</strong> Desprende un delicado
+                                            aroma a crema de avena infantil con toques de algodón de azúcar y ese fondo
+                                            tierno de caricia de abuela primeriza. Su engarce dorado con piedras
+                                            turquesa certifica su categoría imperial dentro del linaje de pelusas bebés.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
                     </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Pelusa de Ombligo Gourmet – Edición
-                            Neonatal Deluxe</p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Ombligo de Amadora Lucía, 9 semanas de
-                            vida,
-                            nacida bajo luz cálida de lámparas de sal rosada, con cuna bordada por monjas tibetanas y
-                            sábanas embebidas en infusión de vainilla azul.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón Von Fluffington III:</strong> Regia
-                            Pastellaria no es una pelusa cualquiera, sino una esfera pastel cuidadosamente curada por el
-                            Barón: suave, simétrica y con destellos en lavanda, melón y crema. Reposa sobre terciopelo
-                            verde
-                            esmeralda con gemas, como una miniatura oficial de la nobleza dérmica infantil. </p>
-                        <p class="text_cards"><strong>Nota Aromática:</strong> Predomina una fragancia a pétalo de
-                            lirio
-                            recién abierto, con toques de leche templada, nube primaveral y un leve retrogusto a babita
-                            perfumada con aceite de camomila real.</p>
+                    <!-- Tarjeta 4 -->
+                    <div class="col-12 col-md-6">
+                        <article class="cards_pelusoteca_article">
+                            <div class="pelusa-card-inner">
+
+                                <!-- FRENTE -->
+                                <div class="pelusa-card-face pelusa-card-front">
+                                    <div class="div_pelusoteca">
+                                        <div class="div_img_pelusoteca">
+                                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-4.jpeg"
+                                                alt="Pelusa 4">
+                                        </div>
+                                        <div class="div_title_pelusoteca_baby">
+                                            <p class="pelusa_name mb-3 mt-3">
+                                                🌈 "Regia Pastellaria, la Orbe del Primer Arcoíris”
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- DORSO -->
+                                <div class="pelusa-card-face pelusa-card-back">
+                                    <div class="div_text_pelusoteca">
+                                        <p class="text_cards mb-3">
+                                            <strong>Clasificación:</strong> Pelusa de Ombligo
+                                            Gourmet – Edición Neonatal Deluxe
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Origen:</strong> Ombligo de Amadora Lucía, 9
+                                            semanas de vida, nacida bajo luz cálida de lámparas de sal rosada, con cuna
+                                            bordada por monjas tibetanas y sábanas embebidas en infusión de vainilla
+                                            azul.
+                                        </p>
+                                        <p class="text_cards mb-3">
+                                            <strong>Descripción del Barón Von Fluffington
+                                                III:</strong> Regia Pastellaria no es una pelusa cualquiera, sino una
+                                            esfera pastel cuidadosamente curada por el Barón: suave, simétrica y con
+                                            destellos en lavanda, melón y crema. Reposa sobre terciopelo verde esmeralda
+                                            con gemas, como una miniatura oficial de la nobleza dérmica infantil.
+                                        </p>
+                                        <p class="text_cards">
+                                            <strong>Nota Aromática:</strong> Predomina una fragancia a
+                                            pétalo de lirio recién abierto, con toques de leche templada, nube
+                                            primaveral y un leve retrogusto a babita perfumada con aceite de camomila
+                                            real.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
                     </div>
-                </article>
+
+                </div>
             </section>
-        </div>
-        </div>
 
+        </div>
     </main>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- FOOTER -->
+
     <footer>
-        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
-                Centurión</strong> ·
-            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
+        <p class="text_footer">
+            Barón Von Fluffington III · Proyecto artístico y digital creado por
+            <strong>Lucas Centurión</strong> ·
+            Contacto:
+            <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a>
+        </p>
         <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
     </footer>
 
-    <!-- BOOTSTRAP JS -->
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

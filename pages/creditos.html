@@ -2,128 +2,152 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Créditos · Proyecto artístico y digital creado por Lucas Centurión en honor al legendario Barón Von Fluffington III.">
-    <meta name="author" content="Lucas Centurión">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Créditos · Proyecto artístico y digital creado por Lucas Centurión en honor al legendario Barón Von Fluffington III.">
+  <meta name="author" content="Lucas Centurión">
 
-     <!-- Title -->
-    <title>Créditos</title>
+  <!-- Title -->
+  <title>Créditos</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/img/Icon2.svg">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-    <!-- Bootstrap -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <!-- NAVBAR  -->
-    <header class="header">
+  <!-- NAVBAR  -->
+  <header class="header">
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img class="navbar__logo" src="../assets/img/logo.svg" alt="Logo del Barón">
+        </a>
 
-        <!-- NAVBAR BOOTSTRAP -->
-        <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
-                        alt="Logo del Barón"></a>
-                <!-- Menu Hamburguesa -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Menu Hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <!-- NAVBAR LINKS -->
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./cronicas.html">Crónicas del Fluff</a>
+            </li>
+            <!-- ------ -->
+            <li class="nav-item">
+              <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
+            </li>
+            <!-- ------ -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pelusoteca
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca Notables</a>
+                </li>
+              </ul>
+            </li>
+            <!-- ------ -->
+            <li class="nav-item">
+              <a class="nav-link" href="./haters_diamonds.html">Haters & Diamonds</a>
+            </li>
+            <!-- ------ -->
+            <li class="nav-item">
+              <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
+            </li>
+            <!-- ------ -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./creditos.html">Créditos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-                    <!-- NAVBAR LINKS -->
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./cronicas.html">Crónicas del
-                                Fluff</a>
-                        </li>
-                        <!-- ------ -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
-                        </li>
-                        <!-- ------ -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Pelusoteca
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
-                                </li>
-                                <li><a class="dropdown-item" href="./pelusoteca_notables.html">Pelusoteca
-                                        Notables</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- ------ -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="./haters_diamonds.html">Haters &
-                                Diamonds</a>
-                        </li>
-                        <!-- ------ -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
-                        </li>
-                        <!-- ------ -->
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./creditos.html">Créditos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <main class="main_playlist">
+    <!-- H1 OCULTO PARA SEO -->
+    <h1 class="h1-hidden" id="h1-creditos">Créditos</h1>
 
-    <main>
-        <!-- H1 OCULTO PARA SEO -->
-        <h1 class="h1-hidden" id="h1-creditos"> Créditos </h1> 
+    <!-- IMAGEN PORTADA -->
+    <div class="div_img_portada_creditos">
+      <img class="img_portada" src="../assets/img/creditos/creditos_portada.png" alt="Créditos de la página">
+    </div>
 
-        <!-- IMAGEN PORTADA -->
-        <div class="div_img_portada_creditos">
-            <img class="img_portada" src="../assets/img/creditos/creditos_portada.png" alt="Créditos de la página">
+    <!-- SUBTÍTULO -->
+    <div class="div_subtitulo_creditos">
+      <h2 class="subtitulo_creditos">🎩💼 "Los Sirvientes Detrás del Genio"</h2>
+    </div>
+
+    <div class="container_cards">
+      <div class="columna-creditos">
+        <div class="rol-creditos">
+          <img class="rol-normal" src="../assets/img/creditos/1.png" alt="Rol Arquitecto">
+          <img class="rol-hover" src="../assets/img/creditos/2.png" alt="Nombre Arquitecto">
         </div>
 
-        <!-- SUBTITULOS -->
-        <div class="div_subtitle_creditos">
-            <h1 class="subtitulo_creditos">🎩💼 "Los Sirvientes Detrás del Genio"</h1>
+        <div class="rol-creditos">
+          <img class="rol-normal" src="../assets/img/creditos/3.png" alt="Rol Escriba">
+          <img class="rol-hover" src="../assets/img/creditos/4.png" alt="Nombre Escriba">
         </div>
 
-
-        <div class="div_img_creditos">
-            <img class="img_creditos" src="../assets/img/creditos/creditos.png" alt="Créditos">
+        <div class="rol-creditos">
+          <img class="rol-normal" src="../assets/img/creditos/5.png" alt="Rol Pintor">
+          <img class="rol-hover" src="../assets/img/creditos/6.png" alt="Nombre Pintor">
         </div>
-    
-    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
-                Centurión</strong> ·
-            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
-        <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
-    </footer>
+        <div class="rol-creditos">
+          <img class="rol-normal" src="../assets/img/creditos/7.png" alt="Rol Cantor">
+          <img class="rol-hover" src="../assets/img/creditos/8.png" alt="Nombre Cantor">
+        </div>
 
+        <div class="rol-creditos">
+          <img class="rol-normal" src="../assets/img/creditos/9.png" alt="Rol Ilusionista">
+          <img class="rol-hover" src="../assets/img/creditos/10.png" alt="Nombre Ilusionista">
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <!-- BOOTSTRAP JS -->
+  <!-- FOOTER -->
+  <footer>
+    <p class="text_footer">
+      Barón Von Fluffington III · Proyecto artístico y digital creado por
+      <strong>Lucas Centurión</strong> ·
+      Contacto:
+      <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a>
+    </p>
+    <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
+</html>

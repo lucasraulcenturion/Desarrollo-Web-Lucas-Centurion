@@ -6,14 +6,17 @@
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   background: #75124c;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -25,11 +28,18 @@ img {
   background: #5f1651;
 }
 
+/* Logo del navbar */
+.navbar__logo {
+  width: 5rem;
+  height: auto;
+  margin: 0;
+}
+
 /* Links generales del navbar */
 .navbar .nav-link,
 .navbar .navbar-brand {
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
 }
 
 /* Dropdown theme */
@@ -40,21 +50,17 @@ img {
   color: #ffffff;
   box-shadow: 0 0.125rem 0.5rem rgba(255, 255, 255, 0.15);
 }
+
 .dropdown-item {
   color: #ffffff;
-}
-
-/* Logo del navbar */
-.navbar__logo {
-  width: 4rem;
-  height: auto;
-  margin: 0;
+  font-size: 1.2rem;
 }
 
 /* Hamburguesa */
 .navbar-toggler {
   border-color: #ffffff;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -65,6 +71,7 @@ img {
   color: #fdf1ff;
   font-weight: 500;
 }
+
 .navbar .nav-link:hover,
 .navbar .dropdown-item:hover {
   color: #ffe28a;
@@ -86,6 +93,7 @@ img {
   background-clip: text;
   color: transparent;
 }
+
 .navbar .dropdown-menu .dropdown-item.active,
 .navbar .dropdown-menu .dropdown-item:active {
   font-weight: 700;
@@ -102,6 +110,7 @@ img {
   color: transparent;
   background-color: transparent !important;
 }
+
 .navbar .dropdown-menu .dropdown-item:focus,
 .navbar .dropdown-menu .dropdown-item:focus-visible {
   outline: none;
@@ -110,6 +119,7 @@ img {
 }
 
 /* ==============UTILIDADES / GENERALES============================== */
+
 /* H1 oculto para SEO */
 .h1-hidden {
   position: absolute;
@@ -123,190 +133,43 @@ img {
   border: 0;
 }
 
+/* Contenedor General */
+.container_cards {
+  max-width: 75rem;
+  margin: 0 auto 1rem;
+  padding: 2rem 1rem 1rem;
+}
+
 /* Imagen de portada de cada página */
 .img_portada {
   object-fit: cover;
   width: 100%;
 }
 
-/* ===============   INDEX  ====================== */
-.hero {
-  position: relative;
-  height: calc(100vh - 90px - 93.6px);
-  display: grid;
-  align-items: center;
-  justify-items: end;
-  padding: 4rem;
-  overflow: clip;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url("../img/Index-Fondo.png") center/cover no-repeat;
-  z-index: 0;
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 60ch;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
-}
-.title-page {
+/* Subtitulos */
+.subtitulo_baron {
   font-family: "Merriweather", serif;
-  font-size: clamp(30px, 4vw, 60px);
-  margin: 0 0 8px;
-  color: #8e0d7b;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
-}
-.iafluencer-description {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(16px, 2.2vw, 24px);
-  color: #d1d5db;
-  text-shadow: 2px 2px 4px #000;
-  margin: 0 20px 20px;
-  padding: 10px;
-}
-
-/* =========== CRÓNICAS DEL FLUFF (lectura)================= */
-.main_cronicas {
-  min-height: 100vh;
-  color: #fff;
-}
-.main_cronicas .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Contenido */
-.contenido-cronicas {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Subtítulo y lema dentro de la sección CRÓNICAS (scoped) */
-.main_cronicas .subtitulo_baron {
-  font-family: "merriweather", serif;
-  font-size: 20px;
+  font-size: 1.5rem;
   text-align: left;
   font-weight: bold;
   color: #ffffff;
-  padding: 2rem 1rem 1rem;
-  text-shadow: 2px 2px 4px #000000;
-}
-.reading-wrapper {
-  max-width: clamp(60ch, 55vw, 88ch);
-  margin: 2rem auto;
-  padding: 1.5rem 1.25rem;
-  background: rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-.reading-wrapper .subtitulo_baron,
-.reading-wrapper .lema_cronicas {
-  max-width: 75rem;
-  margin: 0 auto;
-}
-.main_cronicas .parrafo_baron {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.7;
-  max-width: clamp(60ch, 60vw, 90ch);
-  text-align: justify;
-  color: #fff;
-  text-shadow: 2px 2px 4px #404040;
-  margin: 0.25rem 0;
-}
-.lema_cronicas {
-  font-family: "merriweather", serif;
-  font-size: 24px;
-  text-align: center;
-  margin: 0 1.25rem;
-  font-weight: bold;
-  font-style: italic;
-  color: #ffffff;
-  padding: 4rem;
+  padding: 2rem 1rem 1rem 0;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
 }
 
-/* ============LA CORTE DE LOS CORAZONES (cards + texto)============ */
-.main_corte {
-  padding-bottom: 2rem;
-}
-.container-cards {
-  max-width: 75rem;
-  margin: 0 auto 1rem;
-  padding: 2rem 1rem 1rem;
-}
-.div_text_corte,
-.div_cards_corte {
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Intro de La Corte (scoped) */
-.main_corte .div_text_corte {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: #ffffff;
-  padding: 1rem;
-}
-.main_corte .subtitulo_baron {
-  font-family: "Merriweather", serif;
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 0 0 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
-}
-.main_corte .parrafo_baron {
+/* Textos Párrafos */
+.parrafo_baron {
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   line-height: 1.6;
   color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
   margin: 0 0 0.75rem;
   max-width: 100%;
-}
-#los_mas_likeados {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-top: 1rem;
-  font-weight: 700;
+  text-align: justify;
 }
 
-/* Cards de La Corte */
-.div_cards_corte {
-  width: 100%;
-  margin-top: 2rem;
-}
-.cards_corte_container {
-  display: flex;
-  border: 0.0625rem solid #ddd;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
-  background: #fbf6e4;
-  width: 100%;
-  height: 30rem;
-  max-width: 100%;
-  margin: 1.8rem 0;
-  align-items: stretch;
-}
-.card_body {
-  flex: 1;
-}
-.cards_media_img {
-  width: 50%;
-  max-width: 25rem;
-  height: 100%;
-  border-radius: 0.625rem;
-  object-fit: cover;
-  margin-right: 1.5rem;
-}
+/* Texto de las tarjetas */
 .text_cards {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -318,6 +181,151 @@ img {
   text-align: justify;
   align-items: center;
 }
+
+/* ===============   INDEX ====================== */
+.hero {
+  position: relative;
+  height: calc(100vh - 5.625rem - 5.85rem);
+  display: grid;
+  align-items: center;
+  justify-items: right;
+  padding: 0 5rem 0 0;
+  overflow: clip;
+}
+
+.hero_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/Index-Fondo.png") center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+  max-width: 60ch;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+.title_page {
+  font-family: "Merriweather", serif;
+  font-size: clamp(1.875rem, 4vw, 3.75rem);
+  margin: 0 0 0.5rem;
+  color: #8e0d7b;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
+}
+
+.iafluencer_description {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: #d1d5db;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000;
+  margin: 0 1.25rem 1.25rem;
+  padding: 0.625rem;
+}
+
+/* =========== CRÓNICAS DEL FLUFF ================= */
+
+/* Contenido */
+.contenido_cronicas {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem;
+  background: rgba(0, 0, 0, 0.08);
+  border: 0.1875rem solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.2);
+}
+
+/* Lema Crónicas */
+.lema_cronicas {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 1.25rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff;
+  padding: 4rem;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+/* ============LA CORTE DE LOS CORAZONES============ */
+.main_corte {
+  padding-bottom: 2rem;
+}
+
+.div_text_corte,
+.div_cards_corte {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Intro de La Corte */
+.main_corte .div_text_corte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+#los_mas_likeados {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+/* Tarjetas - Contenedor */
+.div_cards_corte {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Tarjeta - Article */
+.cards_corte_article {
+  display: flex;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  background: #fbf6e4;
+  width: 100%;
+  height: 30rem;
+  max-width: 100%;
+  margin: 1.8rem 0;
+  align-items: stretch;
+  position: relative;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Glow al pasar el mouse */
+.cards_corte_article:hover {
+  animation: royalGlow 1.4s ease-in-out infinite alternate;
+}
+
+/* Imagen y texto se ven como dos columnas que ocupan el mismo alto dentro de la tarjeta. */
+.card_body {
+  flex: 1;
+}
+
+/* Imágenes de las tarjetas de La Corte */
+.cards_corte_article .cards_media_img {
+  width: 50%;
+  max-width: 25rem;
+  height: 100%;
+  border-radius: 0.625rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+/* Hashtags tarjetas */
 .text_hashtag_cards {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
@@ -327,52 +335,181 @@ img {
   padding: 0.5rem 0.75rem;
 }
 
-/* ===========  PELUSOTECA (grid + cards) ================ */
-.grid_container_pelusoteca {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* ==== Keyframes RoyalGlow ==== */
+@keyframes royalGlow {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow:
+      0 0 0 rgba(255, 215, 0, 0),
+      0 0 0 rgba(203, 69, 147, 0);
+    border-color: rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+      0 0 10px rgba(255, 215, 0, 0.9),
+      0 0 25px rgba(203, 69, 147, 0.7);
+    border-color: rgba(255, 215, 0, 0.9);
+  }
+  100% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow:
+      0 0 6px rgba(255, 215, 0, 0.7),
+      0 0 16px rgba(203, 69, 147, 0.6);
+    border-color: rgba(255, 215, 0, 0.8);
+  }
 }
-.div_pelusoteca {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+
+/* ===========  PELUSOTECAS ================ */
+
 .div_text_pelusoteca,
 .grid_container_pelusoteca {
   width: 100%;
   margin: 0 auto;
 }
+
+/* Texto Introducción Pelusoteca */
 .div_text_pelusoteca {
   display: flex;
   flex-direction: column;
   color: #ffffff;
   padding: 1rem;
 }
-.cards_pelusoteca_container {
-  border: 0.0625rem solid #ddd;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 4px 4px 4px #505050;
+
+/* CONTENEDOR TARJETAS NOTABLES: 2 x 2 escritorio */
+.grid_container_pelusoteca {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto 3rem;
+}
+
+/* ---------- TARJETAS PELUSOTECA (flip 3D) ---------- */
+
+.cards_pelusoteca_article {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 32rem;
+  height: 28rem; /* altura base ajustada para que no se corte texto */
+  border-radius: 0.9rem;
+  border: 0.3rem solid transparent;
+  background:
+    linear-gradient(#fbf6e4, #fbf6e4) padding-box,
+    linear-gradient(135deg, #ffd46b, #ff8bd9, #7fffd4) border-box;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  perspective: 1200px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Levanta suavemente al hover */
+.cards_pelusoteca_article:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.45);
+}
+
+/* Transformación 3D */
+.pelusa-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* Giro al hacer hover */
+.cards_pelusoteca_article:hover .pelusa-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.pelusa-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Frente: imagen + nombre */
+.pelusa-card-front {
   background: #fbf6e4;
-  max-width: 560px;
-  margin: 1.25rem auto;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dorso: texto descriptivo (sin scrollbar visible) */
+.pelusa-card-back {
+  background: #fbf6e4;
+  color: #000;
+  padding: 1rem 1.25rem;
+  transform: rotateY(180deg);
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Contenido frente */
+.pelusa-card-front .div_pelusoteca {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
   text-align: center;
 }
+
+/* Contenedor de imagen (marco) */
+.pelusa-card-front .div_img_pelusoteca {
+  width: 100%;
+  max-width: 18rem;
+}
+
+/* Imagen genérica de pelusas (Notables + Baby's) */
 .cards_media_img {
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
+
+/* nombre de la pelusa */
 .pelusa_name {
   font-family: "Roboto", sans-serif;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: bold;
   padding-bottom: 0.625rem;
+}
+
+/* texto del dorso (descripciones) */
+.pelusa-card-back .div_text_pelusoteca {
+  color: #000;
+  padding: 0;
+}
+
+.pelusa-card-back .text_cards {
+  line-height: 1.4;
+  font-size: 0.96rem;
+}
+
+/*  PELUSOTECA BABYS CON BOOTSTRAP */
+
+/* Cada col se comporta como contenedor flex para que la tarjeta llene el alto */
+.pelusoteca_grid .row > [class*="col-"] {
+  display: flex;
+}
+
+/* el article ocupa todo el alto disponible en la columna */
+.pelusoteca_grid .cards_pelusoteca_article {
+  flex: 1 1 auto;
 }
 
 /* =========  HATERS & DIAMONDS (grilla 2 cols) ============= */
@@ -381,48 +518,82 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+
 .cards_haters_container {
   border: 0.0625rem solid #ddd;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 0.75rem;
+  padding: 1rem;
   box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
   background: #fbf6e4;
-  max-width: auto;
   margin: 1.25rem auto;
   text-align: justify;
 }
+
 .barra_instagram {
   width: 100%;
   display: block;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   padding: 0.625rem;
-  max-width: 560px;
+  max-width: 35rem;
 }
+
 .cards_media_img_haters {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 /* ====================== PLAYLIST ======================== */
 
-.main_playlist {
-  padding-bottom: 1.25rem;
-}
-
-/* Intro (fila: video + texto) */
+/* Intro (fila: video + texto) - escritorio */
 .intro_playlist {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  perspective: 1000px;
 }
+
+/* Video circular - Contenedor */
+.div_dj_vid {
+  width: 21.25rem;
+  height: 21.25rem;
+  border-radius: 50%;
+  border: 0.625rem solid #fbf6e4;
+  box-shadow: 0 0.625rem 1.5rem black;
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin: 0 3rem 0 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+/* Hover: giro sobre el eje Y */
+.div_dj_vid:hover {
+  transform: rotateY(180deg);
+}
+
+/* Video circular */
+.dj_vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Texto Intro - Contenedor */
 .div_text_playlist {
   max-width: 100%;
 }
 
-/* Himno + Other Hits en grilla 2 columnas */
+/* Himno + Other Hits - Contener en grilla 2 columnas */
 .grilla_playlist {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 21.25rem 1fr;
   gap: 1.5rem;
   align-items: start;
 }
@@ -432,147 +603,160 @@ img {
   margin: 0;
   border: 0.0625rem solid #ddd;
   border-radius: 0.75rem;
-  max-width: 340px;
+  max-width: 21.25rem;
   background: #75124c;
   box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
-  padding: 8px;
+  padding: 0.5rem;
   display: block;
 }
+
+/* Imagen Stellar El Himno del Baron */
 .hymn_img {
   width: 100%;
   display: block;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   padding-bottom: 0.8rem;
-  max-width: 320px;
+  max-width: 20rem;
   margin: 0 auto;
 }
 
-/* Columna derecha: Other Hits */
+/* Títulos Himno */
+.song_name {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+/*Letra Himno */
+.hymn_lyrics {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 1.25rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+  padding-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* Section: Other Hits - Columna */
 .section_other_hits {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   width: 100%;
-  max-width: 900px;
+  max-width: 56.25rem;
   margin-left: auto;
   overflow: visible;
 }
-.audios_playlist {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 
-/* Video circular */
-.div_dj_vid {
-  width: 17.5rem;
-  height: 17.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-  flex: 0 0 auto;
-  margin: 0 0 1.25rem;
-  position: relative;
-  z-index: 1;
-  align-self: flex-start;
-}
-.dj_vid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Imagen Other Hits */
+/* Imagen Other Hits - Contenedor */
 .div_img_other {
   width: 100%;
   position: relative;
   z-index: 0;
   margin-top: 0;
 }
+
+/*Imagen Other Hits*/
 .img_other {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
-/* Textos intro playlist */
-.subtitle_playlist {
-  font-family: "roboto", sans-serif;
-  font-size: 17.6px;
-  text-align: justify;
-  margin: 1.25rem 0 0.625rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
-  padding: 20px;
-}
-.text_playlist {
-  font-family: "roboto", sans-serif;
-  font-size: 16px;
-  text-align: justify;
-  margin: 0 1.25rem;
-  line-height: 1.5;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
-  padding-bottom: 0.6rem;
-  font-weight: 500;
+/* Section: Audios - Columna */
+.audios_playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* Bootstrap card body (tarjetas de audio) */
+/* Tarjetas Audio (Bootstrap) */
 .card-body {
-  background: linear-gradient(#170505, #a23e9f);
+  background: linear-gradient(
+    45deg,
+    rgba(51, 5, 32, 1) 0%,
+    rgba(117, 18, 76, 1) 50%,
+    rgba(51, 5, 32, 1) 100%
+  );
 }
 
-/* Títulos + letras del Himno */
-.song_name {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 0.625rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
-}
-.hymn_lyrics {
-  font-family: roboto, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  margin: 0 1.25rem;
-  line-height: 1.5;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px #000000;
-  padding-bottom: 1.25rem;
-  font-weight: 500;
-}
-
-/* ================= CRÉDITOS (cabecera + imagen)=============== */
-.div_subtitle_creditos {
+/* ================= CRÉDITOS =================== */
+.div_subtitulo_creditos {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 5rem;
-  padding: 16px;
+  padding: 1rem;
   background: linear-gradient(#cb4593, #75124c);
   max-width: 100%;
   text-align: center;
 }
+
 .subtitulo_creditos {
-  font-family: "merriweather", serif;
-  font-size: 24px;
+  font-family: "Merriweather", serif;
+  font-size: 2.25rem;
   text-align: center;
   margin: 0 1.25rem;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
 }
-.div_img_creditos {
+
+.main_playlist {
+  justify-content: center;
+}
+
+/* Columna vertical */
+.columna-creditos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: max-content;
   margin: 0 auto;
 }
-.img_creditos {
+
+/* Contenedor de cada par de imágenes */
+.rol-creditos {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Imágenes superpuestas */
+.rol-normal {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  transition: opacity 0.25s ease;
+}
+
+/* La imagen de hover queda encima pero invisible */
+.rol-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Al pasar el mouse: se muestra la hover y se oculta la base */
+.rol-creditos:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.rol-creditos:hover .rol-hover {
+  opacity: 1;
+}
+
+.rol-creditos:hover .rol-normal {
+  opacity: 0;
 }
 
 /* ============ FOOTER============== */
@@ -580,49 +764,185 @@ img {
   color: #ffffff;
   text-decoration: underline;
 }
+
 footer {
   background: #5f1651;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  font-size: 14.4px;
+  font-size: 0.9rem;
   text-align: left;
-  padding: 16px;
+  padding: 1rem;
 }
+
 footer p {
-  margin-top: 4.8px;
-  margin-bottom: 4.8px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   padding-bottom: 0.125rem;
 }
 
 /* ==============  RESPONSIVE ====================== */
 
+/* <= 992px: tablets horizontales / notebooks chicos */
 @media (max-width: 992px) {
-  /* Playlist: ajustar columnas */
+  .navbar__logo {
+    width: 4rem;
+  }
+
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 2rem;
+    justify-items: center;
+  }
+
+  .container_cards {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .subtitulo_baron {
+    font-size: 1.35rem;
+    padding-top: 1.5rem;
+  }
+
+  .parrafo_baron {
+    font-size: 1.25rem;
+  }
+
+  .cards_corte_article {
+    height: auto;
+  }
+
+  .cards_corte_article .cards_media_img {
+    width: 45%;
+    height: auto;
+  }
+
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Pelusoteca: un poco más alta para que no se corte texto */
+  .cards_pelusoteca_article {
+    height: 30rem;
+  }
+
+  .grilla_haters {
+    gap: 2rem;
+  }
+
   .grilla_playlist {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 18rem 1fr;
   }
 }
 
+/* <= 768px: tablets verticales / móviles grandes */
 @media (max-width: 768px) {
-  /* Playlist: apilar columnas */
+  .navbar__logo {
+    width: 3.75rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+    height: auto;
+    min-height: calc(100vh - 5rem);
+    justify-items: center;
+  }
+
+  .hero_content {
+    max-width: 90%;
+  }
+
+  .container_cards {
+    max-width: 100%;
+    padding: 1.5rem 0.75rem 1rem;
+  }
+
+  .subtitulo_baron {
+    font-size: 1.25rem;
+    padding: 1.5rem 0.5rem 0.75rem;
+  }
+
+  .parrafo_baron {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cards_corte_article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards_corte_article .cards_media_img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.8rem;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .card_body {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Pelusoteca: altura mayor para todo el texto, sin scrollbar */
+  .cards_pelusoteca_article {
+    max-width: 32rem;
+    height: 32rem;
+  }
+
+  .grilla_haters {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0 1.5rem;
+  }
+
   .grilla_playlist {
     grid-template-columns: 1fr;
   }
+
   .section_hymn {
     max-width: 100%;
+    margin-bottom: 1rem;
   }
+
   .hymn_img {
     max-width: 100%;
   }
+
   .section_other_hits {
     max-width: 100%;
   }
+
   .div_dj_vid {
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
+  }
+
+  .intro_playlist {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .div_text_playlist {
+    max-width: 36rem;
+  }
+
+  .subtitulo_creditos {
+    font-size: 1.9rem;
   }
 }
 
-/* MOBILE (≤480px) */
+/* MOBILE (≤480px): móviles chicos */
 @media (max-width: 480px) {
   /* Evitar desbordes horizontales */
   html,
@@ -632,102 +952,128 @@ footer p {
     overflow-x: hidden;
   }
 
-  /* --- Hero mobile (solo overrides necesarios) --- */
-.hero {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  align-content: end;                                /* baja el contenido */
-  min-height: 100svh;                                /* ocupa todo el alto */
-  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
-}
-.hero-bg {
-  background: url("../img/baron-480.png") center/cover no-repeat;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.20),
-    rgba(0, 0, 0, 0.10) 40%,
-    rgba(0, 0, 0, 0.7)
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: -2% -2%;
-  background: radial-gradient(
-    80% 60% at 70% 50%,
-    transparent 55%,
-    rgba(0, 0, 0, 0.55) 100%
-  );
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 1;
-}
-.hero-content {
-  width: min(94vw, 26rem);
-  margin: 0 auto 0;                                  /* sin margen superior */
-  padding: 0.85rem 1rem;
-  background: rgba(20, 16, 27, 0.45);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-}
+  .navbar__logo {
+    width: 3.25rem;
+  }
 
-/* Versión correcta de clases (con guion) */
-.title-page {
-  color: #fff;
-  font-weight: 800;
-  font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
-  letter-spacing: 0.2px;
-  display: inline;
-  background: rgba(0, 0, 0, 0.55);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  padding: 0.06rem 0.3rem;
-  border-radius: 6px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 0.6);
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
-}
-.iafluencer-description {
-  color: #fff;
-  font-size: clamp(0.92rem, 3.2vw, 1.02rem);
-  line-height: 1.35;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-  text-align: center;
-}
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-size: 0.95rem;
+  }
 
+  /* Hero mobile */
+  .hero {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    min-height: 100svh;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  .hero_bg {
+    background: url("../img/baron-480.png") center/cover no-repeat;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.7)
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -2% -2%;
+    background: radial-gradient(
+      80% 60% at 70% 50%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero_content {
+    width: min(94vw, 26rem);
+    margin: 0 auto 0;
+    padding: 0.85rem 1rem;
+    background: rgba(20, 16, 27, 0.45);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+  }
+
+  .title_page {
+    color: #fff;
+    font-weight: 800;
+    font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
+    letter-spacing: 0.2px;
+    display: inline;
+    background: rgba(0, 0, 0, 0.55);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.06rem 0.3rem;
+    border-radius: 6px;
+    text-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.9),
+      0 0 1px rgba(0, 0, 0, 0.6);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  }
+
+  .iafluencer_description {
+    color: #fff;
+    font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+    line-height: 1.35;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
 
   /* Contenedores generales */
   .img_index,
-  .container-cards,
+  .container_cards,
   .grilla_haters,
   .cards_haters_container {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
+
+  .container_cards {
+    padding: 1.25rem 0.75rem 0.75rem;
+  }
+
   .cards_haters_container {
     margin-left: 0;
     margin-right: 0;
     padding: 0.75rem;
   }
+
   .img_portada {
     max-height: 220px;
     object-fit: cover;
   }
+
   .div_text_corte,
   .div_text_pelusoteca {
     padding: 0.5rem 0.25rem;
     text-align: left;
   }
+
+  .subtitulo_baron {
+    font-size: 1.15rem;
+  }
+
   .parrafo_baron {
     font-size: 1rem;
     line-height: 1.5;
@@ -735,30 +1081,31 @@ footer p {
     margin: 0 0 0.5rem;
   }
 
-  /* La Corte */
-  .cards_corte_container {
+  .cards_corte_article {
     height: auto;
     flex-direction: column;
     align-items: center;
   }
-  .cards_media_img {
+
+  .cards_corte_article .cards_media_img {
     width: 100%;
     max-width: 100%;
     height: auto;
     margin: 0 0 0.8rem;
     border-radius: 12px;
   }
+
   .card_body {
     flex: 1 1 auto;
     width: 100%;
   }
 
-  /* Haters */
   .grilla_haters {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem 0 1.5rem;
   }
+
   .cards_media_img_haters,
   .barra_instagram {
     width: 100%;
@@ -766,6 +1113,7 @@ footer p {
     height: auto;
     display: block;
   }
+
   .text_cards,
   .text_hashtag_cards {
     font-size: 0.95rem;
@@ -778,54 +1126,73 @@ footer p {
     hyphens: auto;
   }
 
-  /* Pelusoteca */
   .grid_container_pelusoteca {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .cards_pelusoteca_container {
-    margin: 1rem auto;
-    padding: 0.75rem;
+
+  /* Pelusoteca: altura un poco mayor por el ancho más chico del texto */
+  .cards_pelusoteca_article {
+    height: 34rem;
   }
 
-  /* Playlist */
+  .pelusa-card-front .div_img_pelusoteca {
+    max-width: 14rem;
+  }
+
+  .pelusa_name {
+    font-size: 1.05rem;
+  }
+
   .intro_playlist {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
+
   .div_text_playlist,
   .div_dj_vid {
     max-width: 100%;
   }
+
+  .div_dj_vid {
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 1rem;
+  }
+
   .subtitle_playlist {
     font-size: 1.05rem;
     padding: 0.75rem 1rem 0.25rem;
     margin: 0;
   }
+
   .text_playlist {
     font-size: 0.95rem;
     margin: 0 1rem 0.5rem;
     padding-bottom: 0.5rem;
   }
+
   .section_hymn {
     max-width: 100%;
     margin: 1rem auto;
   }
+
   .song_name {
     font-size: 1.3rem;
   }
+
   .hymn_lyrics {
     font-size: 0.95rem;
     margin: 0 1rem 1rem;
   }
 
-  /* Créditos */
   .div_img_creditos {
     max-height: 56svh;
     overflow: hidden;
     margin-bottom: 0;
   }
+
   .img_creditos {
     width: 100%;
     height: 100%;
@@ -834,21 +1201,49 @@ footer p {
     display: block;
   }
 
-  /* Footer compacto */
+  .div_subtitulo_creditos {
+    padding: 0.75rem 0.5rem;
+    min-height: auto;
+  }
+
+  .subtitulo_creditos {
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+  }
+
+  .columna-creditos {
+    width: 100%;
+    align-items: center;
+  }
+
+  .rol-creditos {
+    max-width: 100%;
+  }
+
+  .rol-normal,
+  .rol-hover {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer compacto + sticky */
   footer {
     text-align: center;
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
     margin-top: auto;
   }
+
   body {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
   }
+
   main {
     flex: 1 0 auto;
   }
+
   footer p:last-child {
     margin-bottom: 0;
   }

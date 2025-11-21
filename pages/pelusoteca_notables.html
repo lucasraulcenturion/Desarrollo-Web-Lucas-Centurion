@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Pelusoteca del Barón Von Fluffington III · La colección más distinguida de pelusas nobles y notables del planeta.">
+          content="Pelusoteca del Barón Von Fluffington III · La colección más distinguida de pelusas nobles y notables del planeta.">
     <meta name="author" content="Lucas Centurión">
 
-    <!-- Title -->
     <title>Pelusoteca Notables</title>
 
     <!-- Favicon -->
@@ -22,273 +21,373 @@
         rel="stylesheet">
 
     <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<!-- --------------------------------------------------------------------------------------------------------------------- -->
-
 <body>
-    <!-- NAVBAR  -->
+
+         <!-- HEADER / NAVBAR -->
+
     <header class="header">
 
-        <!-- NAVBAR BOOTSTRAP -->
-        <nav class="navbar navbar-expand-md" aria-label="Navegación principal del sitio del Barón Von Fluffington III">
+        <nav class="navbar navbar-expand-md"
+             aria-label="Navegación principal del sitio del Barón Von Fluffington III">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img class="navbar__logo" src="../assets/img/logo.svg"
-                        alt="Logo del Barón"></a>
-                <!-- Menu Hamburguesa -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img class="navbar__logo"
+                         src="../assets/img/logo.svg"
+                         alt="Logo del Barón">
+                </a>
+
+                <!-- Menú Hamburguesa -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
-                    <!-- NAVBAR LINKS -->
                     <ul class="navbar-nav mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./cronicas.html">Crónicas del
-                                Fluff</a>
+                            <a class="nav-link" href="./cronicas.html">Crónicas del Fluff</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./la_corte.html">La Corte de los Corazones</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle active"
+                               aria-current="page"
+                               href="#"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
                                 Pelusoteca
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pelusoteca_babys.html">Pelusoteca Baby's</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pelusoteca_babys.html">
+                                        Pelusoteca Baby's
+                                    </a>
                                 </li>
-                                <li><a class="dropdown-item active" aria-current="page"
-                                        href="./pelusoteca_notables.html">Pelusoteca
-                                        Notables</a>
+                                <li>
+                                    <a class="dropdown-item active"
+                                       aria-current="page"
+                                       href="./pelusoteca_notables.html">
+                                        Pelusoteca Notables
+                                    </a>
                                 </li>
                             </ul>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="./haters_diamonds.html">Haters &
-                                Diamonds</a>
+                            <a class="nav-link" href="./haters_diamonds.html">Haters & Diamonds</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./playlist.html">Playlist Imperial</a>
                         </li>
-                        <!-- ------ -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="./creditos.html">Créditos</a>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+
+         <!-- MAIN -->
 
     <main>
+
         <!-- H1 OCULTO PARA SEO -->
         <h1 class="h1-hidden" id="h1-pelusoteca">Pelusoteca Notables</h1>
+
         <!-- IMAGEN PORTADA -->
         <section class="img_pelusoteca">
-            <img class="img_portada" src="../assets/img/pelusoteca/Pelusoteca Notables.png" alt="Pelusoteca Notables" />
+            <img class="img_portada"
+                 src="../assets/img/pelusoteca/Pelusoteca Notables.png"
+                 alt="Pelusoteca Notables">
         </section>
 
         <!-- TEXTO INTRODUCTORIO -->
-        <div class="container-cards">
+        <div class="container_cards">
 
             <div class="div_text_pelusoteca">
+                <h2 class="subtitulo_baron mt-4 mb-4">
+                    👑 La Cámara de las Reliquias Íntimas: Pelusarium Notables 💎
+                </h2>
 
-                <p class="parrafo_baron"> <strong>👑 La Cámara de las Reliquias Íntimas: Pelusarium Notables 💎</strong>
+                <p class="parrafo_baron mb-4">
+                    El Único Archivo Mundial de Pelusas de Ombligo de Nobles y Notables.
                 </p>
-                <p class="parrafo_baron">El Único Archivo Mundial de Pelusas de Ombligo de Nobles y Notables.</p>
-                <p class="parrafo_baron">En el universo de las colecciones extraordinarias, el valor no se mide solo en
-                    quilates, sino en el linaje. El Pelusarium Notables no alberga cualquier reliquia; es el custodio
-                    exclusivo
-                    de las pelusas de ombligo de la Nobleza, la Aristocracia y figuras prominentes cuyos nacimientos
-                    marcaron el
-                    destino. Hemos elevado lo efímero a la categoría de tesoro histórico, presentando cada fibra no solo
-                    como
-                    una curiosidad, sino como un auténtico vestigio de un linaje de excelencia.</p>
-                <p class="parrafo_baron">✨ Un Recorrido por el Privilegio.</p>
-                <p class="parrafo_baron">Cada diminuta mota es una cápsula del tiempo, capturada en el momento de la
+
+                <p class="parrafo_baron mb-4">
+                    En el universo de las colecciones extraordinarias, el valor no se mide
+                    solo en quilates, sino en el linaje. El Pelusarium Notables no alberga cualquier reliquia; es el
+                    custodio exclusivo de las pelusas de ombligo de la Nobleza, la Aristocracia y figuras prominentes
+                    cuyos nacimientos marcaron el destino. Hemos elevado lo efímero a la categoría de tesoro histórico,
+                    presentando cada fibra no solo como una curiosidad, sino como un auténtico vestigio de un linaje de
+                    excelencia.
+                </p>
+
+                <h2 class="subtitulo_baron mt-4 mb-4">
+                    ✨ Un Recorrido por el Privilegio.
+                </h2>
+
+                <p class="parrafo_baron mb-4">
+                    Cada diminuta mota es una cápsula del tiempo, capturada en el momento de la
                     pureza absoluta. Delicadamente tratadas y engarzadas en vitrinas que evocan el esplendor Art Déco y
                     el lujo barroco con oro pulido, diamantes incrustados y terciopelos suntuosos, estas reliquias son
                     presentadas con la dignidad que corresponde a su origen. Aquí, podrá contemplar las fibras del Barón
                     Von Fluffington III en su infancia, los filamentos de herederos a tronos menores y las hebras de
                     pensadores y artistas que ascendieron a la nobleza. Es un estudio sin precedentes de la grandeza
-                    fibrosa, donde el nacimiento de una leyenda comienza con esta sutil, pero potente, evidencia.</p>
-                <p class="parrafo_baron"><strong> Descubra las pelusas que confirman la prosapia. Descubra el Pelusarium
-                        Notables.</strong></p>
+                    fibrosa, donde el nacimiento de una leyenda comienza con esta sutil, pero potente, evidencia.
                 </p>
+
+                <h2 class="subtitulo_baron mt-4 mb-4">
+                    Descubra las pelusas que confirman la prosapia. Descubra el Pelusarium Notables.
+                </h2>
             </div>
 
             <!-- TARJETAS DE LA PELUSOTECA NOTABLES -->
             <section class="grid_container_pelusoteca">
 
                 <!-- Tarjeta 1 -->
-                <article class="cards_pelusoteca_container">
+                <article class="cards_pelusoteca_article">
+                    <div class="pelusa-card-inner">
 
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-5.jpeg" alt="Pelusa 5" />
+                        <!-- FRENTE (imagen + nombre) -->
+                        <div class="pelusa-card-face pelusa-card-front">
+                            <div class="div_pelusoteca">
+                                <div class="div_img_pelusoteca">
+                                    <img class="cards_media_img"
+                                         src="../assets/img/pelusoteca/pelusa-5.jpeg"
+                                         alt="Pelusa 5">
+                                </div>
+                                <div class="div_text_pelusoteca">
+                                    <p class="pelusa_name">💗 Madame Lintéphora de la Rosa Agazapada</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="div_text_pelusoteca">
-                            <p class="pelusa_name">💗 Madame Lintéphora de la Rosa Agazapada</p>
-                        </div>
-                    </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Pelusa de Ombligo Aristofabulosa –
-                            Edición Cabaretera Nocturna.</p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Extraída del ombligo de Margot Lavigne,
-                            vedette
-                            retirée del circuito burlesque parisino, justo después de su última reverencia en el Moulin
-                            Vert.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón Von Fluffington III:</strong> Ah...,
-                            Lintéphora… musa de terciopelo y secretos nocturnos. Su forma curvada es la de un bostezo
-                            insinuante, un susurro en plena función. El rosa lujurioso de su textura evoca los vestigios
-                            de
-                            una
-                            boa de plumas olvidada sobre un diván de terciopelo burdeos. El zafiro engarzado que porta
-                            no es
-                            simple adorno: es testigo ocular de pasiones clandestinas y brindis con champán rosé.</p>
-                        <p class="text_cards"><strong>Nota Aromática:</strong> Efluvios de talco perfumado con
-                            acentos de
-                            licor de violetas, humo de cigarro mentolado y un leve toque de perfume vintage derramado
-                            accidentalmente en una carta sin enviar.
-                        </p>
+                        <!-- DORSO (texto descriptivo) -->
+                        <div class="pelusa-card-face pelusa-card-back">
+                            <div class="div_text_pelusoteca">
+                                <p class="text_cards mb-3">
+                                    <strong>Clasificación:</strong> Pelusa de Ombligo
+                                    Aristofabulosa – Edición Cabaretera Nocturna.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Origen:</strong> Extraída del ombligo de Margot
+                                    Lavigne, vedette retirée del circuito burlesque parisino, justo después de su última
+                                    reverencia en el Moulin Vert.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Descripción del Barón Von Fluffington III:</strong>
+                                    Ah..., Lintéphora… musa de terciopelo y secretos nocturnos. Su forma curvada es la
+                                    de un bostezo insinuante, un susurro en plena función. El rosa lujurioso de su
+                                    textura evoca los vestigios de una boa de plumas olvidada sobre un diván de
+                                    terciopelo burdeos. El zafiro engarzado que porta no es simple adorno: es testigo
+                                    ocular de pasiones clandestinas y brindis con champán rosé.
+                                </p>
+                                <p class="text_cards">
+                                    <strong>Nota Aromática:</strong> Efluvios de talco perfumado con
+                                    acentos de licor de violetas, humo de cigarro mentolado y un leve toque de perfume
+                                    vintage derramado accidentalmente en una carta sin enviar.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </article>
 
                 <!-- Tarjeta 2 -->
-                <article class="cards_pelusoteca_container">
+                <article class="cards_pelusoteca_article">
+                    <div class="pelusa-card-inner">
 
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-6.jpeg" alt="Pelusa 6" />
+                        <!-- FRENTE (imagen + nombre) -->
+                        <div class="pelusa-card-face pelusa-card-front">
+                            <div class="div_pelusoteca">
+                                <div class="div_img_pelusoteca">
+                                    <img class="cards_media_img"
+                                         src="../assets/img/pelusoteca/pelusa-6.jpeg"
+                                         alt="Pelusa 6">
+                                </div>
+                                <div class="div_text_pelusoteca">
+                                    <p class="pelusa_name">🍉 Maracandia Explosiva del Trópico Inesperado</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="div_text_pelusoteca">
-                            <p class="pelusa_name">🍉 Maracandia Explosiva del Trópico Inesperado</p>
-                        </div>
-                    </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Noble Exótica de la Orden Fluff-Funk.
-                        </p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Interior de la faja ceremonial de un
-                            coreógrafo de samba retirado, actualmente devenido sommelier en un club tropical clandestino
-                            de
-                            Viena.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón Von Fluffington III:</strong> Si las
-                            frutas bailaran reguetón con tiaras puestas, se parecerían a Maracandia. Esta pelusa llegó a
-                            mis
-                            manos envuelta en la bruma de un carnaval nocturno y el sudor de un vals descarriado. Tiene
-                            la
-                            irreverencia de quien no pide permiso para entrar a un palacio, pero es recibida con
-                            aplausos.
-                            Una criatura de la noche que no teme al glitter ni a la crítica.</p>
-                        <p class="text_cards mb-1"><strong>Nota Aromática:</strong> Pulpa de maracuyá con esencias de
-                            chicle
-                            de uva, hojas de menta caribeña y un toque de laca de piña. </p>
+                        <!-- DORSO (texto descriptivo) -->
+                        <div class="pelusa-card-face pelusa-card-back">
+                            <div class="div_text_pelusoteca">
+                                <p class="text_cards mb-3">
+                                    <strong>Clasificación:</strong> Noble Exótica de la Orden
+                                    Fluff-Funk.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Origen:</strong> Interior de la faja ceremonial de un
+                                    coreógrafo de samba retirado, actualmente devenido sommelier en un club tropical
+                                    clandestino de Viena.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Descripción del Barón Von Fluffington III:</strong>
+                                    Si las frutas bailaran reguetón con tiaras puestas, se parecerían a Maracandia. Esta
+                                    pelusa llegó a mis manos envuelta en la bruma de un carnaval nocturno y el sudor de
+                                    un vals descarriado. Tiene la irreverencia de quien no pide permiso para entrar a un
+                                    palacio, pero es recibida con aplausos. Una criatura de la noche que no teme al
+                                    glitter ni a la crítica.
+                                </p>
+                                <p class="text_cards mb-1">
+                                    <strong>Nota Aromática:</strong> Pulpa de maracuyá con
+                                    esencias de chicle de uva, hojas de menta caribeña y un toque de laca de piña.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </article>
 
                 <!-- Tarjeta 3 -->
-                <article class="cards_pelusoteca_container">
+                <article class="cards_pelusoteca_article">
+                    <div class="pelusa-card-inner">
 
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-7.jpeg" alt="Pelusa 7" />
+                        <!-- FRENTE (imagen + nombre) -->
+                        <div class="pelusa-card-face pelusa-card-front">
+                            <div class="div_pelusoteca">
+                                <div class="div_img_pelusoteca">
+                                    <img class="cards_media_img"
+                                         src="../assets/img/pelusoteca/pelusa-7.jpeg"
+                                         alt="Pelusa 7">
+                                </div>
+                                <div class="div_text_pelusoteca">
+                                    <p class="pelusa_name">💎 Celestín & Pomponina</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="div_text_pelusoteca">
-                            <p class="pelusa_name">💎 Celestín & Pomponina</p>
-                        </div>
-                    </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Alta nobleza pelusil cromática.</p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Costura interior de la túnica ceremonial de
-                            una
-                            Drag Queen galáctica, tras una maratón de voguing en gravedad cero.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón Von Fluffington III:</strong> Ah,
-                            Celestín
-                            &
-                            Pomponina, una dupla inseparable como el terciopelo y el escándalo. Esta pelusa, doble y
-                            divina,
-                            reposa como un chantilly de algodón de azúcar galáctico, fusionando la ternura de un
-                            unicornio
-                            recién bañado con el descaro de un confeti con propósito. Fue encontrada mientras bailaba
-                            lentamente
-                            en la brisa de un ventilador de camerino, justo antes de una coronación no autorizada.</p>
-                        <p class="text_cards"><strong>Nota Aromática:</strong> Esencia de chicle de melón rosado con
-                            fondo de crema chantilly y un guiño de laca fluorescente para cabello.</p>
+                        <!-- DORSO (texto descriptivo) -->
+                        <div class="pelusa-card-face pelusa-card-back">
+                            <div class="div_text_pelusoteca">
+                                <p class="text_cards mb-3">
+                                    <strong>Clasificación:</strong> Alta nobleza pelusil
+                                    cromática.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Origen:</strong> Costura interior de la túnica
+                                    ceremonial de una Drag Queen galáctica, tras una maratón de voguing en gravedad
+                                    cero.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Descripción del Barón Von Fluffington III:</strong>
+                                    Ah, Celestín & Pomponina, una dupla inseparable como el terciopelo y el escándalo.
+                                    Esta pelusa, doble y divina, reposa como un chantilly de algodón de azúcar
+                                    galáctico, fusionando la ternura de un unicornio recién bañado con el descaro de un
+                                    confeti con propósito. Fue encontrada mientras bailaba lentamente en la brisa de un
+                                    ventilador de camerino, justo antes de una coronación no autorizada.
+                                </p>
+                                <p class="text_cards">
+                                    <strong>Nota Aromática:</strong> Esencia de chicle de melón rosado
+                                    con fondo de crema chantilly y un guiño de laca fluorescente para cabello.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <!-- Tarjeta 4 -->
-                <article class="cards_pelusoteca_container">
+                <article class="cards_pelusoteca_article">
+                    <div class="pelusa-card-inner">
 
-                    <div class="div_pelusoteca">
-                        <div class="div_img_pelusoteca">
-                            <img class="cards_media_img" src="../assets/img/pelusoteca/pelusa-8.jpeg" alt="Pelusa 8" />
+                        <!-- FRENTE (imagen + nombre) -->
+                        <div class="pelusa-card-face pelusa-card-front">
+                            <div class="div_pelusoteca">
+                                <div class="div_img_pelusoteca">
+                                    <img class="cards_media_img"
+                                         src="../assets/img/pelusoteca/pelusa-8.jpeg"
+                                         alt="Pelusa 8">
+                                </div>
+                                <div class="div_text_pelusoteca">
+                                    <p class="pelusa_name">👑 Suavelia de la Casa Pomponet</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="div_text_pelusoteca">
-                            <p class="pelusa_name">👑 Suavelia de la Casa Pomponet</p>
-                        </div>
-                    </div>
 
-                    <div class="div_text_pelusoteca">
-                        <p class="text_cards mb-3"><strong>Clasificación:</strong> Dama de la Orden de los Vellones
-                            Pastel.</p>
-                        <p class="text_cards mb-3"><strong>Origen:</strong> Interior de la capa de terciopelo ceremonial
-                            de
-                            una reina de las nieves retirada, actualmente residente en una pastelería alpina.</p>
-                        <p class="text_cards mb-3"><strong>Descripción del Barón Von Fluffington III:</strong> Cuando vi
-                            a
-                            Suavelia por primera vez, el tiempo se detuvo. Suspendida sobre un pedestal con la
-                            arrogancia de
-                            una marquesa y el encanto de una nube, me susurró en francés antiguo. Esta pelusa no fue
-                            recogida: se dejó descubrir. Con una textura digna de los suspiros de un cisne enamorado,
-                            Suavelia es el epítome de lo que significa vivir rodeado de lo innecesariamente sublime.</p>
-                        <p class="text_cards"><strong>Nota Aromática:</strong> Helado de lavanda con toques de vainilla
-                            bourbon
-                            y un dejo de azúcar hilado expuesta al rocío de primavera. </p>
+                        <!-- DORSO (texto descriptivo) -->
+                        <div class="pelusa-card-face pelusa-card-back">
+                            <div class="div_text_pelusoteca">
+                                <p class="text_cards mb-3">
+                                    <strong>Clasificación:</strong> Dama de la Orden de los
+                                    Vellones Pastel.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Origen:</strong> Interior de la capa de terciopelo
+                                    ceremonial de una reina de las nieves retirada, actualmente residente en una
+                                    pastelería alpina.
+                                </p>
+                                <p class="text_cards mb-3">
+                                    <strong>Descripción del Barón Von Fluffington III:</strong>
+                                    Cuando vi a Suavelia por primera vez, el tiempo se detuvo. Suspendida sobre un
+                                    pedestal con la arrogancia de una marquesa y el encanto de una nube, me susurró en
+                                    francés antiguo. Esta pelusa no fue recogida: se dejó descubrir. Con una textura
+                                    digna de los suspiros de un cisne enamorado, Suavelia es el epítome de lo que
+                                    significa vivir rodeado de lo innecesariamente sublime.
+                                </p>
+                                <p class="text_cards">
+                                    <strong>Nota Aromática:</strong> Helado de lavanda con toques de
+                                    vainilla bourbon y un dejo de azúcar hilado expuesta al rocío de primavera.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </article>
+
             </section>
         </div>
 
-
-
     </main>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
-    <!-- PIE DE PÁGINA -->
+
+         <!-- FOOTER -->
+
     <footer>
-        <p class="text_footer">Barón Von Fluffington III · Proyecto artístico y digital creado por <strong>Lucas
-                Centurión</strong> ·
-            Contacto: <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a></p>
+        <p class="text_footer">
+            Barón Von Fluffington III · Proyecto artístico y digital creado por
+            <strong>Lucas Centurión</strong> ·
+            Contacto:
+            <a class="link_footer" href="mailto:lucascent@gmail.com">lucascent@gmail.com</a>
+        </p>
         <p class="text_footer">© 2025 · Todos los derechos reservados.</p>
     </footer>
 
-
-    <!-- BOOTSTRAP JS -->
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
+</body>
 </html>
