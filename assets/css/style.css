@@ -1,6 +1,6 @@
-/* =========================================================
-   RESET & BASE
-   ========================================================= */
+@charset "UTF-8";
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,10 +22,6 @@ img {
   height: auto;
   display: block;
 }
-
-/* =========================================================
-   UTILIDADES GENERALES
-   ========================================================= */
 
 /* H1 oculto para SEO */
 .h1-hidden {
@@ -89,10 +85,78 @@ img {
   align-items: center;
 }
 
-/* =========================================================
-   HEADER / NAVBAR
-   ========================================================= */
-
+/* ================== RESPONSIVE BASE ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  .container_cards {
+    padding: 1.5rem 1rem 1rem;
+  }
+  .subtitulo_baron {
+    font-size: 1.35rem;
+    padding-top: 1.5rem;
+  }
+  .parrafo_baron {
+    font-size: 1.25rem;
+  }
+}
+/* <= 768px */
+@media (max-width: 768px) {
+  .container_cards {
+    max-width: 100%;
+    padding: 1.5rem 0.75rem 1rem;
+  }
+  .subtitulo_baron {
+    font-size: 1.25rem;
+    padding: 1.5rem 0.5rem 0.75rem;
+  }
+  .parrafo_baron {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .container_cards {
+    padding: 1.25rem 0.75rem 0.75rem;
+  }
+  .img_portada {
+    max-height: 220px;
+    object-fit: cover;
+  }
+  .subtitulo_baron {
+    font-size: 1.15rem;
+  }
+  .parrafo_baron {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 0 0.5rem;
+  }
+  .text_cards {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0 0 0.5rem;
+    padding: 0 0.25rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+}
 .header {
   background: #5f1651;
 }
@@ -150,14 +214,7 @@ img {
 .navbar .nav-link.active,
 .navbar .nav-link.show {
   font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #fff7cc 0%,
-    #ffe28a 20%,
-    #ffc857 45%,
-    #e0a63b 70%,
-    #b8791a 100%
-  );
+  background: linear-gradient(90deg, #fff7cc 0%, #ffe28a 20%, #ffc857 45%, #e0a63b 70%, #b8791a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -166,14 +223,7 @@ img {
 .navbar .dropdown-menu .dropdown-item.active,
 .navbar .dropdown-menu .dropdown-item:active {
   font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #fff7cc 0%,
-    #ffe28a 20%,
-    #ffc857 45%,
-    #e0a63b 70%,
-    #b8791a 100%
-  );
+  background: linear-gradient(90deg, #fff7cc 0%, #ffe28a 20%, #ffc857 45%, #e0a63b 70%, #b8791a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -187,10 +237,76 @@ img {
   background-color: transparent;
 }
 
-/* =========================================================
-   INDEX / HERO
-   ========================================================= */
+/* ================== RESPONSIVE HEADER / NAVBAR ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  .navbar__logo {
+    width: 4rem;
+  }
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-size: 1rem;
+  }
+}
+/* 768px – 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .navbar .nav-link {
+    text-align: center;
+  }
+}
+/* <= 768px */
+@media (max-width: 768px) {
+  .navbar__logo {
+    width: 3.75rem;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .navbar__logo {
+    width: 3.25rem;
+  }
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-size: 0.95rem;
+  }
+}
+.link_footer {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
+footer {
+  background: #5f1651;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 1rem;
+}
+
+footer p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.125rem;
+}
+
+/* ================== RESPONSIVE FOOTER ================== */
+@media (max-width: 480px) {
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    margin-top: auto;
+  }
+  footer p:last-child {
+    margin-bottom: 0;
+  }
+}
 .hero {
   position: relative;
   height: calc(100vh - 5.625rem - 5.85rem);
@@ -234,147 +350,98 @@ img {
   padding: 0.625rem;
 }
 
-/* =========================================================
-   CRÓNICAS DEL FLUFF
-   ========================================================= */
-
-.contenido_cronicas {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 1.25rem;
-  background: rgba(0, 0, 0, 0.08);
-  border: 0.1875rem solid rgba(255, 255, 255, 0.12);
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.2);
-}
-
-.lema_cronicas {
-  font-family: "Merriweather", serif;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0 1.25rem;
-  font-weight: bold;
-  font-style: italic;
-  color: #ffffff;
-  padding: 4rem;
-  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
-}
-
-/* =========================================================
-   LA CORTE DE LOS CORAZONES
-   ========================================================= */
-
-.main_corte {
-  padding-bottom: 2rem;
-}
-
-.div_text_corte,
-.div_cards_corte {
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Intro */
-.main_corte .div_text_corte {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-#los_mas_likeados {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-top: 1rem;
-  font-weight: 700;
-}
-
-/* Contenedor tarjetas */
-.div_cards_corte {
-  width: 100%;
-  margin-top: 2rem;
-}
-
-/* Tarjeta */
-.cards_corte_article {
-  display: flex;
-  border: 0.0625rem solid #ddd;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
-  background: #fbf6e4;
-  width: 100%;
-  height: 30rem;
-  max-width: 100%;
-  margin: 1.8rem 0;
-  align-items: stretch;
-  position: relative;
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-
-/* Glow al hover */
-.cards_corte_article:hover {
-  animation: royalGlow 1.4s ease-in-out infinite alternate;
-}
-
-/* Columna de texto dentro de la tarjeta */
-.card_body {
-  flex: 1;
-}
-
-/* Imagen dentro de la tarjeta */
-.cards_corte_article .cards_media_img {
-  width: 50%;
-  max-width: 25rem;
-  height: 100%;
-  border-radius: 0.625rem;
-  object-fit: cover;
-  margin-right: 1.5rem;
-}
-
-/* Hashtags */
-.text_hashtag_cards {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  text-align: left;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
-}
-
-/* Efecto RoyalGlow */
-@keyframes royalGlow {
-  0% {
-    transform: translateY(0) scale(1);
-    box-shadow:
-      0 0 0 rgba(255, 215, 0, 0),
-      0 0 0 rgba(203, 69, 147, 0);
-    border-color: rgba(255, 215, 0, 0.3);
+/* ================== RESPONSIVE INDEX / HERO ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  .hero {
+    padding: 0 2.5rem 0 0;
+    height: calc(100vh - 5.625rem - 5.85rem);
+    justify-items: end;
+    align-items: center;
   }
-  50% {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow:
-      0 0 10px rgba(255, 215, 0, 0.9),
-      0 0 25px rgba(203, 69, 147, 0.7);
-    border-color: rgba(255, 215, 0, 0.9);
-  }
-  100% {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow:
-      0 0 6px rgba(255, 215, 0, 0.7),
-      0 0 16px rgba(203, 69, 147, 0.6);
-    border-color: rgba(255, 215, 0, 0.8);
+  .hero_content {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: 1rem;
   }
 }
-
-/* =========================================================
-   PELUSOTECAS (NOTABLES + BABY'S)
-   ========================================================= */
-
+/* <= 768px */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 2rem 0 0;
+    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
+    justify-items: end;
+    align-items: center;
+  }
+  .hero_content {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .hero {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    min-height: 100svh;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+  }
+  .hero_bg {
+    background: url("../img/baron-480.png") center/cover no-repeat;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.7));
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -2% -2%;
+    background: radial-gradient(80% 60% at 70% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero_content {
+    width: min(94vw, 26rem);
+    margin: 0 auto;
+    padding: 0.85rem 1rem;
+    background: rgba(20, 16, 27, 0.45);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+  }
+  .title_page {
+    color: #fff;
+    font-weight: 800;
+    font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
+    letter-spacing: 0.2px;
+    display: inline;
+    background: rgba(0, 0, 0, 0.55);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.06rem 0.3rem;
+    border-radius: 6px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 0.6);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  }
+  .iafluencer_description {
+    color: #fff;
+    font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+    line-height: 1.35;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+}
 /* Intro texto */
 .div_text_pelusoteca {
   display: flex;
@@ -405,7 +472,7 @@ img {
 }
 
 /* Cada col como contenedor flex para que el article llene el alto */
-.pelusoteca_grid .row > [class*="col-"] {
+.pelusoteca_grid .row > [class*=col-] {
   display: flex;
 }
 
@@ -415,7 +482,6 @@ img {
 }
 
 /* -------- Tarjetas Pelusoteca (comunes) -------- */
-
 .cards_pelusoteca_article {
   position: relative;
   justify-self: center;
@@ -424,9 +490,7 @@ img {
   height: 28rem;
   border-radius: 0.9rem;
   border: 0.3rem solid transparent;
-  background:
-    linear-gradient(#fbf6e4, #fbf6e4) padding-box,
-    linear-gradient(135deg, #ffd46b, #ff8bd9, #7fffd4) border-box;
+  background: linear-gradient(#fbf6e4, #fbf6e4) padding-box, linear-gradient(135deg, #ffd46b, #ff8bd9, #7fffd4) border-box;
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
   text-align: center;
   padding: 0;
@@ -528,10 +592,239 @@ img {
   font-size: 0.96rem;
 }
 
-/* =========================================================
-   HATERS & DIAMONDS
-   ========================================================= */
+/* ================== RESPONSIVE PELUSOTECAS ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  /* Notables a 1 columna */
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  /* Baby's columnas full-width */
+  .pelusoteca_grid .row > [class*=col-] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .cards_pelusoteca_article {
+    height: 30rem;
+  }
+}
+/* 768px – 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pelusoteca_grid .row {
+    justify-content: center;
+  }
+  .pelusoteca_grid .cards_pelusoteca_article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* <= 768px */
+@media (max-width: 768px) {
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .cards_pelusoteca_article {
+    max-width: 32rem;
+    height: 32rem;
+  }
+  /* Baby's centrado igual que Notables */
+  .pelusoteca_grid .row {
+    justify-content: center;
+  }
+  .pelusoteca_grid .cards_pelusoteca_article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .div_text_pelusoteca {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
+  .pelusoteca_grid {
+    padding: 0 1rem;
+  }
+  .cards_pelusoteca_article {
+    width: 100%;
+    max-width: 21.5rem;
+    margin: 0 auto;
+    height: 35rem;
+  }
+  .pelusa-card-front .div_img_pelusoteca {
+    max-width: 16rem;
+  }
+  .pelusa-card-back .text_cards {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .pelusa_name {
+    font-size: 1.05rem;
+  }
+}
+.main_corte {
+  padding-bottom: 2rem;
+}
 
+.div_text_corte,
+.div_cards_corte {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Intro */
+.main_corte .div_text_corte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+#los_mas_likeados {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+/* Contenedor tarjetas */
+.div_cards_corte {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Tarjeta */
+.cards_corte_article {
+  display: flex;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  background: #fbf6e4;
+  width: 100%;
+  height: 30rem;
+  max-width: 100%;
+  margin: 1.8rem 0;
+  align-items: stretch;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* Glow al hover */
+.cards_corte_article:hover {
+  animation: royalGlow 1.4s ease-in-out infinite alternate;
+}
+
+/* Columna de texto dentro de la tarjeta */
+.card_body {
+  flex: 1;
+}
+
+/* Imagen dentro de la tarjeta */
+.cards_corte_article .cards_media_img {
+  width: 50%;
+  max-width: 25rem;
+  height: 100%;
+  border-radius: 0.625rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+/* Hashtags */
+.text_hashtag_cards {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Efecto RoyalGlow */
+@keyframes royalGlow {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 215, 0, 0), 0 0 0 rgba(203, 69, 147, 0);
+    border-color: rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 25px rgba(203, 69, 147, 0.7);
+    border-color: rgba(255, 215, 0, 0.9);
+  }
+  100% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.7), 0 0 16px rgba(203, 69, 147, 0.6);
+    border-color: rgba(255, 215, 0, 0.8);
+  }
+}
+/* ================== RESPONSIVE LA CORTE ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  .cards_corte_article {
+    height: auto;
+  }
+  .cards_corte_article .cards_media_img {
+    width: 45%;
+    height: auto;
+  }
+}
+/* <= 768px */
+@media (max-width: 768px) {
+  .cards_corte_article {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .cards_corte_article .cards_media_img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.8rem;
+    height: auto;
+    border-radius: 12px;
+  }
+  .card_body {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .div_text_corte {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
+  .cards_corte_article {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards_corte_article .cards_media_img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 0.8rem;
+    border-radius: 12px;
+  }
+  .card_body {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .text_hashtag_cards {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0 0 0.5rem;
+    padding: 0 0.25rem;
+  }
+}
 .grilla_haters {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -561,10 +854,175 @@ img {
   border-radius: 0.75rem;
 }
 
-/* =========================================================
-   PLAYLIST IMPERIAL
-   ========================================================= */
+/* ================== RESPONSIVE HATERS & DIAMONDS ================== */
+/* <= 992px */
+@media (max-width: 992px) {
+  .grilla_haters {
+    gap: 2rem;
+  }
+}
+/* <= 768px */
+@media (max-width: 768px) {
+  .grilla_haters {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0 1.5rem;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .grilla_haters,
+  .cards_haters_container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .cards_haters_container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.75rem;
+  }
+  .cards_media_img_haters,
+  .barra_instagram {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.contenido_cronicas {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem;
+  background: rgba(0, 0, 0, 0.08);
+  border: 0.1875rem solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.2);
+}
 
+.lema_cronicas {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 1.25rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff;
+  padding: 4rem;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+.div_subtitulo_creditos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  padding: 1rem;
+  background: linear-gradient(#cb4593, #75124c);
+  max-width: 100%;
+  text-align: center;
+}
+
+.subtitulo_creditos {
+  font-family: "Merriweather", serif;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
+}
+
+.main_playlist {
+  justify-content: center;
+}
+
+/* Columna de imágenes de créditos */
+.columna-creditos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* Par de imágenes normal/hover */
+.rol-creditos {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.rol-normal {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.25s ease;
+}
+
+.rol-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.rol-creditos:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.rol-creditos:hover .rol-hover {
+  opacity: 1;
+}
+
+.rol-creditos:hover .rol-normal {
+  opacity: 0;
+}
+
+/* ================== RESPONSIVE CRÉDITOS ================== */
+/* <= 768px */
+@media (max-width: 768px) {
+  .subtitulo_creditos {
+    font-size: 1.9rem;
+  }
+}
+/* <= 480px */
+@media (max-width: 480px) {
+  .div_img_creditos {
+    max-height: 56svh;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .img_creditos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .div_subtitulo_creditos {
+    padding: 0.75rem 0.5rem;
+    min-height: auto;
+  }
+  .subtitulo_creditos {
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+  }
+  .columna-creditos {
+    width: 100%;
+    align-items: center;
+  }
+  .rol-creditos {
+    max-width: 100%;
+  }
+  .rol-normal,
+  .rol-hover {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ================== PLAYLIST IMPERIAL – BASE ================== */
 /* Intro: video + texto */
 .intro_playlist {
   display: flex;
@@ -692,341 +1150,45 @@ img {
 
 /* Tarjetas de audio (Bootstrap) */
 .card-body {
-  background: linear-gradient(
-    45deg,
-    rgba(51, 5, 32, 1) 0%,
-    rgba(117, 18, 76, 1) 50%,
-    rgba(51, 5, 32, 1) 100%
-  );
+  background: linear-gradient(45deg, rgb(51, 5, 32) 0%, rgb(117, 18, 76) 50%, rgb(51, 5, 32) 100%);
 }
 
-/* =========================================================
-   CRÉDITOS
-   ========================================================= */
-
-.div_subtitulo_creditos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 5rem;
-  padding: 1rem;
-  background: linear-gradient(#cb4593, #75124c);
-  max-width: 100%;
-  text-align: center;
-}
-
-.subtitulo_creditos {
-  font-family: "Merriweather", serif;
-  font-size: 2.25rem;
-  text-align: center;
-  margin: 0 1.25rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
-}
-
-.main_playlist {
-  justify-content: center;
-}
-
-/* Columna de imágenes de créditos */
-.columna-creditos {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: max-content;
-  margin: 0 auto;
-}
-
-/* Par de imágenes normal/hover */
-.rol-creditos {
-  position: relative;
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-.rol-normal {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  transition: opacity 0.25s ease;
-}
-
-.rol-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.rol-creditos:hover {
-  transform: translateY(-4px) scale(1.01);
-}
-
-.rol-creditos:hover .rol-hover {
-  opacity: 1;
-}
-
-.rol-creditos:hover .rol-normal {
-  opacity: 0;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.link_footer {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-footer {
-  background: #5f1651;
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9rem;
-  text-align: left;
-  padding: 1rem;
-}
-
-footer p {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-bottom: 0.125rem;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-/* -----------------------------
-   <= 992px (tablets landscape / notebooks chicos)
-   ----------------------------- */
+/* ================== RESPONSIVE PLAYLIST IMPERIAL ================== */
+/* <= 992px */
 @media (max-width: 992px) {
-  /* Navbar */
-  .navbar__logo {
-    width: 4rem;
-  }
-
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 1rem;
-  }
-
-  /* Index / Hero (texto a la derecha, un poco más separado de la imagen) */
-  .hero {
-    padding: 0 2.5rem 0 0;
-    height: calc(100vh - 5.625rem - 5.85rem);
-    justify-items: end;
-    align-items: center;
-  }
-
-  .hero_content {
-    max-width: 34rem;
-    margin-left: auto;
-    margin-right: 1rem; /* más pegado al borde derecho -> más lejos de la imagen */
-  }
-
-  /* Contenidos generales */
-  .container_cards {
-    padding: 1.5rem 1rem 1rem;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.35rem;
-    padding-top: 1.5rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1.25rem;
-  }
-
-  /* Corte */
-  .cards_corte_article {
-    height: auto;
-  }
-
-  .cards_corte_article .cards_media_img {
-    width: 45%;
-    height: auto;
-  }
-
-  /* Pelusotecas: ambas a 1 columna para que no se corte texto */
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .pelusoteca_grid .row > [class*="col-"] {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .cards_pelusoteca_article {
-    height: 30rem;
-  }
-
-  /* Haters */
-  .grilla_haters {
-    gap: 2rem;
-  }
-
-  /* Playlist */
   .grilla_playlist {
     grid-template-columns: 18rem 1fr;
   }
 }
-
-/* -----------------------------
-   768px – 991px (navbar centrado + ajustes Pelusoteca Baby's)
-   ----------------------------- */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Navbar centrado y prolijo */
-  .navbar-nav {
-    width: 100%;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .navbar .nav-link {
-    text-align: center;
-  }
-
-  /* Pelusoteca Baby's: asegurar centrado de tarjetas */
-  .pelusoteca_grid .row {
-    justify-content: center;
-  }
-
-  .pelusoteca_grid .cards_pelusoteca_article {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* -----------------------------
-   <= 768px (tablets verticales / móviles grandes)
-   ----------------------------- */
+/* <= 768px */
 @media (max-width: 768px) {
-  /* Navbar */
-  .navbar__logo {
-    width: 3.75rem;
-  }
-
-  /* Index / Hero 768:
-     Mismo “estilo” que 991: texto a la derecha y centrado verticalmente */
-  .hero {
-    padding: 0 2rem 0 0;
-    height: calc(100vh - 5rem);
-    min-height: calc(100vh - 5rem);
-    justify-items: end;
-    align-items: center;
-  }
-
-  .hero_content {
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: 1.5rem;
-  }
-
-  /* Contenedor general */
-  .container_cards {
-    max-width: 100%;
-    padding: 1.5rem 0.75rem 1rem;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.25rem;
-    padding: 1.5rem 0.5rem 0.75rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1.15rem;
-    margin-bottom: 0.6rem;
-  }
-
-  /* Corte */
-  .cards_corte_article {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .cards_corte_article .cards_media_img {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 0.8rem;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  .card_body {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  /* Pelusotecas */
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .cards_pelusoteca_article {
-    max-width: 32rem;
-    height: 32rem;
-  }
-
-  /* Pelusoteca Baby's: centrado igual que Notables */
-  .pelusoteca_grid .row {
-    justify-content: center;
-  }
-
-  .pelusoteca_grid .cards_pelusoteca_article {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Haters */
-  .grilla_haters {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0 1.5rem;
-  }
-
-  /* Playlist */
   .grilla_playlist {
     grid-template-columns: 1fr;
   }
-
   .section_hymn {
     max-width: 100%;
     margin-bottom: 1rem;
   }
-
   .hymn_img {
     max-width: 100%;
   }
-
   .section_other_hits {
     max-width: 100%;
   }
-
   .div_dj_vid {
     margin: 0 auto 1.5rem;
   }
-
   .intro_playlist {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
   }
-
+  /* En 768 todo lo que está debajo del texto introductorio
+     ocupa el mismo ancho que el texto */
   .div_text_playlist {
     max-width: 36rem;
     margin: 0 auto;
   }
-
-  /* Playlist 768: todo con el mismo ancho que el texto introductorio */
   .grilla_playlist,
   .section_hymn,
   .section_other_hits,
@@ -1034,335 +1196,44 @@ footer p {
     max-width: 36rem;
     margin: 0 auto;
   }
-
-  /* Créditos */
-  .subtitulo_creditos {
-    font-size: 1.9rem;
-  }
 }
-
-/* -----------------------------
-   <= 480px (móviles chicos)
-   ----------------------------- */
+/* <= 480px */
 @media (max-width: 480px) {
-  /* Bloquea scroll horizontal */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Navbar */
-  .navbar__logo {
-    width: 3.25rem;
-  }
-
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 0.95rem;
-  }
-
-  /* Index / Hero versión mobile */
-  .hero {
-    position: relative;
-    display: grid;
-    justify-items: center;
-    align-content: end;
-    min-height: 100svh;
-    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
-  }
-
-  .hero_bg {
-    background: url("../img/baron-480.png") center/cover no-repeat;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.1) 40%,
-      rgba(0, 0, 0, 0.7)
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: -2% -2%;
-    background: radial-gradient(
-      80% 60% at 70% 50%,
-      transparent 55%,
-      rgba(0, 0, 0, 0.55) 100%
-    );
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero_content {
-    width: min(94vw, 26rem);
-    margin: 0 auto;
-    padding: 0.85rem 1rem;
-    background: rgba(20, 16, 27, 0.45);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-  }
-
-  .title_page {
-    color: #fff;
-    font-weight: 800;
-    font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
-    letter-spacing: 0.2px;
-    display: inline;
-    background: rgba(0, 0, 0, 0.55);
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    padding: 0.06rem 0.3rem;
-    border-radius: 6px;
-    text-shadow:
-      0 2px 6px rgba(0, 0, 0, 0.9),
-      0 0 1px rgba(0, 0, 0, 0.6);
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
-  }
-
-  .iafluencer_description {
-    color: #fff;
-    font-size: clamp(0.92rem, 3.2vw, 1.02rem);
-    line-height: 1.35;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-    text-align: center;
-  }
-
-  /* Contenedores generales */
-  .container_cards,
-  .grilla_haters,
-  .cards_haters_container {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .container_cards {
-    padding: 1.25rem 0.75rem 0.75rem;
-  }
-
-  .cards_haters_container {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0.75rem;
-  }
-
-  .img_portada {
-    max-height: 220px;
-    object-fit: cover;
-  }
-
-  /* Corte */
-  .div_text_corte,
-  .div_text_pelusoteca {
-    padding: 0.5rem 0.25rem;
-    text-align: left;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.15rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    margin: 0 0 0.5rem;
-  }
-
-  .cards_corte_article {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cards_corte_article .cards_media_img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 0 0.8rem;
-    border-radius: 12px;
-  }
-
-  .card_body {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  /* Haters */
-  .grilla_haters {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0 1.5rem;
-  }
-
-  .cards_media_img_haters,
-  .barra_instagram {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .text_cards,
-  .text_hashtag_cards {
-    font-size: 0.95rem;
-    line-height: 1.45;
-    margin: 0 0 0.5rem;
-    padding: 0 0.25rem;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  /* Pelusotecas 480: padding lateral, tarjetas más angostas centradas e imagen más grande */
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 0 1rem;
-  }
-
-  .pelusoteca_grid {
-    padding: 0 1rem;
-  }
-
-  .cards_pelusoteca_article {
-    width: 100%;
-    max-width: 21.5rem;
-    margin: 0 auto;
-    height: 35rem;
-  }
-
-  .pelusa-card-front .div_img_pelusoteca {
-    max-width: 16rem;
-  }
-
-  .pelusa-card-back .text_cards {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .pelusa_name {
-    font-size: 1.05rem;
-  }
-
-  /* Playlist */
   .intro_playlist {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
-
   .div_text_playlist,
   .div_dj_vid {
     max-width: 100%;
   }
-
   .div_dj_vid {
     width: 16rem;
     height: 16rem;
     margin-bottom: 1rem;
   }
-
   .subtitle_playlist {
     font-size: 1.05rem;
     padding: 0.75rem 1rem 0.25rem;
     margin: 0;
   }
-
   .text_playlist {
     font-size: 0.95rem;
     margin: 0 1rem 0.5rem;
     padding-bottom: 0.5rem;
   }
-
   .section_hymn {
     max-width: 100%;
     margin: 1rem auto;
   }
-
   .song_name {
     font-size: 1.3rem;
   }
-
   .hymn_lyrics {
     font-size: 0.95rem;
     margin: 0 1rem 1rem;
   }
-
-  /* Créditos */
-  .div_img_creditos {
-    max-height: 56svh;
-    overflow: hidden;
-    margin-bottom: 0;
-  }
-
-  .img_creditos {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
-
-  .div_subtitulo_creditos {
-    padding: 0.75rem 0.5rem;
-    min-height: auto;
-  }
-
-  .subtitulo_creditos {
-    font-size: 1.6rem;
-    margin: 0 0.5rem;
-  }
-
-  .columna-creditos {
-    width: 100%;
-    align-items: center;
-  }
-
-  .rol-creditos {
-    max-width: 100%;
-  }
-
-  .rol-normal,
-  .rol-hover {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Footer compacto + sticky */
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
-    margin-top: auto;
-  }
-
-  body {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  footer p:last-child {
-    margin-bottom: 0;
-  }
 }
+
+/*# sourceMappingURL=style.css.map */

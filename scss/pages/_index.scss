@@ -1,0 +1,160 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 5.625rem - 5.85rem);
+  display: grid;
+  align-items: center;
+  justify-items: right;
+  padding: 0 5rem 0 0;
+  overflow: clip;
+}
+
+.hero_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/Index-Fondo.png") center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+  max-width: 60ch;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+.title_page {
+  font-family: "Merriweather", serif;
+  font-size: clamp(1.875rem, 4vw, 3.75rem);
+  margin: 0 0 0.5rem;
+  color: #8e0d7b;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
+}
+
+.iafluencer_description {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: #d1d5db;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000;
+  margin: 0 1.25rem 1.25rem;
+  padding: 0.625rem;
+}
+
+
+
+
+/* ================== RESPONSIVE INDEX / HERO ================== */
+
+/* <= 992px */
+@media (max-width: 992px) {
+  .hero {
+    padding: 0 2.5rem 0 0;
+    height: calc(100vh - 5.625rem - 5.85rem);
+    justify-items: end;
+    align-items: center;
+  }
+
+  .hero_content {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: 1rem; // un poquito más a la derecha
+  }
+}
+
+/* <= 768px */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 2rem 0 0;
+    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
+    justify-items: end;
+    align-items: center;
+  }
+
+  .hero_content {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+}
+
+/* <= 480px */
+@media (max-width: 480px) {
+  .hero {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    min-height: 100svh;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  .hero_bg {
+    background: url("../img/baron-480.png") center/cover no-repeat;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.7)
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -2% -2%;
+    background: radial-gradient(
+      80% 60% at 70% 50%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero_content {
+    width: min(94vw, 26rem);
+    margin: 0 auto;
+    padding: 0.85rem 1rem;
+    background: rgba(20, 16, 27, 0.45);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+  }
+
+  .title_page {
+    color: #fff;
+    font-weight: 800;
+    font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
+    letter-spacing: 0.2px;
+    display: inline;
+    background: rgba(0, 0, 0, 0.55);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.06rem 0.3rem;
+    border-radius: 6px;
+    text-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.9),
+      0 0 1px rgba(0, 0, 0, 0.6);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  }
+
+  .iafluencer_description {
+    color: #fff;
+    font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+    line-height: 1.35;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+}
