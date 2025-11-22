@@ -1,3 +1,7 @@
+/* ================== INDEX / HERO ================== */
+
+@use "../utils/mixins" as *;
+
 .hero {
   position: relative;
   height: calc(100vh - 5.625rem - 5.85rem);
@@ -41,13 +45,11 @@
   padding: 0.625rem;
 }
 
-
-
-
 /* ================== RESPONSIVE INDEX / HERO ================== */
 
-/* <= 992px */
-@media (max-width: 992px) {
+// <= 992px
+@include respond-to(lg) {
+  /* <= 992px */
   .hero {
     padding: 0 2.5rem 0 0;
     height: calc(100vh - 5.625rem - 5.85rem);
@@ -62,8 +64,9 @@
   }
 }
 
-/* <= 768px */
-@media (max-width: 768px) {
+// <= 768px
+@include respond-to(md) {
+  /* <= 768px */
   .hero {
     padding: 0 2rem 0 0;
     height: calc(100vh - 5rem);
@@ -79,8 +82,10 @@
   }
 }
 
-/* <= 480px */
-@media (max-width: 480px) {
+// <= 480px
+@include respond-to(sm) {
+  /* <= 480px */
+
   .hero {
     position: relative;
     display: grid;
@@ -88,38 +93,38 @@
     align-content: end;
     min-height: 100svh;
     padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.1) 40%,
+        rgba(0, 0, 0, 0.7)
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -2% -2%;
+      background: radial-gradient(
+        80% 60% at 70% 50%,
+        transparent 55%,
+        rgba(0, 0, 0, 0.55) 100%
+      );
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 1;
+    }
   }
 
   .hero_bg {
     background: url("../img/baron-480.png") center/cover no-repeat;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.1) 40%,
-      rgba(0, 0, 0, 0.7)
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: -2% -2%;
-    background: radial-gradient(
-      80% 60% at 70% 50%,
-      transparent 55%,
-      rgba(0, 0, 0, 0.55) 100%
-    );
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    z-index: 1;
   }
 
   .hero_content {

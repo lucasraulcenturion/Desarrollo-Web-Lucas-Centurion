@@ -1,3 +1,7 @@
+@use "../utils/variables" as *;
+
+/* ================== CRÓNICAS DEL FLUFF ================== */
+
 .contenido_cronicas {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,7 @@
   background: rgba(0, 0, 0, 0.08);
   border: 0.1875rem solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow-card-strong;
 }
 
 .lema_cronicas {
@@ -15,7 +19,7 @@
   margin: 0 1.25rem;
   font-weight: bold;
   font-style: italic;
-  color: #ffffff;
+  color: $color-text-main;
   padding: 4rem;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
 }

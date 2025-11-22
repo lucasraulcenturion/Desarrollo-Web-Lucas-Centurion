@@ -1,9 +1,20 @@
+/* ================== PELUSOTECA ================== */
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 /* Intro texto */
 .div_text_pelusoteca {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
+  color: $color-text-main;
   padding: 1rem;
+
+  // <= 480px
+  @include respond-to(sm) {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
 }
 
 /* -------- Pelusoteca Notables (grid propia) -------- */
@@ -14,27 +25,69 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   max-width: 72rem;
+
+  // <= 992px
+  @include respond-to(lg) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
 }
 
 /* -------- Pelusoteca Baby's (con Bootstrap) -------- */
 .pelusoteca_grid {
   max-width: 72rem;
   margin: 0 auto 3rem;
+
+  .row {
+    width: 100%;
+    justify-content: center;
+
+    // Cada col como contenedor flex para que el article llene el alto
+    > [class*="col-"] {
+      display: flex;
+
+      // <= 992px: columnas full-width
+      @include respond-to(lg) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  // Article ocupa todo el alto de la columna
+  .cards_pelusoteca_article {
+    flex: 1 1 auto;
+
+    // 768px – 991.98px: centrados
+    // (lo dejamos como media query "clásica" porque es un rango entre dos valores)
+  }
 }
 
-.pelusoteca_grid .row {
-  width: 100%;
-  justify-content: center;
-}
+/* 768px – 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pelusoteca_grid {
+    .row {
+      justify-content: center;
+    }
 
-/* Cada col como contenedor flex para que el article llene el alto */
-.pelusoteca_grid .row > [class*="col-"] {
-  display: flex;
-}
-
-/* Article ocupa todo el alto de la columna */
-.pelusoteca_grid .cards_pelusoteca_article {
-  flex: 1 1 auto;
+    .cards_pelusoteca_article {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 /* -------- Tarjetas Pelusoteca (comunes) -------- */
@@ -56,11 +109,34 @@
   overflow: hidden;
   perspective: 1200px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
 
-.cards_pelusoteca_article:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.45);
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.45);
+
+    .pelusa-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  // <= 992px
+  @include respond-to(lg) {
+    height: 30rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    max-width: 32rem;
+    height: 32rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 21.5rem;
+    margin: 0 auto;
+    height: 35rem;
+  }
 }
 
 /* Contenedor interno 3D */
@@ -70,11 +146,6 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
-}
-
-/* Giro al hover */
-.cards_pelusoteca_article:hover .pelusa-card-inner {
-  transform: rotateY(180deg);
 }
 
 /* Caras */
@@ -93,6 +164,24 @@
   padding: 1.25rem;
   justify-content: center;
   align-items: center;
+
+  .div_pelusoteca {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .div_img_pelusoteca {
+    width: 100%;
+    max-width: 18rem;
+
+    @include respond-to(sm) {
+      max-width: 16rem;
+    }
+  }
 }
 
 /* Dorso */
@@ -103,22 +192,21 @@
   transform: rotateY(180deg);
   overflow: hidden;
   text-align: left;
-}
 
-/* Contenido frente */
-.pelusa-card-front .div_pelusoteca {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  text-align: center;
-}
+  .div_text_pelusoteca {
+    color: #000;
+    padding: 0;
+  }
 
-/* Contenedor de imagen */
-.pelusa-card-front .div_img_pelusoteca {
-  width: 100%;
-  max-width: 18rem;
+  .text_cards {
+    line-height: 1.4;
+    font-size: 0.96rem;
+
+    @include respond-to(sm) {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  }
 }
 
 /* Imagen pelusas */
@@ -138,116 +226,8 @@
   text-align: center;
   font-weight: bold;
   padding-bottom: 0.625rem;
-}
 
-/* Texto dorso */
-.pelusa-card-back .div_text_pelusoteca {
-  color: #000;
-  padding: 0;
-}
-
-.pelusa-card-back .text_cards {
-  line-height: 1.4;
-  font-size: 0.96rem;
-}
-
-
-
-
-
-
-
-
-/* ================== RESPONSIVE PELUSOTECAS ================== */
-
-/* <= 992px */
-@media (max-width: 992px) {
-  /* Notables a 1 columna */
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* Baby's columnas full-width */
-  .pelusoteca_grid .row > [class*="col-"] {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .cards_pelusoteca_article {
-    height: 30rem;
-  }
-}
-
-/* 768px – 991.98px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .pelusoteca_grid .row {
-    justify-content: center;
-  }
-
-  .pelusoteca_grid .cards_pelusoteca_article {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* <= 768px */
-@media (max-width: 768px) {
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .cards_pelusoteca_article {
-    max-width: 32rem;
-    height: 32rem;
-  }
-
-  /* Baby's centrado igual que Notables */
-  .pelusoteca_grid .row {
-    justify-content: center;
-  }
-
-  .pelusoteca_grid .cards_pelusoteca_article {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* <= 480px */
-@media (max-width: 480px) {
-  .div_text_pelusoteca {
-    padding: 0.5rem 0.25rem;
-    text-align: left;
-  }
-
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 0 1rem;
-  }
-
-  .pelusoteca_grid {
-    padding: 0 1rem;
-  }
-
-  .cards_pelusoteca_article {
-    width: 100%;
-    max-width: 21.5rem;
-    margin: 0 auto;
-    height: 35rem;
-  }
-
-  .pelusa-card-front .div_img_pelusoteca {
-    max-width: 16rem;
-  }
-
-  .pelusa-card-back .text_cards {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .pelusa_name {
+  @include respond-to(sm) {
     font-size: 1.05rem;
   }
 }

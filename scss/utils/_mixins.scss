@@ -1,0 +1,16 @@
+@use "variables" as vars;
+
+// ================== MIXINS ==================
+
+// Mixin para media queries basadas en el mapa $breakpoints
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value == null {
+    @error "El breakpoint `#{$breakpoint}` no existe en \$breakpoints.";
+  }
+
+  @media (max-width: $value) {
+    @content;
+  }
+}

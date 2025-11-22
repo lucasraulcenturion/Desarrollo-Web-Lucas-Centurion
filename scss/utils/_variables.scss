@@ -1,0 +1,31 @@
+// ================== COLORES PRINCIPALES ==================
+$color-baron-bg: #75124c;   // fondo general
+$color-header:   #5f1651;   // header / navbar
+$color-card-bg:  #fbf6e4;   // fondos de tarjetas
+$color-text-main: #ffffff;  // textos claros
+$color-text-dark: #000000;  // textos oscuros
+
+// Gradiente dorado del navbar activo
+$gradient-gold: linear-gradient(
+  90deg,
+  #fff7cc 0%,
+  #ffe28a 20%,
+  #ffc857 45%,
+  #e0a63b 70%,
+  #b8791a 100%
+);
+
+// Sombra típica de tarjetas
+$shadow-card: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+$shadow-card-strong: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+
+// Border radius genérico de tarjetas
+$radius-card: 0.75rem;
+
+// ================== BREAKPOINTS ==================
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

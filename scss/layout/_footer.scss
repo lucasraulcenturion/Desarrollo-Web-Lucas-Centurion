@@ -1,36 +1,38 @@
+@use "../utils/variables";
+
+/* ================== FOOTER ================== */
+
 .link_footer {
-  color: #ffffff;
+  color: $color-text-main; // blanco
   text-decoration: underline;
 }
 
 footer {
-  background: #5f1651;
-  color: #ffffff;
+  background: $color-baron-primary; // #5f1651
+  color: $color-text-main;
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   text-align: left;
   padding: 1rem;
-}
 
-footer p {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-bottom: 0.125rem;
-}
+  p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.125rem;
 
+    // última línea sin margen en mobile
+    @include respond-to(sm) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
-
-/* ================== RESPONSIVE FOOTER ================== */
-
-@media (max-width: 480px) {
-  footer {
+  /* ================== RESPONSIVE FOOTER ================== */
+  @include respond-to(sm) {
     text-align: center;
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
     margin-top: auto;
-  }
-
-  footer p:last-child {
-    margin-bottom: 0;
   }
 }

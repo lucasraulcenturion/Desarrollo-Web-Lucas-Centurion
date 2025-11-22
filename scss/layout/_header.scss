@@ -1,5 +1,10 @@
+/* ================== HEADER / NAVBAR ================== */
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
 .header {
-  background: #5f1651;
+  background: $color-baron-primary;
 }
 
 /* Logo */
@@ -7,134 +12,144 @@
   width: 5rem;
   height: auto;
   margin: 0;
+
+  /* ================== RESPONSIVE LOGO ================== */
+  @include respond-to(lg) {
+    width: 4rem;
+  }
+
+  @include respond-to(md) {
+    width: 3.75rem;
+  }
+
+  @include respond-to(sm) {
+    width: 3.25rem;
+  }
 }
 
 /* Links generales */
-.navbar .nav-link,
-.navbar .navbar-brand {
-  color: #fff;
-  font-size: 1.2rem;
-}
+.navbar {
+  .nav-link,
+  .navbar-brand {
+    color: $color-white;
+    font-size: 1.2rem;
 
-/* Dropdown */
-.navbar .dropdown-menu {
-  background: #5f1651;
-  padding: 1rem 2rem;
-  font-family: "Roboto", sans-serif;
-  color: #ffffff;
-  box-shadow: 0 0.125rem 0.5rem rgba(255, 255, 255, 0.15);
-}
+    @include respond-to(lg) {
+      font-size: 1rem;
+    }
 
-.dropdown-item {
-  color: #ffffff;
-  font-size: 1.2rem;
+    @include respond-to(sm) {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    background: $color-baron-primary;
+    padding: 1rem 2rem;
+    font-family: "Roboto", sans-serif;
+    color: $color-white;
+    box-shadow: 0 0.125rem 0.5rem rgba(255, 255, 255, 0.15);
+
+    .dropdown-item {
+      color: $color-white;
+      font-size: 1.2rem;
+
+      @include respond-to(lg) {
+        font-size: 1rem;
+      }
+
+      @include respond-to(sm) {
+        font-size: 0.95rem;
+      }
+
+      &:hover {
+        color: $color-gold-light;
+      }
+
+      &.active,
+      &:active {
+        font-weight: 700;
+        background: $gradient-gold;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-color: transparent !important;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  /* Estilo base links */
+  .nav-link,
+  .dropdown-item {
+    color: #fdf1ff;
+    font-weight: 500;
+
+    &:hover {
+      color: $color-gold-light;
+    }
+  }
+
+  /* Estado activo */
+  .nav-link.active,
+  .nav-link.show {
+    font-weight: 700;
+    background: $gradient-gold;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ================== NAVBAR CENTRADO 768–991 ================== */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-nav {
+      width: 100%;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      text-align: center;
+    }
+  }
 }
 
 /* Hamburguesa */
 .navbar-toggler {
-  border-color: #ffffff;
-}
+  border-color: $color-white;
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Estilo base links */
-.navbar .nav-link,
-.navbar .dropdown-item {
-  color: #fdf1ff;
-  font-weight: 500;
-}
-
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover {
-  color: #ffe28a;
-}
-
-/* Activo con degradado (navbar + dropdown) */
-.navbar .nav-link.active,
-.navbar .nav-link.show {
-  font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #fff7cc 0%,
-    #ffe28a 20%,
-    #ffc857 45%,
-    #e0a63b 70%,
-    #b8791a 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.navbar .dropdown-menu .dropdown-item.active,
-.navbar .dropdown-menu .dropdown-item:active {
-  font-weight: 700;
-  background: linear-gradient(
-    90deg,
-    #fff7cc 0%,
-    #ffe28a 20%,
-    #ffc857 45%,
-    #e0a63b 70%,
-    #b8791a 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-color: transparent !important;
-}
-
-.navbar .dropdown-menu .dropdown-item:focus,
-.navbar .dropdown-menu .dropdown-item:focus-visible {
-  outline: none;
-  box-shadow: none;
-  background-color: transparent;
-}
-
-
-
-
-/* ================== RESPONSIVE HEADER / NAVBAR ================== */
-
-/* <= 992px */
-@media (max-width: 992px) {
-  .navbar__logo {
-    width: 4rem;
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
+}
 
+/* ================== RESPONSIVE NAVBAR ================== */
+
+@include respond-to(lg) {
+  /* <= 992px */
   .navbar .nav-link,
   .navbar .dropdown-item {
     font-size: 1rem;
   }
 }
 
-/* 768px – 991.98px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .navbar-nav {
-    width: 100%;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .navbar .nav-link {
-    text-align: center;
+@include respond-to(md) {
+  /* <= 768px */
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-size: 1rem;
   }
 }
 
-/* <= 768px */
-@media (max-width: 768px) {
-  .navbar__logo {
-    width: 3.75rem;
-  }
-}
-
-/* <= 480px */
-@media (max-width: 480px) {
-  .navbar__logo {
-    width: 3.25rem;
-  }
-
+@include respond-to(sm) {
+  /* <= 480px */
   .navbar .nav-link,
   .navbar .dropdown-item {
     font-size: 0.95rem;

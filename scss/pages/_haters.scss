@@ -1,17 +1,48 @@
+/* ================== HATERS & DIAMONDS ================== */
+
+@use "../utils/placeholders" as *;
+@use "../utils/mixins" as *;
+
 .grilla_haters {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+
+  // <= 992px
+  @include respond-to(lg) {
+    gap: 2rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0 1.5rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .cards_haters_container {
-  border: 0.0625rem solid #ddd;
-  border-radius: 0.75rem;
+  @extend %card-elevated;
   padding: 1rem;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
-  background: #fbf6e4;
   margin: 1.25rem auto;
   text-align: justify;
+
+  // <= 480px
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.75rem;
+  }
 }
 
 .barra_instagram {
@@ -20,56 +51,28 @@
   border-radius: 0.75rem;
   padding: 0.625rem;
   max-width: 35rem;
-}
 
-.cards_media_img_haters {
-  width: 100%;
-  border-radius: 0.75rem;
-}
-
-
-
-
-
-
-/* ================== RESPONSIVE HATERS & DIAMONDS ================== */
-
-/* <= 992px */
-@media (max-width: 992px) {
-  .grilla_haters {
-    gap: 2rem;
-  }
-}
-
-/* <= 768px */
-@media (max-width: 768px) {
-  .grilla_haters {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0 1.5rem;
-  }
-}
-
-/* <= 480px */
-@media (max-width: 480px) {
-  .grilla_haters,
-  .cards_haters_container {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .cards_haters_container {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0.75rem;
-  }
-
-  .cards_media_img_haters,
-  .barra_instagram {
+  // <= 480px
+  @include respond-to(sm) {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
   }
 }
+
+.cards_media_img_haters {
+  width: 100%;
+  border-radius: 0.75rem;
+
+  // <= 480px
+  @include respond-to(sm) {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ================== RESPONSIVE HATERS & DIAMONDS ================== */
+// (Las reglas responsive están anidadas arriba con el mixin respond-to)

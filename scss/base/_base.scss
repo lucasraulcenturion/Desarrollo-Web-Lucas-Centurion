@@ -1,6 +1,11 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+/* ================= BASE ================= */
+
 body {
   margin: 0;
-  background: #75124c;
+  background: $color-baron-bg; // fondo principal
 }
 
 img {
@@ -27,12 +32,33 @@ img {
   max-width: 75rem;
   margin: 0 auto 1rem;
   padding: 2rem 1rem 1rem;
+
+  // <= 992px
+  @include respond-to(lg) {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    max-width: 100%;
+    padding: 1.5rem 0.75rem 1rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    padding: 1.25rem 0.75rem 0.75rem;
+  }
 }
 
 /* Imagen de portada */
 .img_portada {
   object-fit: cover;
   width: 100%;
+
+  @include respond-to(sm) {
+    max-height: 220px;
+    object-fit: cover;
+  }
 }
 
 /* Subtítulos genéricos del Barón */
@@ -41,9 +67,26 @@ img {
   font-size: 1.5rem;
   text-align: left;
   font-weight: bold;
-  color: #ffffff;
+  color: $color-text-main;
   padding: 2rem 1rem 1rem 0;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+
+  // <= 992px
+  @include respond-to(lg) {
+    font-size: 1.35rem;
+    padding-top: 1.5rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    font-size: 1.25rem;
+    padding: 1.5rem 0.5rem 0.75rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    font-size: 1.15rem;
+  }
 }
 
 /* Párrafos generales */
@@ -51,17 +94,35 @@ img {
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #ffffff;
+  color: $color-text-main;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
   margin: 0 0 0.75rem;
   max-width: 100%;
   text-align: justify;
+
+  // <= 992px
+  @include respond-to(lg) {
+    font-size: 1.25rem;
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+  }
 }
 
 /* Texto estándar de tarjetas */
 .text_cards {
   font-family: "Roboto", sans-serif;
-  color: #000;
+  color: $color-text-dark;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.6;
@@ -69,76 +130,9 @@ img {
   margin-bottom: 0.5rem;
   text-align: justify;
   align-items: center;
-}
 
-
-
-/* ================== RESPONSIVE BASE ================== */
-
-/* <= 992px */
-@media (max-width: 992px) {
-  .container_cards {
-    padding: 1.5rem 1rem 1rem;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.35rem;
-    padding-top: 1.5rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1.25rem;
-  }
-}
-
-/* <= 768px */
-@media (max-width: 768px) {
-  .container_cards {
-    max-width: 100%;
-    padding: 1.5rem 0.75rem 1rem;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.25rem;
-    padding: 1.5rem 0.5rem 0.75rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1.15rem;
-    margin-bottom: 0.6rem;
-  }
-}
-
-/* <= 480px */
-@media (max-width: 480px) {
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .container_cards {
-    padding: 1.25rem 0.75rem 0.75rem;
-  }
-
-  .img_portada {
-    max-height: 220px;
-    object-fit: cover;
-  }
-
-  .subtitulo_baron {
-    font-size: 1.15rem;
-  }
-
-  .parrafo_baron {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    margin: 0 0 0.5rem;
-  }
-
-  .text_cards {
+  // <= 480px
+  @include respond-to(sm) {
     font-size: 0.95rem;
     line-height: 1.45;
     margin: 0 0 0.5rem;
@@ -147,6 +141,18 @@ img {
     overflow-wrap: anywhere;
     word-break: break-word;
     hyphens: auto;
+  }
+}
+
+/* ================= RESPONSIVE BASE ================= */
+
+/* <= 480px: ajustes globales de layout */
+@include respond-to(sm) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {

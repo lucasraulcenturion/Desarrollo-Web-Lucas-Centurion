@@ -1,12 +1,24 @@
+/* ================== CRÉDITOS ================== */
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+/* Subtítulo general */
 .div_subtitulo_creditos {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 5rem;
   padding: 1rem;
-  background: linear-gradient(#cb4593, #75124c);
+  background: linear-gradient($color-creditos-top, $color-baron-primary);
   max-width: 100%;
   text-align: center;
+
+  /* ================== RESPONSIVE <= 480px ================== */
+  @include respond-to(sm) {
+    padding: 0.75rem 0.5rem;
+    min-height: auto;
+  }
 }
 
 .subtitulo_creditos {
@@ -15,70 +27,90 @@
   text-align: center;
   margin: 0 1.25rem;
   font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
+  color: $color-text-main;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000;
+
+  /* ================== RESPONSIVE <= 768px ================== */
+  @include respond-to(md) {
+    font-size: 1.9rem;
+  }
+
+  /* ================== RESPONSIVE <= 480px ================== */
+  @include respond-to(sm) {
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+  }
 }
 
 .main_playlist {
   justify-content: center;
 }
 
-/* Columna de imágenes de créditos */
+/* Columna de imágenes */
 .columna-creditos {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: max-content;
   margin: 0 auto;
+
+  @include respond-to(sm) {
+    width: 100%;
+    align-items: center;
+  }
 }
 
-/* Par de imágenes normal/hover */
+/* Imagenes normales y hover */
 .rol-creditos {
   position: relative;
   display: inline-block;
   transition: transform 0.25s ease;
-}
 
-.rol-normal {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  transition: opacity 0.25s ease;
-}
+  @include respond-to(sm) {
+    max-width: 100%;
+  }
 
-.rol-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
+  &:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
 
-.rol-creditos:hover {
-  transform: translateY(-4px) scale(1.01);
-}
+  .rol-normal {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.25s ease;
 
-.rol-creditos:hover .rol-hover {
-  opacity: 1;
-}
+    @include respond-to(sm) {
+      width: 100%;
+      height: auto;
+    }
+  }
 
-.rol-creditos:hover .rol-normal {
-  opacity: 0;
-}
+  .rol-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
 
+    @include respond-to(sm) {
+      width: 100%;
+      height: auto;
+    }
+  }
 
+  &:hover .rol-hover {
+    opacity: 1;
+  }
 
-/* ================== RESPONSIVE CRÉDITOS ================== */
-
-/* <= 768px */
-@media (max-width: 768px) {
-  .subtitulo_creditos {
-    font-size: 1.9rem;
+  &:hover .rol-normal {
+    opacity: 0;
   }
 }
 
-/* <= 480px */
-@media (max-width: 480px) {
+/* ================== RESPONSIVE IMÁGENES <= 480px ================== */
+
+@include respond-to(sm) {
   .div_img_creditos {
     max-height: 56svh;
     overflow: hidden;
@@ -91,30 +123,5 @@
     object-fit: cover;
     object-position: center top;
     display: block;
-  }
-
-  .div_subtitulo_creditos {
-    padding: 0.75rem 0.5rem;
-    min-height: auto;
-  }
-
-  .subtitulo_creditos {
-    font-size: 1.6rem;
-    margin: 0 0.5rem;
-  }
-
-  .columna-creditos {
-    width: 100%;
-    align-items: center;
-  }
-
-  .rol-creditos {
-    max-width: 100%;
-  }
-
-  .rol-normal,
-  .rol-hover {
-    width: 100%;
-    height: auto;
   }
 }
