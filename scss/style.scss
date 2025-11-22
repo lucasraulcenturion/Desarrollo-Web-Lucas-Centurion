@@ -1,0 +1,855 @@
+/* =================================================================
+   RESET & BASE
+   ================================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #75124c;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============= HEADER / NAVBAR ===================== */
+.header {
+  background: #5f1651;
+}
+
+/* Links generales del navbar */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+/* Dropdown theme */
+.navbar .dropdown-menu {
+  background: #5f1651;
+  padding: 1rem 2rem;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  box-shadow: 0 0.125rem 0.5rem rgba(255, 255, 255, 0.15);
+}
+.dropdown-item {
+  color: #ffffff;
+}
+
+/* Logo del navbar */
+.navbar__logo {
+  width: 4rem;
+  height: auto;
+  margin: 0;
+}
+
+/* Hamburguesa */
+.navbar-toggler {
+  border-color: #ffffff;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Links: default + hover */
+.navbar .nav-link,
+.navbar .dropdown-item {
+  color: #fdf1ff;
+  font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: #ffe28a;
+}
+
+/* Activo con degradado (navbar y dropdown) */
+.navbar .nav-link.active,
+.navbar .nav-link.show {
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #fff7cc 0%,
+    #ffe28a 20%,
+    #ffc857 45%,
+    #e0a63b 70%,
+    #b8791a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.navbar .dropdown-menu .dropdown-item.active,
+.navbar .dropdown-menu .dropdown-item:active {
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #fff7cc 0%,
+    #ffe28a 20%,
+    #ffc857 45%,
+    #e0a63b 70%,
+    #b8791a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-color: transparent !important;
+}
+.navbar .dropdown-menu .dropdown-item:focus,
+.navbar .dropdown-menu .dropdown-item:focus-visible {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* ==============UTILIDADES / GENERALES============================== */
+/* H1 oculto para SEO */
+.h1-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  margin: -0.0625rem;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Imagen de portada de cada página */
+.img_portada {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ===============   INDEX  ====================== */
+.hero {
+  position: relative;
+  height: calc(100vh - 90px - 93.6px);
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  padding: 4rem;
+  overflow: clip;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/Index-Fondo.png") center/cover no-repeat;
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 60ch;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+.title-page {
+  font-family: "Merriweather", serif;
+  font-size: clamp(30px, 4vw, 60px);
+  margin: 0 0 8px;
+  color: #8e0d7b;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
+}
+.iafluencer-description {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(16px, 2.2vw, 24px);
+  color: #d1d5db;
+  text-shadow: 2px 2px 4px #000;
+  margin: 0 20px 20px;
+  padding: 10px;
+}
+
+/* =========== CRÓNICAS DEL FLUFF (lectura)================= */
+.main_cronicas {
+  min-height: 100vh;
+  color: #fff;
+}
+.main_cronicas .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Contenido */
+.contenido-cronicas {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtítulo y lema dentro de la sección CRÓNICAS (scoped) */
+.main_cronicas .subtitulo_baron {
+  font-family: "merriweather", serif;
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 2rem 1rem 1rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+.reading-wrapper {
+  max-width: clamp(60ch, 55vw, 88ch);
+  margin: 2rem auto;
+  padding: 1.5rem 1.25rem;
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.reading-wrapper .subtitulo_baron,
+.reading-wrapper .lema_cronicas {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.main_cronicas .parrafo_baron {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+  max-width: clamp(60ch, 60vw, 90ch);
+  text-align: justify;
+  color: #fff;
+  text-shadow: 2px 2px 4px #404040;
+  margin: 0.25rem 0;
+}
+.lema_cronicas {
+  font-family: "merriweather", serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 1.25rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff;
+  padding: 4rem;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+/* ============LA CORTE DE LOS CORAZONES (cards + texto)============ */
+.main_corte {
+  padding-bottom: 2rem;
+}
+.container-cards {
+  max-width: 75rem;
+  margin: 0 auto 1rem;
+  padding: 2rem 1rem 1rem;
+}
+.div_text_corte,
+.div_cards_corte {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Intro de La Corte (scoped) */
+.main_corte .div_text_corte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+  padding: 1rem;
+}
+.main_corte .subtitulo_baron {
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
+}
+.main_corte .parrafo_baron {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+  margin: 0 0 0.75rem;
+  max-width: 100%;
+}
+#los_mas_likeados {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+/* Cards de La Corte */
+.div_cards_corte {
+  width: 100%;
+  margin-top: 2rem;
+}
+.cards_corte_container {
+  display: flex;
+  border: 0.0625rem solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  background: #fbf6e4;
+  width: 100%;
+  height: 30rem;
+  max-width: 100%;
+  margin: 1.8rem 0;
+  align-items: stretch;
+}
+.card_body {
+  flex: 1;
+}
+.cards_media_img {
+  width: 50%;
+  max-width: 25rem;
+  height: 100%;
+  border-radius: 0.625rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+.text_cards {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  align-items: center;
+}
+.text_hashtag_cards {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+}
+
+/* ===========  PELUSOTECA (grid + cards) ================ */
+.grid_container_pelusoteca {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.div_pelusoteca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.div_text_pelusoteca,
+.grid_container_pelusoteca {
+  width: 100%;
+  margin: 0 auto;
+}
+.div_text_pelusoteca {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 1rem;
+}
+.cards_pelusoteca_container {
+  border: 0.0625rem solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 4px 4px 4px #505050;
+  background: #fbf6e4;
+  max-width: 560px;
+  margin: 1.25rem auto;
+  text-align: center;
+}
+.cards_media_img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+.pelusa_name {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 0.625rem;
+}
+
+/* =========  HATERS & DIAMONDS (grilla 2 cols) ============= */
+.grilla_haters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.cards_haters_container {
+  border: 0.0625rem solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  background: #fbf6e4;
+  max-width: auto;
+  margin: 1.25rem auto;
+  text-align: justify;
+}
+.barra_instagram {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  padding: 0.625rem;
+  max-width: 560px;
+}
+.cards_media_img_haters {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ====================== PLAYLIST ======================== */
+
+.main_playlist {
+  padding-bottom: 1.25rem;
+}
+
+/* Intro (fila: video + texto) */
+.intro_playlist {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.div_text_playlist {
+  max-width: 100%;
+}
+
+/* Himno + Other Hits en grilla 2 columnas */
+.grilla_playlist {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Columna izquierda: Himno */
+.section_hymn {
+  margin: 0;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
+  max-width: 340px;
+  background: #75124c;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  padding: 8px;
+  display: block;
+}
+.hymn_img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  padding-bottom: 0.8rem;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Columna derecha: Other Hits */
+.section_other_hits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  overflow: visible;
+}
+.audios_playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Video circular */
+.div_dj_vid {
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin: 0 0 1.25rem;
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+}
+.dj_vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Imagen Other Hits */
+.div_img_other {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-top: 0;
+}
+.img_other {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Textos intro playlist */
+.subtitle_playlist {
+  font-family: "roboto", sans-serif;
+  font-size: 17.6px;
+  text-align: justify;
+  margin: 1.25rem 0 0.625rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
+  padding: 20px;
+}
+.text_playlist {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  margin: 0 1.25rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+  padding-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+/* Bootstrap card body (tarjetas de audio) */
+.card-body {
+  background: linear-gradient(#170505, #a23e9f);
+}
+
+/* Títulos + letras del Himno */
+.song_name {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+.hymn_lyrics {
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 1.25rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+  padding-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* ================= CRÉDITOS (cabecera + imagen)=============== */
+.div_subtitle_creditos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  padding: 16px;
+  background: linear-gradient(#cb4593, #75124c);
+  max-width: 100%;
+  text-align: center;
+}
+.subtitulo_creditos {
+  font-family: "merriweather", serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #000000;
+}
+.div_img_creditos {
+  margin: 0 auto;
+}
+.img_creditos {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============ FOOTER============== */
+.link_footer {
+  color: #ffffff;
+  text-decoration: underline;
+}
+footer {
+  background: #5f1651;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14.4px;
+  text-align: left;
+  padding: 16px;
+}
+footer p {
+  margin-top: 4.8px;
+  margin-bottom: 4.8px;
+  padding-bottom: 0.125rem;
+}
+
+/* ==============  RESPONSIVE ====================== */
+
+@media (max-width: 992px) {
+  /* Playlist: ajustar columnas */
+  .grilla_playlist {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Playlist: apilar columnas */
+  .grilla_playlist {
+    grid-template-columns: 1fr;
+  }
+  .section_hymn {
+    max-width: 100%;
+  }
+  .hymn_img {
+    max-width: 100%;
+  }
+  .section_other_hits {
+    max-width: 100%;
+  }
+  .div_dj_vid {
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE (≤480px) */
+@media (max-width: 480px) {
+  /* Evitar desbordes horizontales */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* --- Hero mobile (solo overrides necesarios) --- */
+.hero {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: end;                                /* baja el contenido */
+  min-height: 100svh;                                /* ocupa todo el alto */
+  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+}
+.hero-bg {
+  background: url("../img/baron-480.png") center/cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.20),
+    rgba(0, 0, 0, 0.10) 40%,
+    rgba(0, 0, 0, 0.7)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -2% -2%;
+  background: radial-gradient(
+    80% 60% at 70% 50%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-content {
+  width: min(94vw, 26rem);
+  margin: 0 auto 0;                                  /* sin margen superior */
+  padding: 0.85rem 1rem;
+  background: rgba(20, 16, 27, 0.45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+/* Versión correcta de clases (con guion) */
+.title-page {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(1.55rem, 5vw + 0.2rem, 2.05rem);
+  letter-spacing: 0.2px;
+  display: inline;
+  background: rgba(0, 0, 0, 0.55);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0.06rem 0.3rem;
+  border-radius: 6px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+}
+.iafluencer-description {
+  color: #fff;
+  font-size: clamp(0.92rem, 3.2vw, 1.02rem);
+  line-height: 1.35;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+
+  /* Contenedores generales */
+  .img_index,
+  .container-cards,
+  .grilla_haters,
+  .cards_haters_container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .cards_haters_container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.75rem;
+  }
+  .img_portada {
+    max-height: 220px;
+    object-fit: cover;
+  }
+  .div_text_corte,
+  .div_text_pelusoteca {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
+  .parrafo_baron {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0 0 0.5rem;
+  }
+
+  /* La Corte */
+  .cards_corte_container {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards_media_img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 0.8rem;
+    border-radius: 12px;
+  }
+  .card_body {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  /* Haters */
+  .grilla_haters {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0 1.5rem;
+  }
+  .cards_media_img_haters,
+  .barra_instagram {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .text_cards,
+  .text_hashtag_cards {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0 0 0.5rem;
+    padding: 0 0.25rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Pelusoteca */
+  .grid_container_pelusoteca {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .cards_pelusoteca_container {
+    margin: 1rem auto;
+    padding: 0.75rem;
+  }
+
+  /* Playlist */
+  .intro_playlist {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .div_text_playlist,
+  .div_dj_vid {
+    max-width: 100%;
+  }
+  .subtitle_playlist {
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem 0.25rem;
+    margin: 0;
+  }
+  .text_playlist {
+    font-size: 0.95rem;
+    margin: 0 1rem 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .section_hymn {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+  .song_name {
+    font-size: 1.3rem;
+  }
+  .hymn_lyrics {
+    font-size: 0.95rem;
+    margin: 0 1rem 1rem;
+  }
+
+  /* Créditos */
+  .div_img_creditos {
+    max-height: 56svh;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .img_creditos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Footer compacto */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    margin-top: auto;
+  }
+  body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  footer p:last-child {
+    margin-bottom: 0;
+  }
+}

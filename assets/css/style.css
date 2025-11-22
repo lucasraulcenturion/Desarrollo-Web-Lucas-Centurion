@@ -1,6 +1,6 @@
-/* =================================================================
+/* =========================================================
    RESET & BASE
-   ================================================================= */
+   ========================================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,26 +23,95 @@ img {
   display: block;
 }
 
-/* ============= HEADER / NAVBAR ===================== */
+/* =========================================================
+   UTILIDADES GENERALES
+   ========================================================= */
+
+/* H1 oculto para SEO */
+.h1-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  margin: -0.0625rem;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Contenedor general de páginas de texto / tarjetas */
+.container_cards {
+  max-width: 75rem;
+  margin: 0 auto 1rem;
+  padding: 2rem 1rem 1rem;
+}
+
+/* Imagen de portada */
+.img_portada {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Subtítulos genéricos del Barón */
+.subtitulo_baron {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 2rem 1rem 1rem 0;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+
+/* Párrafos generales */
+.parrafo_baron {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+  margin: 0 0 0.75rem;
+  max-width: 100%;
+  text-align: justify;
+}
+
+/* Texto estándar de tarjetas */
+.text_cards {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  align-items: center;
+}
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
 .header {
   background: #5f1651;
 }
 
-/* Logo del navbar */
+/* Logo */
 .navbar__logo {
   width: 5rem;
   height: auto;
   margin: 0;
 }
 
-/* Links generales del navbar */
+/* Links generales */
 .navbar .nav-link,
 .navbar .navbar-brand {
   color: #fff;
   font-size: 1.2rem;
 }
 
-/* Dropdown theme */
+/* Dropdown */
 .navbar .dropdown-menu {
   background: #5f1651;
   padding: 1rem 2rem;
@@ -65,7 +134,7 @@ img {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Links: default + hover */
+/* Estilo base links */
 .navbar .nav-link,
 .navbar .dropdown-item {
   color: #fdf1ff;
@@ -77,7 +146,7 @@ img {
   color: #ffe28a;
 }
 
-/* Activo con degradado (navbar y dropdown) */
+/* Activo con degradado (navbar + dropdown) */
 .navbar .nav-link.active,
 .navbar .nav-link.show {
   font-weight: 700;
@@ -118,71 +187,10 @@ img {
   background-color: transparent;
 }
 
-/* ==============UTILIDADES / GENERALES============================== */
+/* =========================================================
+   INDEX / HERO
+   ========================================================= */
 
-/* H1 oculto para SEO */
-.h1-hidden {
-  position: absolute;
-  width: 0.0625rem;
-  height: 0.0625rem;
-  margin: -0.0625rem;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Contenedor General */
-.container_cards {
-  max-width: 75rem;
-  margin: 0 auto 1rem;
-  padding: 2rem 1rem 1rem;
-}
-
-/* Imagen de portada de cada página */
-.img_portada {
-  object-fit: cover;
-  width: 100%;
-}
-
-/* Subtitulos */
-.subtitulo_baron {
-  font-family: "Merriweather", serif;
-  font-size: 1.5rem;
-  text-align: left;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 2rem 1rem 1rem 0;
-  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
-}
-
-/* Textos Párrafos */
-.parrafo_baron {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #ffffff;
-  text-shadow: 0.125rem 0.125rem 0.25rem #000000;
-  margin: 0 0 0.75rem;
-  max-width: 100%;
-  text-align: justify;
-}
-
-/* Texto de las tarjetas */
-.text_cards {
-  font-family: "Roboto", sans-serif;
-  color: #000;
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.6;
-  padding: 0 0.75rem;
-  margin-bottom: 0.5rem;
-  text-align: justify;
-  align-items: center;
-}
-
-/* ===============   INDEX ====================== */
 .hero {
   position: relative;
   height: calc(100vh - 5.625rem - 5.85rem);
@@ -226,9 +234,10 @@ img {
   padding: 0.625rem;
 }
 
-/* =========== CRÓNICAS DEL FLUFF ================= */
+/* =========================================================
+   CRÓNICAS DEL FLUFF
+   ========================================================= */
 
-/* Contenido */
 .contenido_cronicas {
   display: flex;
   flex-direction: column;
@@ -239,7 +248,6 @@ img {
   box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.2);
 }
 
-/* Lema Crónicas */
 .lema_cronicas {
   font-family: "Merriweather", serif;
   font-size: 1.5rem;
@@ -252,7 +260,10 @@ img {
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
 }
 
-/* ============LA CORTE DE LOS CORAZONES============ */
+/* =========================================================
+   LA CORTE DE LOS CORAZONES
+   ========================================================= */
+
 .main_corte {
   padding-bottom: 2rem;
 }
@@ -263,7 +274,7 @@ img {
   margin: 0 auto;
 }
 
-/* Intro de La Corte */
+/* Intro */
 .main_corte .div_text_corte {
   display: flex;
   flex-direction: column;
@@ -279,13 +290,13 @@ img {
   font-weight: 700;
 }
 
-/* Tarjetas - Contenedor */
+/* Contenedor tarjetas */
 .div_cards_corte {
   width: 100%;
   margin-top: 2rem;
 }
 
-/* Tarjeta - Article */
+/* Tarjeta */
 .cards_corte_article {
   display: flex;
   border: 0.0625rem solid #ddd;
@@ -305,17 +316,17 @@ img {
     border-color 0.35s ease;
 }
 
-/* Glow al pasar el mouse */
+/* Glow al hover */
 .cards_corte_article:hover {
   animation: royalGlow 1.4s ease-in-out infinite alternate;
 }
 
-/* Imagen y texto se ven como dos columnas que ocupan el mismo alto dentro de la tarjeta. */
+/* Columna de texto dentro de la tarjeta */
 .card_body {
   flex: 1;
 }
 
-/* Imágenes de las tarjetas de La Corte */
+/* Imagen dentro de la tarjeta */
 .cards_corte_article .cards_media_img {
   width: 50%;
   max-width: 25rem;
@@ -325,7 +336,7 @@ img {
   margin-right: 1.5rem;
 }
 
-/* Hashtags tarjetas */
+/* Hashtags */
 .text_hashtag_cards {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
@@ -335,7 +346,7 @@ img {
   padding: 0.5rem 0.75rem;
 }
 
-/* ==== Keyframes RoyalGlow ==== */
+/* Efecto RoyalGlow */
 @keyframes royalGlow {
   0% {
     transform: translateY(0) scale(1);
@@ -360,15 +371,11 @@ img {
   }
 }
 
-/* ===========  PELUSOTECAS ================ */
+/* =========================================================
+   PELUSOTECAS (NOTABLES + BABY'S)
+   ========================================================= */
 
-.div_text_pelusoteca,
-.grid_container_pelusoteca {
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Texto Introducción Pelusoteca */
+/* Intro texto */
 .div_text_pelusoteca {
   display: flex;
   flex-direction: column;
@@ -376,23 +383,45 @@ img {
   padding: 1rem;
 }
 
-/* CONTENEDOR TARJETAS NOTABLES: 2 x 2 escritorio */
+/* -------- Pelusoteca Notables (grid propia) -------- */
 .grid_container_pelusoteca {
+  width: 100%;
+  margin: 0 auto 3rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   max-width: 72rem;
+}
+
+/* -------- Pelusoteca Baby's (con Bootstrap) -------- */
+.pelusoteca_grid {
+  max-width: 72rem;
   margin: 0 auto 3rem;
 }
 
-/* ---------- TARJETAS PELUSOTECA (flip 3D) ---------- */
+.pelusoteca_grid .row {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Cada col como contenedor flex para que el article llene el alto */
+.pelusoteca_grid .row > [class*="col-"] {
+  display: flex;
+}
+
+/* Article ocupa todo el alto de la columna */
+.pelusoteca_grid .cards_pelusoteca_article {
+  flex: 1 1 auto;
+}
+
+/* -------- Tarjetas Pelusoteca (comunes) -------- */
 
 .cards_pelusoteca_article {
   position: relative;
   justify-self: center;
   width: 100%;
   max-width: 32rem;
-  height: 28rem; /* altura base ajustada para que no se corte texto */
+  height: 28rem;
   border-radius: 0.9rem;
   border: 0.3rem solid transparent;
   background:
@@ -406,13 +435,12 @@ img {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Levanta suavemente al hover */
 .cards_pelusoteca_article:hover {
   transform: translateY(-0.4rem);
   box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.45);
 }
 
-/* Transformación 3D */
+/* Contenedor interno 3D */
 .pelusa-card-inner {
   position: relative;
   width: 100%;
@@ -421,12 +449,12 @@ img {
   transition: transform 0.8s ease;
 }
 
-/* Giro al hacer hover */
+/* Giro al hover */
 .cards_pelusoteca_article:hover .pelusa-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Caras de la tarjeta */
+/* Caras */
 .pelusa-card-face {
   position: absolute;
   inset: 0;
@@ -436,7 +464,7 @@ img {
   flex-direction: column;
 }
 
-/* Frente: imagen + nombre */
+/* Frente */
 .pelusa-card-front {
   background: #fbf6e4;
   padding: 1.25rem;
@@ -444,7 +472,7 @@ img {
   align-items: center;
 }
 
-/* Dorso: texto descriptivo (sin scrollbar visible) */
+/* Dorso */
 .pelusa-card-back {
   background: #fbf6e4;
   color: #000;
@@ -464,13 +492,13 @@ img {
   text-align: center;
 }
 
-/* Contenedor de imagen (marco) */
+/* Contenedor de imagen */
 .pelusa-card-front .div_img_pelusoteca {
   width: 100%;
   max-width: 18rem;
 }
 
-/* Imagen genérica de pelusas (Notables + Baby's) */
+/* Imagen pelusas */
 .cards_media_img {
   width: 100%;
   height: auto;
@@ -479,7 +507,7 @@ img {
   border-radius: 0.75rem;
 }
 
-/* nombre de la pelusa */
+/* Nombre pelusa */
 .pelusa_name {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -489,7 +517,7 @@ img {
   padding-bottom: 0.625rem;
 }
 
-/* texto del dorso (descripciones) */
+/* Texto dorso */
 .pelusa-card-back .div_text_pelusoteca {
   color: #000;
   padding: 0;
@@ -500,19 +528,10 @@ img {
   font-size: 0.96rem;
 }
 
-/*  PELUSOTECA BABYS CON BOOTSTRAP */
+/* =========================================================
+   HATERS & DIAMONDS
+   ========================================================= */
 
-/* Cada col se comporta como contenedor flex para que la tarjeta llene el alto */
-.pelusoteca_grid .row > [class*="col-"] {
-  display: flex;
-}
-
-/* el article ocupa todo el alto disponible en la columna */
-.pelusoteca_grid .cards_pelusoteca_article {
-  flex: 1 1 auto;
-}
-
-/* =========  HATERS & DIAMONDS (grilla 2 cols) ============= */
 .grilla_haters {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -542,9 +561,11 @@ img {
   border-radius: 0.75rem;
 }
 
-/* ====================== PLAYLIST ======================== */
+/* =========================================================
+   PLAYLIST IMPERIAL
+   ========================================================= */
 
-/* Intro (fila: video + texto) - escritorio */
+/* Intro: video + texto */
 .intro_playlist {
   display: flex;
   flex-direction: row;
@@ -552,7 +573,7 @@ img {
   perspective: 1000px;
 }
 
-/* Video circular - Contenedor */
+/* Video circular */
 .div_dj_vid {
   width: 21.25rem;
   height: 21.25rem;
@@ -571,12 +592,10 @@ img {
   transform-style: preserve-3d;
 }
 
-/* Hover: giro sobre el eje Y */
 .div_dj_vid:hover {
   transform: rotateY(180deg);
 }
 
-/* Video circular */
 .dj_vid {
   width: 100%;
   height: 100%;
@@ -585,12 +604,12 @@ img {
   display: block;
 }
 
-/* Texto Intro - Contenedor */
+/* Texto introductorio */
 .div_text_playlist {
   max-width: 100%;
 }
 
-/* Himno + Other Hits - Contener en grilla 2 columnas */
+/* Grilla himno + other hits */
 .grilla_playlist {
   display: grid;
   grid-template-columns: 21.25rem 1fr;
@@ -598,7 +617,7 @@ img {
   align-items: start;
 }
 
-/* Columna izquierda: Himno */
+/* Sección himno */
 .section_hymn {
   margin: 0;
   border: 0.0625rem solid #ddd;
@@ -610,7 +629,6 @@ img {
   display: block;
 }
 
-/* Imagen Stellar El Himno del Baron */
 .hymn_img {
   width: 100%;
   display: block;
@@ -620,7 +638,6 @@ img {
   margin: 0 auto;
 }
 
-/* Títulos Himno */
 .song_name {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
@@ -631,7 +648,6 @@ img {
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
 }
 
-/*Letra Himno */
 .hymn_lyrics {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -644,7 +660,7 @@ img {
   font-weight: 500;
 }
 
-/* Section: Other Hits - Columna */
+/* Other hits + audios */
 .section_other_hits {
   display: flex;
   flex-direction: column;
@@ -655,7 +671,6 @@ img {
   overflow: visible;
 }
 
-/* Imagen Other Hits - Contenedor */
 .div_img_other {
   width: 100%;
   position: relative;
@@ -663,21 +678,19 @@ img {
   margin-top: 0;
 }
 
-/*Imagen Other Hits*/
 .img_other {
   max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
 }
 
-/* Section: Audios - Columna */
 .audios_playlist {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-/* Tarjetas Audio (Bootstrap) */
+/* Tarjetas de audio (Bootstrap) */
 .card-body {
   background: linear-gradient(
     45deg,
@@ -687,7 +700,10 @@ img {
   );
 }
 
-/* ================= CRÉDITOS =================== */
+/* =========================================================
+   CRÉDITOS
+   ========================================================= */
+
 .div_subtitulo_creditos {
   display: flex;
   justify-content: center;
@@ -713,7 +729,7 @@ img {
   justify-content: center;
 }
 
-/* Columna vertical */
+/* Columna de imágenes de créditos */
 .columna-creditos {
   display: flex;
   flex-direction: column;
@@ -722,14 +738,13 @@ img {
   margin: 0 auto;
 }
 
-/* Contenedor de cada par de imágenes */
+/* Par de imágenes normal/hover */
 .rol-creditos {
   position: relative;
   display: inline-block;
   transition: transform 0.25s ease;
 }
 
-/* Imágenes superpuestas */
 .rol-normal {
   display: block;
   max-width: 100%;
@@ -737,7 +752,6 @@ img {
   transition: opacity 0.25s ease;
 }
 
-/* La imagen de hover queda encima pero invisible */
 .rol-hover {
   position: absolute;
   top: 0;
@@ -746,7 +760,6 @@ img {
   transition: opacity 0.25s ease;
 }
 
-/* Al pasar el mouse: se muestra la hover y se oculta la base */
 .rol-creditos:hover {
   transform: translateY(-4px) scale(1.01);
 }
@@ -759,7 +772,10 @@ img {
   opacity: 0;
 }
 
-/* ============ FOOTER============== */
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 .link_footer {
   color: #ffffff;
   text-decoration: underline;
@@ -780,10 +796,15 @@ footer p {
   padding-bottom: 0.125rem;
 }
 
-/* ==============  RESPONSIVE ====================== */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-/* <= 992px: tablets horizontales / notebooks chicos */
+/* -----------------------------
+   <= 992px (tablets landscape / notebooks chicos)
+   ----------------------------- */
 @media (max-width: 992px) {
+  /* Navbar */
   .navbar__logo {
     width: 4rem;
   }
@@ -793,11 +814,21 @@ footer p {
     font-size: 1rem;
   }
 
+  /* Index / Hero (texto a la derecha, un poco más separado de la imagen) */
   .hero {
-    padding: 3rem 2rem;
-    justify-items: center;
+    padding: 0 2.5rem 0 0;
+    height: calc(100vh - 5.625rem - 5.85rem);
+    justify-items: end;
+    align-items: center;
   }
 
+  .hero_content {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: 1rem; /* más pegado al borde derecho -> más lejos de la imagen */
+  }
+
+  /* Contenidos generales */
   .container_cards {
     padding: 1.5rem 1rem 1rem;
   }
@@ -811,6 +842,7 @@ footer p {
     font-size: 1.25rem;
   }
 
+  /* Corte */
   .cards_corte_article {
     height: auto;
   }
@@ -820,42 +852,84 @@ footer p {
     height: auto;
   }
 
+  /* Pelusotecas: ambas a 1 columna para que no se corte texto */
   .grid_container_pelusoteca {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  /* Pelusoteca: un poco más alta para que no se corte texto */
+  .pelusoteca_grid .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
   .cards_pelusoteca_article {
     height: 30rem;
   }
 
+  /* Haters */
   .grilla_haters {
     gap: 2rem;
   }
 
+  /* Playlist */
   .grilla_playlist {
     grid-template-columns: 18rem 1fr;
   }
 }
 
-/* <= 768px: tablets verticales / móviles grandes */
+/* -----------------------------
+   768px – 991px (navbar centrado + ajustes Pelusoteca Baby's)
+   ----------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Navbar centrado y prolijo */
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .navbar .nav-link {
+    text-align: center;
+  }
+
+  /* Pelusoteca Baby's: asegurar centrado de tarjetas */
+  .pelusoteca_grid .row {
+    justify-content: center;
+  }
+
+  .pelusoteca_grid .cards_pelusoteca_article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* -----------------------------
+   <= 768px (tablets verticales / móviles grandes)
+   ----------------------------- */
 @media (max-width: 768px) {
+  /* Navbar */
   .navbar__logo {
     width: 3.75rem;
   }
 
+  /* Index / Hero 768:
+     Mismo “estilo” que 991: texto a la derecha y centrado verticalmente */
   .hero {
-    padding: 2.5rem 1.5rem;
-    height: auto;
+    padding: 0 2rem 0 0;
+    height: calc(100vh - 5rem);
     min-height: calc(100vh - 5rem);
-    justify-items: center;
+    justify-items: end;
+    align-items: center;
   }
 
   .hero_content {
-    max-width: 90%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
   }
 
+  /* Contenedor general */
   .container_cards {
     max-width: 100%;
     padding: 1.5rem 0.75rem 1rem;
@@ -871,9 +945,11 @@ footer p {
     margin-bottom: 0.6rem;
   }
 
+  /* Corte */
   .cards_corte_article {
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 
   .cards_corte_article .cards_media_img {
@@ -889,23 +965,35 @@ footer p {
     width: 100%;
   }
 
+  /* Pelusotecas */
   .grid_container_pelusoteca {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  /* Pelusoteca: altura mayor para todo el texto, sin scrollbar */
   .cards_pelusoteca_article {
     max-width: 32rem;
     height: 32rem;
   }
 
+  /* Pelusoteca Baby's: centrado igual que Notables */
+  .pelusoteca_grid .row {
+    justify-content: center;
+  }
+
+  .pelusoteca_grid .cards_pelusoteca_article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Haters */
   .grilla_haters {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem 0 1.5rem;
   }
 
+  /* Playlist */
   .grilla_playlist {
     grid-template-columns: 1fr;
   }
@@ -935,16 +1023,29 @@ footer p {
 
   .div_text_playlist {
     max-width: 36rem;
+    margin: 0 auto;
   }
 
+  /* Playlist 768: todo con el mismo ancho que el texto introductorio */
+  .grilla_playlist,
+  .section_hymn,
+  .section_other_hits,
+  .audios_playlist {
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  /* Créditos */
   .subtitulo_creditos {
     font-size: 1.9rem;
   }
 }
 
-/* MOBILE (≤480px): móviles chicos */
+/* -----------------------------
+   <= 480px (móviles chicos)
+   ----------------------------- */
 @media (max-width: 480px) {
-  /* Evitar desbordes horizontales */
+  /* Bloquea scroll horizontal */
   html,
   body {
     width: 100%;
@@ -952,6 +1053,7 @@ footer p {
     overflow-x: hidden;
   }
 
+  /* Navbar */
   .navbar__logo {
     width: 3.25rem;
   }
@@ -961,7 +1063,7 @@ footer p {
     font-size: 0.95rem;
   }
 
-  /* Hero mobile */
+  /* Index / Hero versión mobile */
   .hero {
     position: relative;
     display: grid;
@@ -1005,7 +1107,7 @@ footer p {
 
   .hero_content {
     width: min(94vw, 26rem);
-    margin: 0 auto 0;
+    margin: 0 auto;
     padding: 0.85rem 1rem;
     background: rgba(20, 16, 27, 0.45);
     backdrop-filter: blur(3px);
@@ -1040,7 +1142,6 @@ footer p {
   }
 
   /* Contenedores generales */
-  .img_index,
   .container_cards,
   .grilla_haters,
   .cards_haters_container {
@@ -1064,6 +1165,7 @@ footer p {
     object-fit: cover;
   }
 
+  /* Corte */
   .div_text_corte,
   .div_text_pelusoteca {
     padding: 0.5rem 0.25rem;
@@ -1077,7 +1179,7 @@ footer p {
   .parrafo_baron {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: left;
+    text-align: justify;
     margin: 0 0 0.5rem;
   }
 
@@ -1100,6 +1202,7 @@ footer p {
     width: 100%;
   }
 
+  /* Haters */
   .grilla_haters {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1126,24 +1229,38 @@ footer p {
     hyphens: auto;
   }
 
+  /* Pelusotecas 480: padding lateral, tarjetas más angostas centradas e imagen más grande */
   .grid_container_pelusoteca {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
+    padding: 0 1rem;
   }
 
-  /* Pelusoteca: altura un poco mayor por el ancho más chico del texto */
+  .pelusoteca_grid {
+    padding: 0 1rem;
+  }
+
   .cards_pelusoteca_article {
-    height: 34rem;
+    width: 100%;
+    max-width: 21.5rem;
+    margin: 0 auto;
+    height: 35rem;
   }
 
   .pelusa-card-front .div_img_pelusoteca {
-    max-width: 14rem;
+    max-width: 16rem;
+  }
+
+  .pelusa-card-back .text_cards {
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .pelusa_name {
     font-size: 1.05rem;
   }
 
+  /* Playlist */
   .intro_playlist {
     flex-direction: column;
     gap: 1rem;
@@ -1187,6 +1304,7 @@ footer p {
     margin: 0 1rem 1rem;
   }
 
+  /* Créditos */
   .div_img_creditos {
     max-height: 56svh;
     overflow: hidden;
