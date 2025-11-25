@@ -1,9 +1,11 @@
+@use "variables" as vars;
+
 // ================== PLACEHOLDERS ==================
 
 // Tarjeta elevada genérica
 %card-elevated {
   border: 0.0625rem solid #ddd;
-  border-radius: $radius-card;
-  box-shadow: $shadow-card;
-  background: $color-card-bg;
+  border-radius: vars.$radius-card;
+  box-shadow: vars.$shadow-card;
+  background: vars.$color-card-bg;
 }

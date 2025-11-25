@@ -2,12 +2,12 @@
 
 // ================== MIXINS ==================
 
-// Mixin para media queries basadas en el mapa $breakpoints
+// Mixin para media queries basadas en el mapa vars.$breakpoints
 @mixin respond-to($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map-get(vars.$breakpoints, $breakpoint);
 
   @if $value == null {
-    @error "El breakpoint `#{$breakpoint}` no existe en \$breakpoints.";
+    @error "El breakpoint `#{$breakpoint}` no existe en vars.$breakpoints.";
   }
 
   @media (max-width: $value) {

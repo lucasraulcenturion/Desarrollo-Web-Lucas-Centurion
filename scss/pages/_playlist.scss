@@ -2,6 +2,7 @@
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
 
 /* Intro: video + texto */
 .intro_playlist {
