@@ -28,32 +28,21 @@ Usado estratégicamente:
 ✔️ CSS Grid
 Aplicado para:
   -  Pelusoteca Notables → grilla flexible de tarjetas 2×N → 1 columna en mobile
-
-Haters & Diamonds → distribución simétrica en dos columnas
-
-Playlist → layout que combina el Himno + otros audios
+  -  Haters & Diamonds → distribución simétrica en dos columnas
+  -  Playlist → layout que combina el Himno + otros audios
 
 ✔️ Flexbox
-
 Utilizado para:
-
-Alinear imágenes y textos dentro de cada tarjeta
-
-Centrar contenido en La Corte
-
-Distribuir elementos en Créditos
-
-Ordenar video + texto en Playlist
+  -  Alinear imágenes y textos dentro de cada tarjeta
+  -  Centrar contenido en La Corte
+  -  Distribuir elementos en Créditos
+  -  Ordenar video + texto en Playlist
 
 ✔️ Diseño responsive completo
-
 Breakpoints personalizados (SASS):
-
-≤ 992 px (lg)
-
-≤ 768 px (md)
-
-≤ 480 px (sm)
+  ≤ 992 px (lg)
+  ≤ 768 px (md)
+  ≤ 480 px (sm)
 
 Toda la UI se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar centrado en tablets, hero reacomodado en mobile, etc.
 
@@ -87,140 +76,96 @@ Toda la UI se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar
 style.scss  ← archivo principal que importa todos los módulos
 
 ✔️ Variables SASS
-
-Colores (paleta púrpura + dorados)
-
-Breakpoints del sistema responsive
-
-Border-radius y sombras globales
-
-Gradiente dorado del navbar
+  -  Colores (paleta púrpura + dorados)
+  -  Breakpoints del sistema responsive
+  -  Border-radius y sombras globales
+  -  Gradiente dorado del navbar
 
 ✔️ Mixins
-
-respond-to() para media queries limpias
-→ mayor legibilidad y mantenimiento
+  →   respond-to() para media queries limpias, mayor legibilidad y mantenimiento
 
 ✔️ Placeholders
-
 %card-elevated para tarjetas reutilizables
-→ aplicado en: La Corte, Haters & Diamonds, Playlist (Himno)
+  →   aplicado en: La Corte, Haters & Diamonds, Playlist (Himno)
 
 💅 Animaciones implementadas
-✔️ 1. Flip 3D en Pelusoteca (tarjetas Notables)
-
+✔️ 1. Flip 3D.
 Aplicado sobre .pelusa-card-inner
-
-Efecto:
-
-Rotación rotateY(180deg) al hover
-
-Front/back con backface-visibility: hidden;
-
-Contenedor con perspective: 1200px;
-
-Secciones:
-✔ Pelusoteca Notables
-✔ Pelusoteca Baby’s (si se reutilizan tarjetas)
+  Efecto:
+    Rotación rotateY(180deg) al hover
+    Front/back con backface-visibility: hidden;
+    Contenedor con perspective: 1200px;
+Aplicado a tarjetas:
+  ✔ Pelusoteca Notables
+  ✔ Pelusoteca Baby’s
 
 ✔️ 2. RoyalGlow (animación personalizada)
-
 Efecto "resplandor real" creado con @keyframes royalGlow.
+  Incluye:
+    Glow dorado pulsante
+    Borde dinámico
+    Sombra animada
+    Pequeño “lift” al pasar el cursor
 
-Incluye:
-
-Glow dorado en pulsación
-
-Escala suave
-
-Border dinámico
-
-Sombra animada
-
-Aplicado a:
-✔ .cards_corte_article → La Corte de los Corazones
+Aplicado a tarjetas:
+  ✔ La Corte de los Corazones
 
 ✔️ 3. Flip del logo en la Navbar (Animate.css)
-
 Aplicado con clases:
+    animate__animated animate__flip
 
-animate__animated animate__flip
-
-
-Sección:
+Aplicado a Logo:
 ✔ Header / Navbar (logo principal)
 
 ✔️ 4. Rotación 3D del video DJ en Playlist
-
 En .div_dj_vid:hover:
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    perspective: 1000px;
 
-transform: rotateY(180deg);
-transform-style: preserve-3d;
-perspective: 1000px;
-
-
-Sección:
-✔ Playlist Imperial → Intro del DJ
+Aplicado a:
+✔ Playlist Imperial → Mini Video del Baron DJ
 
 ✔️ 5. Overlays y gradientes animados del Hero
-
 Se agregaron capas visuales:
+    ::before → gradiente vertical
+    ::after → radial blend con multiplicación
 
-::before → gradiente vertical
+**Ajustes especiales para 480px**
 
-::after → radial blend con multiplicación
-
-Ajustes especiales para 480px
-
-Sección:
+Aplicado a :
 ✔ Página de Inicio (Index)
 
 🧭 Secciones del sitio
 🟣 Inicio / El Salón del Barón
-
-Hero con imagen completa
-
-Texto encapsulado con blur en mobile
-
-Diseño inspirado en marquesina real
+    Hero con imagen completa
+    Texto encapsulado con blur en mobile
+    Diseño inspirado en marquesina real
 
 📖 Crónicas del Fluff
-
-Caja central con sombras fuertes
-
-Estética de libro antiguo y relato épico
+    Caja central con sombras fuertes
+    Estética de libro antiguo y relato épico
 
 💗 La Corte de los Corazones
-
-Cards flexibles con imágenes grandes
-
-Efecto RoyalGlow al hover
+    Cards flexibles con imágenes grandes
+    Efecto RoyalGlow al hover
 
 🧸 Pelusoteca
-
-Baby’s → grilla Bootstrap
-
-Notables → grilla CSS Grid + tarjetas 3D flip
+    Baby’s → grilla Bootstrap
+    Notables → grilla CSS Grid + tarjetas 3D flip
 
 💬 Haters & Diamonds
-
-Grid 2 columnas
-
-Capturas estilo Instagram
+    Grid 2 columnas
+    Capturas estilo Instagram
 
 🎶 Playlist Imperial
-
-Video redondo animado
-
-Card del Himno
-
-6 audios con sistema anti-reproducción simultánea (JS externo)
+    Video redondo animado
+    Card del Himno
+    6 audios con sistema anti-reproducción simultánea (JS externo)
 
 🏅 Créditos
-
-Gradiente superior
-
-Sistema de imágenes con efecto hover swap
+    Gradiente superior
+    Sistema de imágenes con efecto hover swap
 
 📄 Autor
 
