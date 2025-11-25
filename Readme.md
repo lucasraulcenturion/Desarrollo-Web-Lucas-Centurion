@@ -50,6 +50,9 @@ Toda la UI se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar
 
 ✔️ Migración completa a SASS con partials organizados:
 
+El CSS se organiza con **SASS** en partials, facilitando mantenimiento y escalabilidad:
+
+```text
 /base
   reset.scss
   fonts.scss
@@ -73,7 +76,9 @@ Toda la UI se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar
   mixins.scss
   placeholders.scss
 
-style.scss  ← archivo principal que importa todos los módulos
+style.scss   ← archivo principal que importa todos los partials
+
+```
 
 ✔️ Variables SASS
   -  Colores (paleta púrpura + dorados)
