@@ -1,47 +1,228 @@
-# 🌟 Sitio del Barón Von Fluffington III
+🌟 Sitio del Barón Von Fluffington III
+Pre-entrega N.º 3 – Desarrollo Web (Coderhouse)
 
-**Pre-entrega N.º 2 – Desarrollo Web (Coderhouse)**
+Versión avanzada y responsive del sitio oficial del Barón Von Fluffington III.
+El proyecto implementa una arquitectura ordenada, estilos escalables con SASS, animaciones visuales y una integración coherente entre Bootstrap, Grid y Flexbox.
 
-Versión avanzada del sitio del Barón Von Fluffington III.  
-El proyecto presenta una estructura HTML ordenada, uso combinado de **Bootstrap**, **Grid** y **Flexbox**, y un **diseño responsive completo**.
+📍 Demo publicada
+👉 GitHub Pages:
+https://lucasraulcenturion.github.io/Desarrollo-Web-Lucas-Centurion/
 
-📍 **Publicado en GitHub Pages:**  
-👉 [https://lucasraulcenturion.github.io/Desarrollo-Web-Lucas-Centurion/]
+🧩 Estructura, maquetado y organización
+El proyecto está construido siguiendo buenas prácticas de HTML5 semántico y una estructura escalable en SASS:
 
----
+✔️ HTML semántico
+  -  header, nav, main, section, article, footer
+  -  Navegación accesible y responsive
+  -  Imágenes con alt descriptivos
+  -  Títulos jerarquizados (h1 oculto para SEO cuando corresponde)
 
-## 🧩 Estructura y maquetado
+✔️ Bootstrap 5
+Usado estratégicamente:
+  -  Navbar responsive (navbar-expand-md)
+  -  Cards de audio en Playlist
+  -  Grilla responsiva en Pelusoteca Baby's
+  -  Sistema de columnas (row, col)
+  -  Botón hamburguesa + collapse accesible
 
-La estructura se organizó siguiendo buenas prácticas de **HTML5 semántico** y maquetado modular.  
-Cada sección fue diseñada con un enfoque adaptable, utilizando:
+✔️ CSS Grid
+Aplicado para:
+  -  Pelusoteca Notables → grilla flexible de tarjetas 2×N → 1 columna en mobile
 
-- **Bootstrap** para la navegación (navbar responsive), tarjetas (`.card`), contenedores (`.container`, `.row`, `.col`) y componentes de audio.
-- **Grid CSS** para dividir áreas principales como la Playlist y Haters & Diamonds en columnas equilibradas.
-- **Flexbox** para alinear elementos dentro de cards, bloques de texto e imágenes, y lograr una distribución fluida en distintos tamaños de pantalla.
+Haters & Diamonds → distribución simétrica en dos columnas
 
-La combinación de ambas técnicas garantiza una disposición visual coherente y escalable.
+Playlist → layout que combina el Himno + otros audios
 
----
+✔️ Flexbox
 
-## 💅 Estilo y diseño
+Utilizado para:
 
-- Paleta cromática: tonos **púrpura profundo**, **dorado** y **neutros** con acentos brillantes.
-- Tipografías jerarquizadas: _Merriweather_ (títulos) y _Roboto_ (textos).
-- Bordes redondeados, sombras suaves y gradientes lineales para reforzar la estética “aristocrático glam”.
-- Adaptación completa mediante _media queries_ (≤992 px, ≤768 px y ≤480 px) para asegurar legibilidad y coherencia visual en todos los dispositivos.
+Alinear imágenes y textos dentro de cada tarjeta
 
----
+Centrar contenido en La Corte
 
-## 🧭 Secciones destacadas
+Distribuir elementos en Créditos
 
-- **Inicio / El Salón del Barón:** hero central con fondo completo y tipografía decorativa.
-- **Crónicas del Fluff:** disposición de lectura centrada con márgenes y sombras suaves.
-- **La Corte:** estructura en cards flexibles con imágenes y texto alineado.
-- **Pelusoteca:** grilla de imágenes responsive organizada por tipo.
-- **Haters & Diamonds:** uso de Grid para separar bloques visuales simétricos.
-- **Playlist:** video circular con recorte mediante `border-radius` y grilla para audios.
-- **Créditos:** cierre visual con gradientes y tipografía destacada.
+Ordenar video + texto en Playlist
 
----
+✔️ Diseño responsive completo
 
-📄 _Desarrollado por Lucas Centurión — Curso Desarrollo Web, Coderhouse 2025_
+Breakpoints personalizados (SASS):
+
+≤ 992 px (lg)
+
+≤ 768 px (md)
+
+≤ 480 px (sm)
+
+Toda la UI se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar centrado en tablets, hero reacomodado en mobile, etc.
+
+🎨 Estilo y diseño (SASS)
+
+✔️ Migración completa a SASS con partials organizados:
+
+/base
+  reset.scss
+  fonts.scss
+  base.scss
+
+/layout
+  header.scss
+  footer.scss
+
+/pages
+  index.scss
+  pelusoteca.scss
+  lacorte.scss
+  haters.scss
+  cronicas.scss
+  creditos.scss
+  playlist.scss
+
+/utils
+  variables.scss
+  mixins.scss
+  placeholders.scss
+
+style.scss  ← archivo principal que importa todos los módulos
+
+✔️ Variables SASS
+
+Colores (paleta púrpura + dorados)
+
+Breakpoints del sistema responsive
+
+Border-radius y sombras globales
+
+Gradiente dorado del navbar
+
+✔️ Mixins
+
+respond-to() para media queries limpias
+→ mayor legibilidad y mantenimiento
+
+✔️ Placeholders
+
+%card-elevated para tarjetas reutilizables
+→ aplicado en: La Corte, Haters & Diamonds, Playlist (Himno)
+
+💅 Animaciones implementadas
+✔️ 1. Flip 3D en Pelusoteca (tarjetas Notables)
+
+Aplicado sobre .pelusa-card-inner
+
+Efecto:
+
+Rotación rotateY(180deg) al hover
+
+Front/back con backface-visibility: hidden;
+
+Contenedor con perspective: 1200px;
+
+Secciones:
+✔ Pelusoteca Notables
+✔ Pelusoteca Baby’s (si se reutilizan tarjetas)
+
+✔️ 2. RoyalGlow (animación personalizada)
+
+Efecto "resplandor real" creado con @keyframes royalGlow.
+
+Incluye:
+
+Glow dorado en pulsación
+
+Escala suave
+
+Border dinámico
+
+Sombra animada
+
+Aplicado a:
+✔ .cards_corte_article → La Corte de los Corazones
+
+✔️ 3. Flip del logo en la Navbar (Animate.css)
+
+Aplicado con clases:
+
+animate__animated animate__flip
+
+
+Sección:
+✔ Header / Navbar (logo principal)
+
+✔️ 4. Rotación 3D del video DJ en Playlist
+
+En .div_dj_vid:hover:
+
+transform: rotateY(180deg);
+transform-style: preserve-3d;
+perspective: 1000px;
+
+
+Sección:
+✔ Playlist Imperial → Intro del DJ
+
+✔️ 5. Overlays y gradientes animados del Hero
+
+Se agregaron capas visuales:
+
+::before → gradiente vertical
+
+::after → radial blend con multiplicación
+
+Ajustes especiales para 480px
+
+Sección:
+✔ Página de Inicio (Index)
+
+🧭 Secciones del sitio
+🟣 Inicio / El Salón del Barón
+
+Hero con imagen completa
+
+Texto encapsulado con blur en mobile
+
+Diseño inspirado en marquesina real
+
+📖 Crónicas del Fluff
+
+Caja central con sombras fuertes
+
+Estética de libro antiguo y relato épico
+
+💗 La Corte de los Corazones
+
+Cards flexibles con imágenes grandes
+
+Efecto RoyalGlow al hover
+
+🧸 Pelusoteca
+
+Baby’s → grilla Bootstrap
+
+Notables → grilla CSS Grid + tarjetas 3D flip
+
+💬 Haters & Diamonds
+
+Grid 2 columnas
+
+Capturas estilo Instagram
+
+🎶 Playlist Imperial
+
+Video redondo animado
+
+Card del Himno
+
+6 audios con sistema anti-reproducción simultánea (JS externo)
+
+🏅 Créditos
+
+Gradiente superior
+
+Sistema de imágenes con efecto hover swap
+
+📄 Autor
+
+Desarrollado por:
+👉 Lucas Centurión – Curso Desarrollo Web, Coderhouse 2025
