@@ -15,59 +15,56 @@ https://lucasraulcenturion.github.io/Desarrollo-Web-Lucas-Centurion/
 
 ## 🧩 Estructura, maquetado y organización
 
-Proyecto construido con buenas prácticas de **HTML5 semántico** y una arquitectura escalable en SASS.
+El proyecto está construido siguiendo buenas prácticas de **HTML5 semántico** y una estructura escalable en **SASS**.
 
-### ✔ HTML semántico
+### ✔️ HTML semántico
 
-- Uso de `header`, `nav`, `main`, `section`, `article`, `footer`.  
-- Navegación accesible y responsive.  
-- Imágenes con `alt` descriptivos.  
-- Títulos jerarquizados, con `h1` oculto para SEO cuando corresponde.  
+- Uso de etiquetas: `header`, `nav`, `main`, `section`, `article`, `footer`.
+- Navegación accesible y responsive.
+- Imágenes con atributos `alt` descriptivos.
+- Títulos jerarquizados, con `h1` oculto para SEO cuando corresponde.
 
-### ✔ Bootstrap 5
+### ✔️ Bootstrap 5 (uso estratégico)
 
-Utilizado estratégicamente para:
+- Navbar responsive (`.navbar-expand-md`) con botón hamburguesa + `collapse`.
+- Cards de audio en **Playlist Imperial**.
+- Grilla responsiva en **Pelusoteca Baby’s**.
+- Sistema de columnas (`.container`, `.row`, `.col-*`).
 
-- Navbar responsive (`navbar-expand-md`).  
-- Cards de audio en **Playlist Imperial**.  
-- Grilla responsiva en **Pelusoteca Baby’s**.  
-- Sistema de columnas (`.row`, `.col-*`).  
-- Botón hamburguesa + `collapse` accesible.
-
-### ✔ CSS Grid
+### ✔️ CSS Grid
 
 Aplicado para:
 
-- **Pelusoteca Notables** → grilla flexible de tarjetas 2×N (1 columna en mobile).  
-- **Haters & Diamonds** → distribución simétrica en dos columnas.  
-- **Playlist Imperial** → layout que combina Himno + otros audios.
+- **Pelusoteca Notables** → grilla flexible de tarjetas `2 × N` que pasa a **1 columna** en mobile.
+- **Haters & Diamonds** → distribución simétrica en **dos columnas**.
+- **Playlist Imperial** → layout que combina el **Himno** del Barón con otros audios.
 
-### ✔ Flexbox
+### ✔️ Flexbox
 
-Usado para:
+Utilizado para:
 
-- Alinear imágenes y textos dentro de cada tarjeta.  
-- Centrar contenido en **La Corte de los Corazones**.  
-- Organizar bloques en **Créditos**.  
+- Alinear imágenes y textos dentro de cada tarjeta.
+- Centrar contenido en **La Corte de los Corazones**.
+- Distribuir elementos en la sección **Créditos**.
 - Ordenar video + texto en **Playlist Imperial**.
 
-### ✔ Diseño responsive completo
+### ✔️ Diseño responsive completo
 
-Breakpoints personalizados (SASS):
+Breakpoints personalizados definidos en SASS:
 
-- `≤ 992px` (`lg`)  
-- `≤ 768px` (`md`)  
-- `≤ 480px` (`sm`)  
+- `≤ 992px` (`lg`)
+- `≤ 768px` (`md`)
+- `≤ 480px` (`sm`)
 
-La UI ajusta tipografías, paddings, alturas, anchos máximos, navbar centrado en tablets y hero reacomodado en mobile.
+Toda la interfaz se adapta: tipografías, paddings, alturas, ancho de tarjetas, navbar centrado en tablets, hero reacomodado en mobile, etc.
 
 ---
 
 ## 🎨 Estilo y diseño (SASS)
 
-### ✔ Arquitectura SASS
+### ✔️ Estructura de SASS con partials
 
-El CSS se organiza en **partials** SASS para facilitar el mantenimiento y la escalabilidad:
+El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenimiento y la escalabilidad:
 
     /base
       reset.scss
@@ -92,92 +89,120 @@ El CSS se organiza en **partials** SASS para facilitar el mantenimiento y la esc
       mixins.scss
       placeholders.scss
 
-    style.scss    ← archivo principal que importa todos los partials
+    style.scss   ← archivo principal que importa todos los partials
 
-### ✔ Variables SASS
+### ✔️ Variables SASS
 
-- Paleta de colores (púrpuras, dorados y neutros).  
-- Breakpoints del sistema responsive.  
-- Border-radius y sombras globales.  
-- Gradiente dorado para el estado activo del navbar.
+- Colores (paleta púrpura + dorados).
+- Breakpoints del sistema responsive.
+- Border-radius y sombras globales.
+- Gradiente dorado para estados activos del navbar.
 
-### ✔ Mixins
+### ✔️ Mixins
 
-- `respond-to()` para generar **media queries limpias**, mejorar la legibilidad y unificar puntos de corte.
+- `respond-to()` para media queries limpias, mejor legibilidad y mantenimiento.
 
-### ✔ Placeholders
+### ✔️ Placeholders
 
 - `%card-elevated` para tarjetas reutilizables.  
-  - Aplicado en: **La Corte**, **Haters & Diamonds** y **Playlist Imperial** (card del Himno).
+  Aplicado en:
+  - **La Corte de los Corazones**
+  - **Haters & Diamonds**
+  - **Playlist Imperial** (card del Himno)
 
 ---
 
 ## 💅 Animaciones implementadas
 
-1. **Flip 3D en Pelusoteca**  
-   - Aplicado sobre `.pelusa-card-inner`.  
-   - Efecto: `rotateY(180deg)` al hover, con `backface-visibility: hidden`.  
-   - Contenedor con `perspective: 1200px`.  
-   - Tarjetas afectadas: **Pelusoteca Notables** y **Pelusoteca Baby’s**.
+1. **Flip 3D en tarjetas de la Pelusoteca**
+   - Aplicado sobre `.pelusa-card-inner`.
+   - Efecto:
+     - Rotación `rotateY(180deg)` al **hover**.
+     - Caras front/back con `backface-visibility: hidden`.
+     - Contenedor con `perspective: 1200px`.
+   - Aplicado a tarjetas:
+     - ✅ Pelusoteca **Notables**
+     - ✅ Pelusoteca **Baby’s**
 
-2. **RoyalGlow (animación personalizada)**  
-   - Definida con `@keyframes royalGlow`.  
-   - Incluye glow dorado pulsante, borde dinámico, sombra animada y pequeño “lift” al pasar el cursor.  
-   - Aplicada a las tarjetas de **La Corte de los Corazones**.
+2. **RoyalGlow (animación personalizada)**
+   - Efecto de “resplandor real” creado con `@keyframes royalGlow`.
+   - Incluye:
+     - Glow dorado pulsante.
+     - Borde dinámico.
+     - Sombra animada.
+     - Pequeño “lift” al pasar el cursor.
+   - Aplicado a tarjetas:
+     - ✅ **La Corte de los Corazones**
 
-3. **Flip del logo en la Navbar (Animate.css)**  
-   - Uso de las clases `animate__animated` y `animate__flip`.  
-   - Aplicado al **logo principal** en el header / navbar.
+3. **Flip del logo en la Navbar (Animate.css)**
+   - Implementado con Animate.css usando las clases:
+     - `animate__animated`
+     - `animate__flip`
+   - Aplicado al logo principal:
+     - ✅ Header / Navbar.
 
-4. **Rotación 3D del video DJ en Playlist**  
-   - En `.div_dj_vid:hover`:  
-     - `transform: rotateY(180deg);`  
-     - `transform-style: preserve-3d;`  
-     - `perspective: 1000px;`  
-   - Aplicado al mini video del **Barón DJ** en **Playlist Imperial**.
+4. **Rotación 3D del video DJ en Playlist**
+   - En `.div_dj_vid:hover`:
+     - `transform: rotateY(180deg);`
+     - `transform-style: preserve-3d;`
+     - `perspective: 1000px;`
+   - Aplicado a:
+     - ✅ **Playlist Imperial** → Mini video del Barón DJ.
 
-5. **Overlays y gradientes del Hero (Index)**  
-   - Capas visuales en `::before` (gradiente vertical) y `::after` (radial blend con `mix-blend-mode: multiply`).  
-   - Ajustes especiales para `≤ 480px` con blur de fondo y recuadro de texto encapsulado.  
-   - Aplicado a la **página de Inicio (Index)**.
+5. **Overlays y gradientes del Hero (Inicio)**
+   - Se agregan capas visuales en `.hero`:
+     - `::before` → gradiente vertical.
+     - `::after` → radial blend con `mix-blend-mode: multiply`.
+   - Ajustes específicos para `≤ 480px` para mejorar legibilidad del texto sobre la imagen.
+   - Aplicado a:
+     - ✅ Página de **Inicio (Index)**.
 
 ---
 
 ## 🧭 Secciones del sitio
 
-- 🟣 **Inicio / El Salón del Barón**  
-  - Hero a pantalla completa.  
-  - Texto principal encapsulado con blur en mobile.  
-  - Estética de marquesina real.
+### 🟣 Inicio / El Salón del Barón
 
-- 📖 **Crónicas del Fluff**  
-  - Caja central con sombras fuertes.  
-  - Estilo de libro antiguo y relato épico.
+- Hero con imagen a pantalla completa.
+- Texto encapsulado con fondo translúcido y blur en mobile.
+- Estética inspirada en una marquesina real de show imperial.
 
-- 💗 **La Corte de los Corazones**  
-  - Cards flexibles con imágenes grandes.  
-  - Efecto **RoyalGlow** al hover.
+### 📖 Crónicas del Fluff
 
-- 🧸 **Pelusoteca**  
-  - **Baby’s** → grilla con Bootstrap.  
-  - **Notables** → grilla con CSS Grid + tarjetas con flip 3D.
+- Caja central de lectura con bordes redondeados y sombras fuertes.
+- Estilo de “libro antiguo” para acompañar las crónicas del Barón.
 
-- 💬 **Haters & Diamonds**  
-  - Layout en 2 columnas.  
-  - Capturas estilo Instagram con contexto narrativo.
+### 💗 La Corte de los Corazones
 
-- 🎶 **Playlist Imperial**  
-  - Video circular animado del Barón DJ.  
-  - Card destacada del Himno oficial.  
-  - 6 audios con sistema JS para evitar reproducciones simultáneas.
+- Cards flexibles con imágenes protagonistas.
+- Efecto **RoyalGlow** al hover para resaltar a los miembros de la Corte.
 
-- 🏅 **Créditos**  
-  - Encabezado con gradiente superior.  
-  - Sistema de imágenes con efecto **hover swap** (normal / hover).
+### 🧸 Pelusoteca
+
+- **Baby’s** → grilla basada en Bootstrap (`.row` + `.col-*`), pensada para fichas delicadas.
+- **Notables** → grilla con **CSS Grid** + tarjetas **3D flip** (front/back con animación).
+
+### 💬 Haters & Diamonds
+
+- Layout en **Grid 2 columnas**.
+- Capturas estilo Instagram con contenedores elevados.
+- Sección pensada para contrastar hate vs. brillo imperial.
+
+### 🎶 Playlist Imperial
+
+- Video circular animado del Barón DJ.
+- Card destacada del **Himno "Stellar"**.
+- 6 audios adicionales con sistema JS externo para evitar reproducciones simultáneas.
+
+### 🏅 Créditos
+
+- Franja superior con gradiente.
+- Sistema de imágenes con **hover swap** (imagen normal ↔ imagen alternativa de rol).
+- Reconocimiento a herramientas y colaboradores del universo Fluffington.
 
 ---
 
 ## 📄 Autor
 
-Desarrollado por: **Lucas Centurión**  
-Curso **Desarrollo Web – Coderhouse 2025**
+Desarrollado por:  
+**Lucas Centurión** – Curso **Desarrollo Web**, Coderhouse 2025.
