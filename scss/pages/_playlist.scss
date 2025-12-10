@@ -1,8 +1,8 @@
-/* ================== PLAYLIST IMPERIAL – BASE ================== */
-
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 @use "../utils/placeholders" as *;
+
+/* ================== PLAYLIST IMPERIAL – BASE ================== */
 
 /* Intro: video + texto */
 .intro_playlist {
@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: 21.25rem 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 
   @include respond-to(lg) {
     grid-template-columns: 18rem 1fr;
@@ -201,7 +201,7 @@
   .audios_playlist {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.4rem;
     max-width: 100%;
 
     @include respond-to(md) {
@@ -211,14 +211,30 @@
   }
 }
 
-/* Tarjetas de audio (Bootstrap override) */
-.card-body {
-  background: linear-gradient(
-    45deg,
-    rgba(51, 5, 32, 1) 0%,
-    rgba(117, 18, 76, 1) 50%,
-    rgba(51, 5, 32, 1) 100%
-  );
+/* Ajuste de distribución en desktop */
+@media (min-width: 992px) {
+  .section_hymn,
+  .section_other_hits {
+    height: 100%;
+  }
+
+  .section_other_hits {
+    display: flex;
+    flex-direction: column;
+
+    .div_img_other {
+      flex: 0 0 auto;
+      margin-bottom: 1.25rem; // espacio fijo entre banner y primera tarjeta
+    }
+
+    .audios_playlist {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; // reparte TODAS las tarjetas en alto
+      gap: 0; // si querés un pelín de separación fija, probá 0.5rem
+    }
+  }
 }
 
 /* <= 480px — subtítulos y textos */
@@ -235,5 +251,74 @@
     font-size: 0.95rem;
     margin: 0 1rem 0.5rem;
     padding-bottom: 0.5rem;
+  }
+}
+
+/* ================== OVERRIDES DE CARDS SOLO PARA PLAYLIST ==================
+   Evita afectar otras páginas con Bootstrap cards.
+   Requiere envolver el main de Playlist con .playlist-page
+*/
+
+.playlist-page {
+  .card {
+    position: relative;
+    border-radius: 1rem;
+    background: #3a0530;
+
+    /* OJO: si querés que se vea el glow sin recorte en algún caso,
+       podés cambiar a overflow: visible.
+       Por ahora lo dejo igual que tu versión. */
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0.75rem 1.5rem rgba(243, 243, 243, 0.35);
+    z-index: -1; /* queda por detrás de la tarjeta */
+  }
+
+  .card-body {
+    background: linear-gradient(
+      45deg,
+      rgba(51, 5, 32, 1) 0%,
+      rgba(117, 18, 76, 1) 50%,
+      rgba(51, 5, 32, 1) 100%
+    );
+  }
+}
+
+/* Fila con control de audio + icono a la derecha */
+.audio-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* espacio entre audio e icono */
+
+  /* El audio ocupa todo el espacio que queda, sin salirse */
+  .audio-player {
+    flex: 1 1 auto;
+    width: auto; /* por si Bootstrap le puso width:100% */
+  }
+
+  /* Icono BVF fijo a la derecha */
+  .audio-icon {
+    flex: 0 0 auto;
+    width: 5rem; /* ajustá el tamaño que quieras */
+    height: auto;
+    transform-origin: 50% 50%;
+
+    /* Solo gira cuando JS agrega esta clase */
+    &.is-spinning {
+      animation: bvf-spin 1.2s linear infinite;
+    }
+  }
+}
+
+/* Animación del icono */
+@keyframes bvf-spin {
+  to {
+    transform: rotate(360deg);
   }
 }

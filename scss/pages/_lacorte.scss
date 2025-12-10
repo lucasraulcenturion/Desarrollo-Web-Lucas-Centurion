@@ -1,8 +1,8 @@
-/* ================== LA CORTE DE LOS CORAZONES ================== */
-
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 @use "../utils/placeholders" as *;
+
+/* ================== LA CORTE DE LOS CORAZONES ================== */
 
 .main_corte {
   padding-bottom: 2rem;
@@ -21,6 +21,11 @@
   gap: 1rem;
   color: $color-text-main;
   padding: 1rem;
+
+  @include respond-to(sm) {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
 }
 
 #los_mas_likeados {
@@ -66,11 +71,61 @@
     object-fit: cover;
     margin-right: 1.5rem;
   }
+
+  // <= 992px
+  @include respond-to(lg) {
+    height: auto;
+
+    .cards_media_img {
+      width: 45%;
+      height: auto;
+    }
+  }
+
+  // <= 768px
+  @include respond-to(md) {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+    .cards_media_img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 0.8rem;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  // <= 480px
+  @include respond-to(sm) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+
+    .cards_media_img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 0.8rem;
+      border-radius: 12px;
+    }
+  }
 }
 
 /* Columna de texto dentro de la tarjeta */
 .card_body {
   flex: 1;
+
+  @include respond-to(md) {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  @include respond-to(sm) {
+    flex: 1 1 auto;
+    width: 100%;
+  }
 }
 
 /* Hashtags */
@@ -81,6 +136,13 @@
   margin-top: 0.5rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
+
+  @include respond-to(sm) {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0 0 0.5rem;
+    padding: 0 0.25rem;
+  }
 }
 
 /* Efecto RoyalGlow */
@@ -105,75 +167,5 @@
       0 0 6px rgba(255, 215, 0, 0.7),
       0 0 16px rgba(203, 69, 147, 0.6);
     border-color: rgba(255, 215, 0, 0.8);
-  }
-}
-
-/* ================== RESPONSIVE LA CORTE ================== */
-
-// <= 992px
-@include respond-to(lg) {
-  .cards_corte_article {
-    height: auto;
-
-    .cards_media_img {
-      width: 45%;
-      height: auto;
-    }
-  }
-}
-
-// <= 768px
-@include respond-to(md) {
-  .cards_corte_article {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-
-    .cards_media_img {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 0 0.8rem;
-      height: auto;
-      border-radius: 12px;
-    }
-  }
-
-  .card_body {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-}
-
-// <= 480px
-@include respond-to(sm) {
-  .div_text_corte {
-    padding: 0.5rem 0.25rem;
-    text-align: left;
-  }
-
-  .cards_corte_article {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-
-    .cards_media_img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin: 0 0 0.8rem;
-      border-radius: 12px;
-    }
-  }
-
-  .card_body {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
-  .text_hashtag_cards {
-    font-size: 0.95rem;
-    line-height: 1.45;
-    margin: 0 0 0.5rem;
-    padding: 0 0.25rem;
   }
 }

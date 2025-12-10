@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.section_hymn, .cards_haters_container, .cards_corte_article {
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
+  background: #fbf6e4;
+}
+
+/* Resets básicos */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,14 +35,29 @@ img {
 /* H1 oculto para SEO */
 .h1-hidden {
   position: absolute;
-  width: 0.0625rem;
-  height: 0.0625rem;
-  margin: -0.0625rem;
+  width: 1px;
+  height: 1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
-  clip-path: inset(50%);
+  clip: rect(0 0 0 0); /* fallback clásico */
+  clip-path: inset(50%); /* moderno */
   white-space: nowrap;
   border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  z-index: 10000;
+}
+.skip-link:focus {
+  left: 0;
 }
 
 /* Contenedor general de páginas de texto / tarjetas */
@@ -62,13 +85,15 @@ img {
 
 /* Imagen de portada */
 .img_portada {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 @media (max-width: 480px) {
   .img_portada {
     max-height: 220px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -140,7 +165,6 @@ img {
   padding: 0 0.75rem;
   margin-bottom: 0.5rem;
   text-align: justify;
-  align-items: center;
 }
 @media (max-width: 480px) {
   .text_cards {
@@ -151,7 +175,8 @@ img {
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
-    hyphens: auto;
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 }
 
@@ -180,7 +205,7 @@ img {
 
 /* Logo */
 .navbar__logo {
-  width: 5rem;
+  width: 3rem;
   height: auto;
   margin: 0;
   /* ================== RESPONSIVE LOGO ================== */
@@ -202,6 +227,12 @@ img {
 }
 
 /* Links generales */
+.navbar {
+  /* Dropdown */
+  /* Estilo base links */
+  /* Estado activo */
+  /* ================== NAVBAR CENTRADO 768–991 ================== */
+}
 .navbar .nav-link,
 .navbar .navbar-brand {
   color: #ffffff;
@@ -218,9 +249,6 @@ img {
   .navbar .navbar-brand {
     font-size: 0.95rem;
   }
-}
-.navbar {
-  /* Dropdown */
 }
 .navbar .dropdown-menu {
   background: #5f1651;
@@ -259,9 +287,6 @@ img {
   box-shadow: none;
   background-color: transparent;
 }
-.navbar {
-  /* Estilo base links */
-}
 .navbar .nav-link,
 .navbar .dropdown-item {
   color: #fdf1ff;
@@ -271,9 +296,6 @@ img {
 .navbar .dropdown-item:hover {
   color: #ffe28a;
 }
-.navbar {
-  /* Estado activo */
-}
 .navbar .nav-link.active,
 .navbar .nav-link.show {
   font-weight: 700;
@@ -281,9 +303,6 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-.navbar {
-  /* ================== NAVBAR CENTRADO 768–991 ================== */
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar .navbar-nav {
@@ -304,28 +323,6 @@ img {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* ================== RESPONSIVE NAVBAR ================== */
-@media (max-width: 992px) {
-  /* <= 992px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  /* <= 768px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  /* <= 480px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 0.95rem;
-  }
-}
 /* ================== FOOTER ================== */
 .link_footer {
   color: #ffffff;
@@ -339,19 +336,12 @@ footer {
   font-size: 0.9rem;
   text-align: left;
   padding: 1rem;
+  /* ================== RESPONSIVE FOOTER ================== */
 }
 footer p {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   padding-bottom: 0.125rem;
-}
-@media (max-width: 480px) {
-  footer p:last-child {
-    margin-bottom: 0;
-  }
-}
-footer {
-  /* ================== RESPONSIVE FOOTER ================== */
 }
 @media (max-width: 480px) {
   footer {
@@ -360,69 +350,30 @@ footer {
     padding: 0.75rem 1rem;
     margin-top: auto;
   }
+  footer p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* ================== INDEX / HERO ================== */
 .hero {
   position: relative;
-  height: calc(100vh - 5.625rem - 5.85rem);
+  height: calc(100vh - 3.625rem - 5.85rem);
   display: grid;
   align-items: center;
   justify-items: right;
   padding: 0 5rem 0 0;
   overflow: clip;
 }
-
-.hero_bg {
-  position: absolute;
-  inset: 0;
-  background: url("../img/Index-Fondo.png") center/cover no-repeat;
-  z-index: 0;
-}
-
-.hero_content {
-  position: relative;
-  z-index: 1;
-  max-width: 60ch;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
-}
-
-.title_page {
-  font-family: "Merriweather", serif;
-  font-size: clamp(1.875rem, 4vw, 3.75rem);
-  margin: 0 0 0.5rem;
-  color: #8e0d7b;
-  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
-}
-
-.iafluencer_description {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
-  color: #d1d5db;
-  text-shadow: 0.125rem 0.125rem 0.25rem #000;
-  margin: 0 1.25rem 1.25rem;
-  padding: 0.625rem;
-}
-
-/* ================== RESPONSIVE INDEX / HERO ================== */
 @media (max-width: 992px) {
-  /* <= 992px */
   .hero {
     padding: 0 2.5rem 0 0;
     height: calc(100vh - 5.625rem - 5.85rem);
     justify-items: end;
     align-items: center;
   }
-  .hero_content {
-    max-width: 34rem;
-    margin-left: auto;
-    margin-right: 1rem;
-  }
 }
 @media (max-width: 768px) {
-  /* <= 768px */
   .hero {
     padding: 0 2rem 0 0;
     height: calc(100vh - 5rem);
@@ -430,14 +381,8 @@ footer {
     justify-items: end;
     align-items: center;
   }
-  .hero_content {
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: 1.5rem;
-  }
 }
 @media (max-width: 480px) {
-  /* <= 480px */
   .hero {
     position: relative;
     display: grid;
@@ -463,9 +408,43 @@ footer {
     pointer-events: none;
     z-index: 1;
   }
+}
+
+.hero_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/index/fondo-index.webp") center/cover no-repeat;
+  z-index: 0;
+}
+@media (max-width: 480px) {
   .hero_bg {
-    background: url("../img/baron-480.png") center/cover no-repeat;
+    background: url("../img/index/baron-480.webp") center/cover no-repeat;
   }
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+  max-width: 60ch;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 992px) {
+  .hero_content {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero_content {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
   .hero_content {
     width: min(94vw, 26rem);
     margin: 0 auto;
@@ -476,6 +455,16 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
   }
+}
+
+.title_page {
+  font-family: "Merriweather", serif;
+  font-size: clamp(1.875rem, 4vw, 3.75rem);
+  margin: 0 0 0.5rem;
+  color: #8e0d7b;
+  text-shadow: 0.1875rem 0.1875rem 0.3125rem #ffffff;
+}
+@media (max-width: 480px) {
   .title_page {
     color: #fff;
     font-weight: 800;
@@ -490,6 +479,17 @@ footer {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 0.6);
     -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
   }
+}
+
+.iafluencer_description {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: #d1d5db;
+  text-shadow: 0.125rem 0.125rem 0.25rem #000;
+  margin: 0 1.25rem 1.25rem;
+  padding: 0.625rem;
+}
+@media (max-width: 480px) {
   .iafluencer_description {
     color: #fff;
     font-size: clamp(0.92rem, 3.2vw, 1.02rem);
@@ -498,6 +498,7 @@ footer {
     text-align: center;
   }
 }
+
 /* ================== PELUSOTECA ================== */
 /* Intro texto */
 .div_text_pelusoteca {
@@ -528,12 +529,6 @@ footer {
     gap: 1.5rem;
   }
 }
-@media (max-width: 768px) {
-  .grid_container_pelusoteca {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
 @media (max-width: 480px) {
   .grid_container_pelusoteca {
     grid-template-columns: 1fr;
@@ -546,6 +541,7 @@ footer {
 .pelusoteca_grid {
   max-width: 72rem;
   margin: 0 auto 3rem;
+  /* 768px – 991.98px (rango entre breakpoints) */
 }
 .pelusoteca_grid .row {
   width: 100%;
@@ -563,8 +559,6 @@ footer {
 .pelusoteca_grid .cards_pelusoteca_article {
   flex: 1 1 auto;
 }
-
-/* 768px – 991.98px */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .pelusoteca_grid .row {
     justify-content: center;
@@ -574,6 +568,7 @@ footer {
     margin-right: auto;
   }
 }
+
 /* -------- Tarjetas Pelusoteca (comunes) -------- */
 .cards_pelusoteca_article {
   position: relative;
@@ -699,10 +694,12 @@ footer {
 .pelusa_name {
   font-family: "Roboto", sans-serif;
   color: #000;
+  text-shadow: 1px 1px 2px rgba(80, 80, 80, 0.7);
   font-size: 1.2rem;
   text-align: center;
   font-weight: bold;
   padding-bottom: 0.625rem;
+  margin: 0.625rem;
 }
 @media (max-width: 480px) {
   .pelusa_name {
@@ -711,13 +708,6 @@ footer {
 }
 
 /* ================== LA CORTE DE LOS CORAZONES ================== */
-.section_hymn, .cards_haters_container, .cards_corte_article {
-  border: 0.0625rem solid #ddd;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
-  background: #fbf6e4;
-}
-
 .main_corte {
   padding-bottom: 2rem;
 }
@@ -735,6 +725,12 @@ footer {
   gap: 1rem;
   color: #ffffff;
   padding: 1rem;
+}
+@media (max-width: 480px) {
+  .main_corte .div_text_corte {
+    padding: 0.5rem 0.25rem;
+    text-align: left;
+  }
 }
 
 #los_mas_likeados {
@@ -762,56 +758,20 @@ footer {
   position: relative;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   /* Glow al hover */
+  /* Imagen dentro de la tarjeta */
 }
 .cards_corte_article:hover {
   animation: royalGlow 1.4s ease-in-out infinite alternate;
-}
-.cards_corte_article {
-  /* Imagen dentro de la tarjeta */
 }
 .cards_corte_article .cards_media_img {
   width: 50%;
   max-width: 25rem;
   height: 100%;
   border-radius: 0.625rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-right: 1.5rem;
 }
-
-/* Columna de texto dentro de la tarjeta */
-.card_body {
-  flex: 1;
-}
-
-/* Hashtags */
-.text_hashtag_cards {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  text-align: left;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
-}
-
-/* Efecto RoyalGlow */
-@keyframes royalGlow {
-  0% {
-    transform: translateY(0) scale(1);
-    box-shadow: 0 0 0 rgba(255, 215, 0, 0), 0 0 0 rgba(203, 69, 147, 0);
-    border-color: rgba(255, 215, 0, 0.3);
-  }
-  50% {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 25px rgba(203, 69, 147, 0.7);
-    border-color: rgba(255, 215, 0, 0.9);
-  }
-  100% {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 0 6px rgba(255, 215, 0, 0.7), 0 0 16px rgba(203, 69, 147, 0.6);
-    border-color: rgba(255, 215, 0, 0.8);
-  }
-}
-/* ================== RESPONSIVE LA CORTE ================== */
 @media (max-width: 992px) {
   .cards_corte_article {
     height: auto;
@@ -834,16 +794,8 @@ footer {
     height: auto;
     border-radius: 12px;
   }
-  .card_body {
-    flex: 1 1 auto;
-    width: 100%;
-  }
 }
 @media (max-width: 480px) {
-  .div_text_corte {
-    padding: 0.5rem 0.25rem;
-    text-align: left;
-  }
   .cards_corte_article {
     height: auto;
     flex-direction: column;
@@ -856,15 +808,59 @@ footer {
     margin: 0 0 0.8rem;
     border-radius: 12px;
   }
+}
+
+/* Columna de texto dentro de la tarjeta */
+.card_body {
+  flex: 1;
+}
+@media (max-width: 768px) {
   .card_body {
     flex: 1 1 auto;
     width: 100%;
   }
+}
+@media (max-width: 480px) {
+  .card_body {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+/* Hashtags */
+.text_hashtag_cards {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+}
+@media (max-width: 480px) {
   .text_hashtag_cards {
     font-size: 0.95rem;
     line-height: 1.45;
     margin: 0 0 0.5rem;
     padding: 0 0.25rem;
+  }
+}
+
+/* Efecto RoyalGlow */
+@keyframes royalGlow {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 215, 0, 0), 0 0 0 rgba(203, 69, 147, 0);
+    border-color: rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 25px rgba(203, 69, 147, 0.7);
+    border-color: rgba(255, 215, 0, 0.9);
+  }
+  100% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.7), 0 0 16px rgba(203, 69, 147, 0.6);
+    border-color: rgba(255, 215, 0, 0.8);
   }
 }
 /* ================== HATERS & DIAMONDS ================== */
@@ -918,10 +914,8 @@ footer {
 }
 @media (max-width: 480px) {
   .barra_instagram {
-    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
   }
 }
 
@@ -931,14 +925,11 @@ footer {
 }
 @media (max-width: 480px) {
   .cards_media_img_haters {
-    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
   }
 }
 
-/* ================== RESPONSIVE HATERS & DIAMONDS ================== */
 /* ================== CRÓNICAS DEL FLUFF ================== */
 .contenido_cronicas {
   display: flex;
@@ -960,6 +951,46 @@ footer {
   color: #ffffff;
   padding: 4rem;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+}
+@media (max-width: 480px) {
+  .lema_cronicas {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* ================== ROLLO FOTOGRÁFICO (JS) ================== */
+.filmstrip {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.filmstrip-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  will-change: transform;
+  /* Imágenes de la tira */
+}
+.filmstrip-track img {
+  height: 12rem; /* alto del rollo */
+  width: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  /* Efecto al pasar el mouse */
+  /* Versión mobile - Disminución de tamaño */
+}
+.filmstrip-track img:hover {
+  transform: scale(1.06);
+}
+@media (max-width: 480px) {
+  .filmstrip-track img {
+    height: 6.5rem;
+  }
 }
 
 /* ================== CRÉDITOS ================== */
@@ -991,14 +1022,12 @@ footer {
   color: #ffffff;
   text-shadow: 0.1875rem 0.1875rem 0.3125rem #000;
   /* ================== RESPONSIVE <= 768px ================== */
+  /* ================== RESPONSIVE <= 480px ================== */
 }
 @media (max-width: 768px) {
   .subtitulo_creditos {
     font-size: 1.9rem;
   }
-}
-.subtitulo_creditos {
-  /* ================== RESPONSIVE <= 480px ================== */
 }
 @media (max-width: 480px) {
   .subtitulo_creditos {
@@ -1007,15 +1036,12 @@ footer {
   }
 }
 
-.main_playlist {
-  justify-content: center;
-}
-
 /* Columna de imágenes */
 .columna-creditos {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -1026,7 +1052,7 @@ footer {
   }
 }
 
-/* Imagenes normales y hover */
+/* Imágenes normales y hover */
 .rol-creditos {
   position: relative;
   display: inline-block;
@@ -1036,9 +1062,6 @@ footer {
   .rol-creditos {
     max-width: 100%;
   }
-}
-.rol-creditos:hover {
-  transform: translateY(-4px) scale(1.01);
 }
 .rol-creditos .rol-normal {
   display: block;
@@ -1065,6 +1088,9 @@ footer {
     height: auto;
   }
 }
+.rol-creditos:hover {
+  transform: translateY(-4px) scale(1.01);
+}
 .rol-creditos:hover .rol-hover {
   opacity: 1;
 }
@@ -1072,21 +1098,27 @@ footer {
   opacity: 0;
 }
 
-/* ================== RESPONSIVE IMÁGENES <= 480px ================== */
+/* Portada créditos */
 @media (max-width: 480px) {
-  .div_img_creditos {
+  .div_img_portada_creditos {
     max-height: 56svh;
     overflow: hidden;
     margin-bottom: 0;
   }
+}
+
+@media (max-width: 480px) {
   .img_creditos {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center top;
+       object-position: center top;
     display: block;
   }
 }
+
 /* ================== PLAYLIST IMPERIAL – BASE ================== */
 /* Intro: video + texto */
 .intro_playlist {
@@ -1147,8 +1179,10 @@ footer {
 .div_dj_vid .dj_vid {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   display: block;
 }
 
@@ -1173,7 +1207,7 @@ footer {
   display: grid;
   grid-template-columns: 21.25rem 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 @media (max-width: 992px) {
   .grilla_playlist {
@@ -1293,7 +1327,7 @@ footer {
 .section_other_hits .audios_playlist {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.4rem;
   max-width: 100%;
 }
 @media (max-width: 768px) {
@@ -1303,11 +1337,28 @@ footer {
   }
 }
 
-/* Tarjetas de audio (Bootstrap override) */
-.card-body {
-  background: linear-gradient(45deg, rgb(51, 5, 32) 0%, rgb(117, 18, 76) 50%, rgb(51, 5, 32) 100%);
+/* Ajuste de distribución en desktop */
+@media (min-width: 992px) {
+  .section_hymn,
+  .section_other_hits {
+    height: 100%;
+  }
+  .section_other_hits {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_other_hits .div_img_other {
+    flex: 0 0 auto;
+    margin-bottom: 1.25rem;
+  }
+  .section_other_hits .audios_playlist {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
-
 /* <= 480px — subtítulos y textos */
 @media (max-width: 480px) {
   .subtitle_playlist {
@@ -1325,4 +1376,57 @@ footer {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* ================== OVERRIDES DE CARDS SOLO PARA PLAYLIST ==================
+   Evita afectar otras páginas con Bootstrap cards.
+   Requiere envolver el main de Playlist con .playlist-page
+*/
+.playlist-page .card {
+  position: relative;
+  border-radius: 1rem;
+  background: #3a0530;
+  /* OJO: si querés que se vea el glow sin recorte en algún caso,
+     podés cambiar a overflow: visible.
+     Por ahora lo dejo igual que tu versión. */
+  overflow: hidden;
+}
+.playlist-page .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0.75rem 1.5rem rgba(243, 243, 243, 0.35);
+  z-index: -1; /* queda por detrás de la tarjeta */
+}
+.playlist-page .card-body {
+  background: linear-gradient(45deg, rgb(51, 5, 32) 0%, rgb(117, 18, 76) 50%, rgb(51, 5, 32) 100%);
+}
+
+/* Fila con control de audio + icono a la derecha */
+.audio-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* espacio entre audio e icono */
+  /* El audio ocupa todo el espacio que queda, sin salirse */
+  /* Icono BVF fijo a la derecha */
+}
+.audio-line .audio-player {
+  flex: 1 1 auto;
+  width: auto; /* por si Bootstrap le puso width:100% */
+}
+.audio-line .audio-icon {
+  flex: 0 0 auto;
+  width: 5rem; /* ajustá el tamaño que quieras */
+  height: auto;
+  transform-origin: 50% 50%;
+  /* Solo gira cuando JS agrega esta clase */
+}
+.audio-line .audio-icon.is-spinning {
+  animation: bvf-spin 1.2s linear infinite;
+}
+
+/* Animación del icono */
+@keyframes bvf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

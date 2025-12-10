@@ -1,10 +1,18 @@
+// ================== UTILS ==================
+@use "utils/variables";
+@use "utils/mixins";
+@use "utils/placeholders";
+
+// ================== BASE ==================
 @use "base/reset";
 @use "base/fonts";
 @use "base/base";
 
+// ================== LAYOUT ==================
 @use "layout/header";
 @use "layout/footer";
 
+// ================== PAGES ==================
 @use "pages/index";
 @use "pages/pelusoteca";
 @use "pages/lacorte";
@@ -12,7 +20,3 @@
 @use "pages/cronicas";
 @use "pages/creditos";
 @use "pages/playlist";
-
-@use "utils/variables";
-@use "utils/mixins";
-@use "utils/placeholders";

@@ -1,10 +1,13 @@
+@use "sass:map";
 @use "variables" as vars;
 
 // ================== MIXINS ==================
 
 // Mixin para media queries basadas en el mapa vars.$breakpoints
+// Uso: @include respond-to(sm) { ... }
+
 @mixin respond-to($breakpoint) {
-  $value: map-get(vars.$breakpoints, $breakpoint);
+  $value: map.get(vars.$breakpoints, $breakpoint);
 
   @if $value == null {
     @error "El breakpoint `#{$breakpoint}` no existe en vars.$breakpoints.";

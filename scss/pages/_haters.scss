@@ -1,7 +1,7 @@
-/* ================== HATERS & DIAMONDS ================== */
-
 @use "../utils/placeholders" as *;
 @use "../utils/mixins" as *;
+
+/* ================== HATERS & DIAMONDS ================== */
 
 .grilla_haters {
   display: grid;
@@ -54,10 +54,8 @@
 
   // <= 480px
   @include respond-to(sm) {
-    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
   }
 }
 
@@ -67,12 +65,7 @@
 
   // <= 480px
   @include respond-to(sm) {
-    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
   }
 }
-
-/* ================== RESPONSIVE HATERS & DIAMONDS ================== */
-// (Las reglas responsive están anidadas arriba con el mixin respond-to)

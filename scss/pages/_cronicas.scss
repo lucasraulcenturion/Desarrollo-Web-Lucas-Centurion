@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 /* ================== CRÓNICAS DEL FLUFF ================== */
 
@@ -22,4 +23,46 @@
   color: $color-text-main;
   padding: 4rem;
   text-shadow: 0.125rem 0.125rem 0.25rem #000000;
+
+  // <= 480px: ajusto padding para que no explote el layout
+  @include respond-to(sm) {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* ================== ROLLO FOTOGRÁFICO (JS) ================== */
+
+.filmstrip {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.filmstrip-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  will-change: transform;
+
+  /* Imágenes de la tira */
+  img {
+    height: 12rem; /* alto del rollo */
+    width: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.35);
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+
+    /* Efecto al pasar el mouse */
+    &:hover {
+      transform: scale(1.06);
+    }
+
+    /* Versión mobile - Disminución de tamaño */
+    @include respond-to(sm) {
+      height: 6.5rem;
+    }
+  }
 }

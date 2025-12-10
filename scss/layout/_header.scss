@@ -1,7 +1,7 @@
-/* ================== HEADER / NAVBAR ================== */
-
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+
+/* ================== HEADER / NAVBAR ================== */
 
 .header {
   background: $color-baron-primary;
@@ -9,7 +9,7 @@
 
 /* Logo */
 .navbar__logo {
-  width: 5rem;
+  width: 3rem;
   height: auto;
   margin: 0;
 
@@ -127,31 +127,5 @@
 
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-}
-
-/* ================== RESPONSIVE NAVBAR ================== */
-
-@include respond-to(lg) {
-  /* <= 992px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 1rem;
-  }
-}
-
-@include respond-to(md) {
-  /* <= 768px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 1rem;
-  }
-}
-
-@include respond-to(sm) {
-  /* <= 480px */
-  .navbar .nav-link,
-  .navbar .dropdown-item {
-    font-size: 0.95rem;
   }
 }

@@ -1,16 +1,18 @@
-// ================== COLORES PRINCIPALES ==================
-$color-baron-bg: #75124c;   // fondo general
-$color-header:   #5f1651;   // header / navbar
-$color-card-bg:  #fbf6e4;   // fondos de tarjetas
-$color-text-main: #ffffff;  // textos claros
-$color-text-dark: #000000;  // textos oscuros
+// ===================== COLORES PRINCIPALES ====================
+$color-baron-bg: #75124c;      // fondo general
+$color-header: #5f1651;        // header / navbar / base primario
+$color-card-bg: #fbf6e4;       // fondos de tarjetas
+$color-text-main: #ffffff;     // textos claros
+$color-text-dark: #000000;     // textos oscuros
 
-// Alias para mantener compatibilidad con otros parciales
-$color-baron-primary: $color-header; // usado en header, footer, créditos
-$color-white: #ffffff;               // usado en header
-$color-gold-light: #ffe28a;          // dorado suave para hover en navbar
-$color-creditos-top: #b864a0;        // degradado superior en créditos
+// ================== ALIASES / COMPATIBILIDAD ==================
+// Mantener compatibilidad con otros parciales
+$color-baron-primary: $color-header;     // usado en header, footer, créditos
+$color-white: $color-text-main;          // usado en header
+$color-gold-light: #ffe28a;              // dorado suave para hover en navbar
+$color-creditos-top: #b864a0;            // degradado superior en créditos
 
+// ========================== GRADIENTES ========================
 // Gradiente dorado del navbar activo
 $gradient-gold: linear-gradient(
   90deg,
@@ -21,14 +23,14 @@ $gradient-gold: linear-gradient(
   #b8791a 100%
 );
 
-// Sombras de tarjetas
+// ========================== SOMBRAS ==========================
 $shadow-card: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.07);
 $shadow-card-strong: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
 
-// Border radius genérico de tarjetas
+// ========================== BORDER RADIUS ====================
 $radius-card: 0.75rem;
 
-// ================== BREAKPOINTS ==================
+// ========================== BREAKPOINTS ======================
 $breakpoints: (
   sm: 480px,
   md: 768px,

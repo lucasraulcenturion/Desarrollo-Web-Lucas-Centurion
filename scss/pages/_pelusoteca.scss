@@ -1,7 +1,7 @@
-/* ================== PELUSOTECA ================== */
-
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+
+/* ================== PELUSOTECA ================== */
 
 /* Intro texto */
 .div_text_pelusoteca {
@@ -28,12 +28,6 @@
 
   // <= 992px
   @include respond-to(lg) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  // <= 768px
-  @include respond-to(md) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -70,15 +64,10 @@
   // Article ocupa todo el alto de la columna
   .cards_pelusoteca_article {
     flex: 1 1 auto;
-
-    // 768px – 991.98px: centrados
-    // (lo dejamos como media query "clásica" porque es un rango entre dos valores)
   }
-}
 
-/* 768px – 991.98px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .pelusoteca_grid {
+  /* 768px – 991.98px (rango entre breakpoints) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
     .row {
       justify-content: center;
     }
@@ -91,7 +80,6 @@
 }
 
 /* -------- Tarjetas Pelusoteca (comunes) -------- */
-
 .cards_pelusoteca_article {
   position: relative;
   justify-self: center;
@@ -222,10 +210,12 @@
 .pelusa_name {
   font-family: "Roboto", sans-serif;
   color: #000;
+  text-shadow: 1px 1px 2px rgba(80, 80, 80, 0.7);
   font-size: 1.2rem;
   text-align: center;
   font-weight: bold;
   padding-bottom: 0.625rem;
+  margin: 0.625rem;
 
   @include respond-to(sm) {
     font-size: 1.05rem;
