@@ -1,5 +1,5 @@
 # 🌟 Sitio del Barón Von Fluffington III  
-### Pre-entrega Nº 3 – Desarrollo Web (Coderhouse)
+### Entrega Final – Desarrollo Web (Coderhouse)
 
 Versión avanzada y totalmente responsive del sitio oficial del **Barón Von Fluffington III**.  
 El proyecto utiliza **SASS modular**, animaciones personalizadas y una integración coherente entre **Bootstrap**, **CSS Grid** y **Flexbox**.
@@ -10,6 +10,9 @@ El proyecto utiliza **SASS modular**, animaciones personalizadas y una integraci
 
 👉 **GitHub Pages:**  
 https://lucasraulcenturion.github.io/Desarrollo-Web-Lucas-Centurion/
+
+👉 **Hosting Externo**  
+https://www.baronvonfluffington.infinityfreeapp.com
 
 ---
 
@@ -91,6 +94,9 @@ El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenim
 
     style.scss   ← archivo principal que importa todos los partials
 
+### 📌 Revisión de nesting
+Por indicaciones recibidas en la corrección de la Preentrega 3, se revisó y optimizó el nesting en SASS para mejorar la legibilidad y el mantenimiento del código.
+
 ### ✔️ Variables SASS
 
 - Colores (paleta púrpura + dorados).
@@ -109,6 +115,38 @@ El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenim
   - **La Corte de los Corazones**
   - **Haters & Diamonds**
   - **Playlist Imperial** (card del Himno)
+
+---
+
+## 🚀 Optimización de imágenes y SEO
+
+Para mejorar rendimiento y visibilidad en buscadores, el proyecto incorpora optimizaciones específicas en **assets** y en el **HTML**.
+
+### 🖼️ Optimización de imágenes
+
+- Conversión de imágenes principales a **WebP** para reducir peso y mejorar tiempos de carga.
+- Organización por carpetas según sección para un mantenimiento más claro:
+  - `assets/img/index/`
+  - `assets/img/pelusoteca/`
+  - `assets/img/corte/`
+  - `assets/img/haters/`
+  - `assets/img/cronicas/`
+  - `assets/img/creditos/`
+  - `assets/img/playlist/`
+- Imágenes de previsualización social en:
+  - `assets/img/og/`
+- Ajustes de tamaño específicos para variantes responsive (ej. assets del index y recursos clave del layout).
+
+### 🧠 Optimización del HTML para SEO
+
+- Títulos únicos por página (`<title>`).
+- `meta description` ajustadas a cada sección.
+- `keywords` incluidas por requisito académico.
+- Implementación de **Open Graph** para compartir en redes.
+- `link rel="canonical"` por página.
+- `meta robots` para indexación correcta.
+- Uso de estructura semántica consistente y jerarquía de headings.
+- Atributos `alt` descriptivos para imágenes relevantes del contenido.
 
 ---
 
@@ -157,6 +195,11 @@ El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenim
    - Aplicado a:
      - ✅ Página de **Inicio (Index)**.
 
+6. **Monogramas animados en Playlist Imperial**
+   - Animaciones decorativas del monograma para reforzar identidad visual de la sección.
+   - Aplicado a:
+     - ✅ **Playlist Imperial**.
+
 ---
 
 ## 🧭 Secciones del sitio
@@ -192,7 +235,8 @@ El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenim
 
 - Video circular animado del Barón DJ.
 - Card destacada del **Himno "Stellar"**.
-- 6 audios adicionales con sistema JS externo para evitar reproducciones simultáneas.
+- 6 audios adicionales con sistema JS para evitar reproducciones simultáneas.
+- Monogramas animados como detalles de identidad visual imperial.
 
 ### 🏅 Créditos
 
@@ -205,4 +249,4 @@ El CSS se organiza con **SASS** en archivos parciales para facilitar el mantenim
 ## 📄 Autor
 
 Desarrollado por:  
-**Lucas Centurión** – Curso **Desarrollo Web**, Coderhouse 2025.
+**Lucas Centurión** – Curso **Desarrollo Web** - Profesor **César Astorga**, Coderhouse 2025.
